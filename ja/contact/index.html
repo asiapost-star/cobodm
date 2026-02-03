@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせ｜SUNSEMI</title>
+    <meta name="description" content="SUNSEMIへのお問い合わせフォーム。製品に関するご質問、お見積り、ODM対応のご相談など、お気軽にお問い合わせください。">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a237e;
+            --primary-light: #3949ab;
+            --secondary: #c9a227;
+            --bg: #f5f5f5;
+            --text: #333;
+            --text-light: #666;
+            --white: #fff;
+            --shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        /* Header */
+        .header {
+            background: var(--white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 70px;
+        }
+        
+        .logo {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: 0.1em;
+            text-decoration: none;
+        }
+        
+        .logo span {
+            font-size: 0.65rem;
+            display: block;
+            color: var(--text-light);
+            letter-spacing: 0.05em;
+            font-weight: 400;
+        }
+        
+        .nav { display: flex; align-items: center; gap: 0.5rem; }
+        .nav-item { position: relative; }
+        .nav-link {
+            display: block;
+            padding: 0.75rem 1rem;
+            color: var(--text);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            border-radius: 4px;
+            transition: all 0.2s;
+        }
+        .nav-link:hover { background: rgba(26,35,126,0.08); color: var(--primary); }
+        .nav-link.highlight { background: var(--primary); color: var(--white); }
+        .nav-link.highlight:hover { background: var(--primary-light); }
+        
+        .mega-menu {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 520px;
+            background: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.2s;
+            padding: 1.5rem;
+            margin-top: 0;
+        }
+        .nav-item:hover .mega-menu { opacity: 1; visibility: visible; }
+        .nav-item::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            height: 20px;
+            background: transparent;
+        }
+        .mega-menu-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        .mega-column h4 {
+            font-size: 0.75rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.75rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #eee;
+        }
+        .mega-list { list-style: none; }
+        .mega-list li { margin-bottom: 0.5rem; }
+        .mega-list a {
+            display: block;
+            padding: 0.4rem 0;
+            color: var(--text);
+            text-decoration: none;
+            font-size: 0.8125rem;
+            transition: color 0.2s;
+        }
+        .mega-list a:hover { color: var(--primary); }
+        .mega-list a small { display: block; color: #999; font-size: 0.7rem; }
+        
+        /* Breadcrumb */
+        .breadcrumb {
+            background: #e8eaf6;
+            padding: 0.75rem 2rem;
+        }
+        .breadcrumb-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            font-size: 0.75rem;
+            color: var(--text-light);
+        }
+        .breadcrumb a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        .breadcrumb a:hover { text-decoration: underline; }
+        
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--white);
+            padding: 4rem 2rem;
+        }
+        .page-header-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .page-header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .page-header p {
+            opacity: 0.9;
+            font-size: 1rem;
+        }
+        
+        /* Section */
+        .section {
+            padding: 3rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+        }
+        
+        /* Form */
+        .form-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+        .form-group label .required {
+            color: #e53935;
+            margin-left: 0.25rem;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 0.9375rem;
+            font-family: inherit;
+            transition: border-color 0.2s;
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .checkbox-item input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: var(--primary);
+        }
+        .checkbox-item label {
+            margin: 0;
+            font-weight: 400;
+            cursor: pointer;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 1rem 2rem;
+            background: var(--primary);
+            color: var(--white);
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .submit-btn:hover {
+            background: var(--primary-light);
+        }
+        
+        /* Sidebar */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .info-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+        }
+        .info-card h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        .info-card p {
+            font-size: 0.875rem;
+            color: var(--text-light);
+            line-height: 1.6;
+            margin-bottom: 0.75rem;
+        }
+        .info-card p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .contact-method {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        .contact-method:last-child {
+            border-bottom: none;
+        }
+        .contact-method .icon {
+            width: 40px;
+            height: 40px;
+            background: #e8eaf6;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 1.25rem;
+        }
+        .contact-method .content {
+            flex: 1;
+        }
+        .contact-method .content .label {
+            font-size: 0.75rem;
+            color: var(--text-light);
+        }
+        .contact-method .content .value {
+            font-size: 0.9375rem;
+            font-weight: 500;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #1a1a2e;
+            color: #aaa;
+            padding: 3rem 2rem 1.5rem;
+            margin-top: 3rem;
+        }
+        .footer-inner { max-width: 1400px; margin: 0 auto; }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        .footer-col h4 {
+            color: var(--white);
+            font-size: 0.875rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 0.5rem; }
+        .footer-col a {
+            color: #aaa;
+            text-decoration: none;
+            font-size: 0.8125rem;
+            transition: color 0.2s;
+        }
+        .footer-col a:hover { color: var(--white); }
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding-top: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .footer-bottom p { font-size: 0.75rem; }
+        
+        @media (max-width: 768px) {
+            .nav { display: none; }
+            .mega-menu { width: 100vw; left: 0; transform: none; }
+            .mega-menu-inner { grid-template-columns: 1fr; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Mega Menu -->
+    <header class="header">
+        <div class="header-inner">
+            <a href="/ja/" class="logo">
+                SUNSEMI
+                <span>FCOB LED TECHNOLOGY</span>
+            </a>
+            
+            <nav class="nav">
+                <div class="nav-item">
+                    <a href="/ja/" class="nav-link">ホーム</a>
+                </div>
+                
+                <div class="nav-item">
+                    <a href="/ja/fcob-led/" class="nav-link">製品一覧</a>
+                    <div class="mega-menu">
+                        <div class="mega-menu-inner">
+                            <div class="mega-column">
+                                <h4>標準照明</h4>
+                                <ul class="mega-list">
+                                    <li><a href="/ja/fcob-led/single-color/">単色シリーズ<small>320D/480D/608D</small></a></li>
+                                    <li><a href="/ja/fcob-led/cct/">調光調色(CCT)<small>2700K-6500K</small></a></li>
+                                    <li><a href="/ja/fcob-led/rgb-series/">RGBフルカラー<small>RGB/RGBW/RGBCW</small></a></li>
+                                    <li><a href="/ja/fcob-led/mini-size/">ミニサイズ<small>2.7mm/4mm/5mm</small></a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-column">
+                                <h4>特殊・高出力</h4>
+                                <ul class="mega-list">
+                                    <li><a href="/ja/fcob-led/high-efficiency/">高効率<small>HE Series</small></a></li>
+                                    <li><a href="/ja/fcob-led/high-power/">高出力<small>HP Series</small></a></li>
+                                    <li><a href="/ja/fcob-led/long-run/">超長連続<small>LR Series</small></a></li>
+                                    <li><a href="/ja/fcob-led/side-emitting/">側面発光<small>SE Series</small></a></li>
+                                    <li><a href="/ja/fcob-led/waterproof/">防水<small>IP67</small></a></li>
+                                    <li><a href="/ja/fcob-led/everywhere-cut/">任意カット<small>EC Series</small></a></li>
+                                    <li><a href="/ja/fcob-led/short-cut/">短カット<small>SC Series</small></a></li>
+                                    <li><a href="/ja/fcob-led/pixel-spi/">ピクセル制御(SPI)<small>360D-720D</small></a></li>
+                                    <li><a href="/ja/fcob-led/pixel-dmx/">ピクセル制御(DMX)<small>DMX512</small></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="nav-item">
+                    <a href="/ja/technical/" class="nav-link">技術資料</a>
+                </div>
+                
+                <div class="nav-item">
+                    <a href="/ja/applications/" class="nav-link">応用事例</a>
+                </div>
+                
+                <div class="nav-item">
+                    <a href="/ja/company/" class="nav-link">企業概要</a>
+                </div>
+                
+                <div class="nav-item">
+                    <a href="/ja/downloads/" class="nav-link">資料ダウンロード</a>
+                </div>
+                
+                <div class="nav-item">
+                    <a href="/ja/contact/" class="nav-link highlight">お問い合わせ</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="breadcrumb-inner">
+            <a href="/ja/">ホーム</a> &gt; お問い合わせ
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-header-inner">
+            <h1>お問い合わせ</h1>
+            <p>製品に関するご質問、お見積り、ODM対応のご相談など、お気軽にお問い合わせください</p>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="section">
+        <div class="contact-grid">
+            <!-- Form -->
+            <div class="form-card">
+                <form action="/ja/contact/submit/" method="POST">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>会社名 <span class="required">*</span></label>
+                            <input type="text" name="company" required placeholder="株式会社SUNSEMI">
+                        </div>
+                        <div class="form-group">
+                            <label>部署名</label>
+                            <input type="text" name="department" placeholder="購買部">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>お名前 <span class="required">*</span></label>
+                            <input type="text" name="name" required placeholder="山田太郎">
+                        </div>
+                        <div class="form-group">
+                            <label>お名前（フリガナ）</label>
+                            <input type="text" name="name_kana" placeholder="ヤマダタロウ">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>メールアドレス <span class="required">*</span></label>
+                            <input type="email" name="email" required placeholder="example@company.jp">
+                        </div>
+                        <div class="form-group">
+                            <label>電話番号</label>
+                            <input type="tel" name="phone" placeholder="03-1234-5678">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>お問い合わせ種別 <span class="required">*</span></label>
+                        <select name="inquiry_type" required>
+                            <option value="">選択してください</option>
+                            <option value="product">製品に関するお問い合わせ</option>
+                            <option value="quotation">お見積り依頼</option>
+                            <option value="sample">サンプル依頼</option>
+                            <option value="odm">ODM対応のご相談</option>
+                            <option value="technical">技術的なご質問</option>
+                            <option value="other">その他</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>関心のある製品（複数選択可）</label>
+                        <div class="checkbox-group">
+                            <div class="checkbox-item">
+                                <input type="checkbox" name="products" value="single-color" id="prod1">
+                                <label for="prod1">単色シリーズ</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" name="products" value="cct" id="prod2">
+                                <label for="prod2">調光調色(CCT)</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" name="products" value="rgb" id="prod3">
+                                <label for="prod3">RGBフルカラー</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" name="products" value="mini" id="prod4">
+                                <label for="prod4">ミニサイズ</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" name="products" value="waterproof" id="prod5">
+                                <label for="prod5">防水(IP67)</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" name="products" value="pixel" id="prod6">
+                                <label for="prod6">ピクセル制御(SPI/DMX)</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" name="products" value="other" id="prod7">
+                                <label for="prod7">その他・未定</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>お問い合わせ内容 <span class="required">*</span></label>
+                        <textarea name="message" required placeholder="お問い合わせ内容をご記入ください。&#10;・ご希望の製品仕様&#10;・使用用途・環境&#10;・想定される数量&#10;・納期ご希望&#10;など、できるだけ詳しくご記入いただくとスムーズな対応が可能です。"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">送信する</button>
+                </form>
+            </div>
+            
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <div class="info-card">
+                    <h3>お電話でのお問い合わせ</h3>
+                    <div class="contact-method">
+                        <div class="icon">&#9742;</div>
+                        <div class="content">
+                            <div class="label">営業部直通</div>
+                            <div class="value">03-XXXX-XXXX</div>
+                        </div>
+                    </div>
+                    <p>受付時間: 平日 9:00-18:00</p>
+                </div>
+                
+                <div class="info-card">
+                    <h3>メールでのお問い合わせ</h3>
+                    <div class="contact-method">
+                        <div class="icon">&#9993;</div>
+                        <div class="content">
+                            <div class="label">営業部</div>
+                            <div class="value">sales@sunsemi.jp</div>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <div class="icon">&#9993;</div>
+                        <div class="content">
+                            <div class="label">技術部</div>
+                            <div class="value">tech@sunsemi.jp</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="info-card">
+                    <h3>ご注意事項</h3>
+                    <p>
+                        フォームからのお問い合わせは、営業日以内に担当者よりご連絡させていただきます。
+                    </p>
+                    <p>
+                        迷惑メール対策の設定により、返信メールが届かない場合がございます。@sunsemi.jpからのメールを受信できるよう設定をお願いいたします。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>製品一覧</h4>
+                    <ul>
+                        <li><a href="/ja/fcob-led/single-color/">単色シリーズ</a></li>
+                        <li><a href="/ja/fcob-led/cct/">調光調色(CCT)</a></li>
+                        <li><a href="/ja/fcob-led/rgb-series/">RGBフルカラー</a></li>
+                        <li><a href="/ja/fcob-led/mini-size/">ミニサイズ</a></li>
+                        <li><a href="/ja/fcob-led/waterproof/">防水(IP67)</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>技術資料</h4>
+                    <ul>
+                        <li><a href="/ja/technical/">技術資料トップ</a></li>
+                        <li><a href="/ja/technical/pse-guide/">電気用品安全法ガイド</a></li>
+                        <li><a href="/ja/technical/installation/">施工ガイド</a></li>
+                        <li><a href="/ja/technical/faq/">技術FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>企業情報</h4>
+                    <ul>
+                        <li><a href="/ja/company/">会社概要</a></li>
+                        <li><a href="/ja/company/quality/">品質管理</a></li>
+                        <li><a href="/ja/downloads/">資料ダウンロード</a></li>
+                        <li><a href="/ja/contact/">お問い合わせ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>法的情報</h4>
+                    <ul>
+                        <li><a href="/ja/company/privacy/">プライバシーポリシー</a></li>
+                        <li><a href="/ja/company/terms/">利用規約</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 SUNSEMI. All rights reserved.</p>
+                <p>FCOB LED Lighting Solutions</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>電気用品安全法ガイド｜技術資料｜SUNSEMI</title>
+    <meta name="description" content="SUNSEMI製品と電気用品安全法の関係について解説。PSEマークの表示対象・非対象の判断基準、お客様による自主確認事項など。">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a237e;
+            --primary-light: #3949ab;
+            --secondary: #c9a227;
+            --bg: #f5f5f5;
+            --text: #333;
+            --text-light: #666;
+            --white: #fff;
+            --shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        /* Header */
+        .header {
+            background: var(--white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 70px;
+        }
+        
+        .logo {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: 0.1em;
+            text-decoration: none;
+        }
+        
+        .logo span {
+            font-size: 0.65rem;
+            display: block;
+            color: var(--text-light);
+            letter-spacing: 0.05em;
+            font-weight: 400;
+        }
+        
+        .nav { display: flex; align-items: center; gap: 0.5rem; }
+        .nav-item { position: relative; }
+        .nav-link {
+            display: block;
+            padding: 0.75rem 1rem;
+            color: var(--text);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            border-radius: 4px;
+            transition: all 0.2s;
+        }
+        .nav-link:hover { background: rgba(26,35,126,0.08); color: var(--primary); }
+        .nav-link.highlight { background: var(--primary); color: var(--white); }
+        .nav-link.highlight:hover { background: var(--primary-light); }
+        
+        .mega-menu {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 520px;
+            background: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.2s;
+            padding: 1.5rem;
+            margin-top: 0;
+        }
+        .nav-item:hover .mega-menu { opacity: 1; visibility: visible; }
+        .nav-item::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            height: 20px;
+            background: transparent;
+        }
+        .mega-menu-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        .mega-column h4 {
+            font-size: 0.75rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.75rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #eee;
+        }
+        .mega-list { list-style: none; }
+        .mega-list li { margin-bottom: 0.5rem; }
+        .mega-list a {
+            display: block;
+            padding: 0.4rem 0;
+            color: var(--text);
+            text-decoration: none;
+            font-size: 0.8125rem;
+            transition: color 0.2s;
+        }
+        .mega-list a:hover { color: var(--primary); }
+        .mega-list a small { display: block; color: #999; font-size: 0.7rem; }
+        
+        /* Breadcrumb */
+        .breadcrumb {
+            background: #e8eaf6;
+            padding: 0.75rem 2rem;
+        }
+        .breadcrumb-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            font-size: 0.75rem;
+            color: var(--text-light);
+        }
+        .breadcrumb a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        .breadcrumb a:hover { text-decoration: underline; }
+        
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--white);
+            padding: 4rem 2rem;
+        }
+        .page-header-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .page-header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .page-header p {
+            opacity: 0.9;
+            font-size: 1rem;
+        }
+        
+        /* Section */
+        .section {
+            padding: 3rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            margin-bottom: 2rem;
+        }
+        .section-title h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 0.5rem;
+        }
+        .section-title p {
+            color: var(--text-light);
+            font-size: 0.9375rem;
+        }
+        
+        /* Alert Box */
+        .alert-box {
+            background: #fff3e0;
+            border-left: 4px solid #e65100;
+            padding: 1.5rem;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 2rem;
+        }
+        .alert-box h3 {
+            color: #e65100;
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .alert-box h3::before {
+            content: '!';
+            width: 24px;
+            height: 24px;
+            background: #e65100;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.875rem;
+            font-weight: 700;
+        }
+        .alert-box p {
+            font-size: 0.9375rem;
+            line-height: 1.8;
+        }
+        
+        /* Content Card */
+        .content-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+        }
+        .content-card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+        .content-card p {
+            font-size: 0.9375rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        .content-card p:last-child {
+            margin-bottom: 0;
+        }
+        
+        /* Status Grid */
+        .status-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .status-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: var(--shadow);
+            border: 2px solid transparent;
+        }
+        .status-card.exempt {
+            border-color: #4caf50;
+        }
+        .status-card.non-exempt {
+            border-color: #ff9800;
+        }
+        .status-card h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .status-card.exempt h4::before {
+            content: '';
+            width: 12px;
+            height: 12px;
+            background: #4caf50;
+            border-radius: 50%;
+        }
+        .status-card.non-exempt h4::before {
+            content: '';
+            width: 12px;
+            height: 12px;
+            background: #ff9800;
+            border-radius: 50%;
+        }
+        .status-card p {
+            font-size: 0.875rem;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+        .status-card .products {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
+        }
+        .status-card .products li {
+            font-size: 0.8125rem;
+            color: var(--text);
+            margin-bottom: 0.25rem;
+            list-style: none;
+        }
+        
+        /* Flow Diagram */
+        .flow-diagram {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: var(--shadow);
+        }
+        .flow-diagram h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        .flow-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .flow-step {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.25rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        .flow-step .number {
+            width: 32px;
+            height: 32px;
+            background: var(--primary);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        .flow-step .content h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+        .flow-step .content p {
+            font-size: 0.875rem;
+            color: var(--text-light);
+        }
+        .flow-arrow {
+            text-align: center;
+            color: var(--primary);
+            font-size: 1.5rem;
+        }
+        
+        /* FAQ Style */
+        .faq-item {
+            background: var(--white);
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        .faq-question {
+            padding: 1.25rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-answer {
+            padding: 0 1.25rem 1.25rem;
+            font-size: 0.9375rem;
+            line-height: 1.8;
+            color: var(--text-light);
+        }
+        
+        /* Table */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        .data-table th,
+        .data-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        .data-table th {
+            font-size: 0.8125rem;
+            color: var(--text-light);
+            font-weight: 500;
+            background: #f8f9fa;
+        }
+        .data-table td {
+            font-size: 0.9375rem;
+        }
+        .data-table tr:last-child th,
+        .data-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        /* CTA */
+        .cta-box {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            color: var(--white);
+        }
+        .cta-box h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+        .cta-box p {
+            opacity: 0.9;
+            margin-bottom: 1.25rem;
+        }
+        .cta-btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--white);
+            color: var(--primary);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+        .cta-btn:hover {
+            background: #f5f5f5;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #1a1a2e;
+            color: #aaa;
+            padding: 3rem 2rem 1.5rem;
+            margin-top: 3rem;
+        }
+        .footer-inner { max-width: 1400px; margin: 0 auto; }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        .footer-col h4 {
+            color: var(--white);
+            font-size: 0.875rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 0.5rem; }
+        .footer-col a {
+            color: #aaa;
+            text-decoration: none;
+            font-size: 0.8125rem;
+            transition: color 0.2s;
+        }
+        .footer-col a:hover { color: var(--white); }
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding-top: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .footer-bottom p { font-size: 0.75rem; }
+        
+        @media (max-width: 768px) {
+            .nav { display: none; }
+            .mega-menu { width: 100vw; left: 0; transform: none; }
+            .mega-menu-inner { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Mega Menu -->
+    <header class="header">
+        <div class="header-inner">
+            <a href="/ja/" class="logo">
+                SUNSEMI
+                <span>FCOB LED TECHNOLOGY</span>
+            </a>
+            
+            <nav class="nav">
+                <div class="nav-item">
+                    <a href="/ja/" class="nav-link">ホーム</a>
+                </div>
+                
+                <div class="nav-item">
+                    <a href="/ja/fcob-led/" class="nav-link">製品一覧</a>
+                    <div class="mega-menu">
+                        <div class="mega-menu-inner">
+                            <div class="mega-column">
+                                <h4>標準照明</h4>
+                                <ul class="mega-list">
+                                    <li><a href="/ja/fcob-led/single-color/">単色シリーズ<small>320D/480D/608D</small></a></li>
+                                    <li><a href="/ja/fcob-led/cct/">調光調色(CCT)<small>2700K-6500K</small></a></li>
+                                    <li><a href="/ja/fcob-led/rgb-series/">RGBフルカラー<small>RGB/RGBW/RGBCW</small></a></li>
+                                    <li><a href="/ja/fcob-led/mini-size/">ミニサイズ<small>2.7mm/4mm/5mm</small></a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-column">
+                                <h4>特殊・高出力</h4>
+                                <ul class="mega-list">
+                                    <li><a href="/ja/fcob-led/high-efficiency/">高効率<small>HE Series</small></a></li>
+                                    <li><a href="/ja/fcob-led/high-power/">高出力<small>HP Series</small></a></li>
+                                    <li><a href="/ja/fcob-led/long-run/">超長連続<small>LR Series</small></a></li>
+                                    <li><a href="/ja/fcob-led/side-emitting/">側面発光<small>SE Series</small></a></li>
+                                    <li><a href="/ja/fcob-led/waterproof/">防水<small>IP67</small></a></li>
+                                    <li><a href="/ja/fcob-led/everywhere-cut/">任意カット<small>EC Series</small></a></li>
+                                    <li><a href="/ja/fcob-led/short-cut/">短カット<small>SC Series</small></a></li>
+                                    <li><a href="/ja/fcob-led/pixel-spi/">ピクセル制御(SPI)<small>360D-720D</small></a></li>
+                                    <li><a href="/ja/fcob-led/pixel-dmx/">ピクセル制御(DMX)<small>DMX512</small></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="nav-item">
+                    <a href="/ja/technical/" class="nav-link">技術資料</a>
+                </div>
+                
+                <div class="nav-item">
+                    <a href="/ja/applications/" class="nav-link">応用事例</a>
+                </div>
+                
+                <div class="nav-item">
+                    <a href="/ja/company/" class="nav-link">企業概要</a>
+                </div>
+                
+                <div class="nav-item">
+                    <a href="/ja/downloads/" class="nav-link">資料ダウンロード</a>
+                </div>
+                
+                <div class="nav-item">
+                    <a href="/ja/contact/" class="nav-link highlight">お問い合わせ</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="breadcrumb-inner">
+            <a href="/ja/">ホーム</a> &gt; <a href="/ja/technical/">技術資料</a> &gt; 電気用品安全法ガイド
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-header-inner">
+            <h1>電気用品安全法ガイド</h1>
+            <p>SUNSEMI製品と電気用品安全法の関係について</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="section">
+        <!-- Alert Box -->
+        <div class="alert-box">
+            <h3>重要なご案内</h3>
+            <p>
+                SUNSEMIの製品は主にDC低電圧入力のLED灯帯・LEDモジュールです。これらの製品は電気用品安全法の規制対象外であることが一般的ですが、最終製品への組み込み状況により法規制の適用が変わる場合があります。本ページは一般的な情報提供を目的としており、具体的な法規制判断については専門家へのご相談をお勧めします。
+            </p>
+        </div>
+        
+        <!-- Overview -->
+        <div class="content-card">
+            <h3>電気用品安全法とは</h3>
+            <p>
+                電気用品安全法（DENAN法）は、電気用品の安全性を確保し、電気用品による危険や障害の発生を防止することを目的とした法律です。特定の電気用品（457品目）については、事業者が自主検査を行い、PSEマークを表示することが義務付けられています。
+            </p>
+            <p>
+                電気用品は「特定電気用品（特定電気用品以外の電気用品を含む）」と「特定電気用品以外の電気用品（非特定電気用品）」に分類され、それぞれ異なる規制が適用されます。
+            </p>
+        </div>
+        
+        <!-- Product Status -->
+        <div class="section-title">
+            <h2>SUNSEMI製品の法規制状況</h2>
+            <p>製品カテゴリ別の電気用品安全法適用状況</p>
+        </div>
+        
+        <div class="status-grid">
+            <div class="status-card exempt">
+                <h4>PSE対象外製品</h4>
+                <p>DC低電圧入力のLED灯帯・モジュールは、電気用品安全法の規制対象外です。</p>
+                <ul class="products">
+                    <li>単色シリーズ (12V/24V)</li>
+                    <li>調光調色(CCT)シリーズ</li>
+                    <li>RGBフルカラーシリーズ</li>
+                    <li>ミニサイズシリーズ</li>
+                    <li>高効率/高出力シリーズ</li>
+                    <li>防水(IP67)シリーズ</li>
+                    <li>ピクセル制御(SPI/DMX)シリーズ</li>
+                </ul>
+            </div>
+            <div class="status-card non-exempt">
+                <h4>組み込み時に要確認</h4>
+                <p>以下の製品は組み込み先の仕様によりPSE規制対象となる場合があります。</p>
+                <ul class="products">
+                    <li>AC入力電源アダプター</li>
+                    <li>調光器・コントローラー</li>
+                    <li>AC直接入力型製品</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Flow Diagram -->
+        <div class="flow-diagram">
+            <h3>お客様の確認フロー</h3>
+            <div class="flow-steps">
+                <div class="flow-step">
+                    <div class="number">1</div>
+                    <div class="content">
+                        <h4>製品の入力電圧を確認</h4>
+                        <p>DC 12V/24Vなどの低電圧製品はPSE対象外。AC 100V入力の場合は規制対象となる可能性があります。</p>
+                    </div>
+                </div>
+                <div class="flow-arrow">&#8595;</div>
+                <div class="flow-step">
+                    <div class="number">2</div>
+                    <div class="content">
+                        <h4>最終製品の仕様を確認</h4>
+                        <p>LED灯帯を照明器具に組み込む場合、最終製品としての法規制適合が必要です。</p>
+                    </div>
+                </div>
+                <div class="flow-arrow">&#8595;</div>
+                <div class="flow-step">
+                    <div class="number">3</div>
+                    <div class="content">
+                        <h4>専門家へのご相談</h4>
+                        <p>法規制の適用判断が難しい場合は、認定検査機関や専門家へのご相談をお勧めします。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- FAQ -->
+        <div class="section-title">
+            <h2>よくあるご質問</h2>
+            <p>電気用品安全法に関するよくいただく質問と回答</p>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>LED灯帯にPSEマークがないのはなぜですか？</span>
+            </div>
+            <div class="faq-answer">
+                <p>
+                    SUNSEMIのLED灯帯はDC 12V/24Vなどの低電圧入力のため、電気用品安全法の規制対象外となります。PSEマークの表示は義務付けられていないため、表示しておりません。
+                </p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>照明器具に組み込んで販売する場合、PSEは必要ですか？</span>
+            </div>
+            <div class="faq-answer">
+                <p>
+                    LED灯帯を照明器具に組み込んで販売する場合、最終製品としての法規制適合が必要となります。AC 100V入力の照明器具の場合、PSEマークの表示が必要となる可能性があります。詳細は認定検査機関へのご相談をお勧めします。
+                </p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>電源アダプターはPSE対象ですか？</span>
+            </div>
+            <div class="faq-answer">
+                <p>
+                    AC 100V入力の電源アダプターは電気用品安全法の規制対象となります。SUNSEMIではPSE認証取得済みの電源アダプターを別途ご用意しております。お問い合わせください。
+                </p>
+            </div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>自主検査の記録は必要ですか？</span>
+            </div>
+            <div class="faq-answer">
+                <p>
+                    PSE対象外製品については自主検査の記録義務はありません。ただし、品質管理の一環として製品検査を実施しており、必要に応じて検査成績書をご提供いたします。
+                </p>
+            </div>
+        </div>
+        
+        <!-- Reference Info -->
+        <div class="content-card">
+            <h3>参考情報</h3>
+            <table class="data-table">
+                <tr>
+                    <th>関連法規</th>
+                    <td>電気用品安全法（DENAN法）、電気用品の技術上の基準を定める省令</td>
+                </tr>
+                <tr>
+                    <th>主管官庁</th>
+                    <td>経済産業省</td>
+                </tr>
+                <tr>
+                    <th>認定検査機関</th>
+                    <td>日本適合性認定協会(JAB)が認定した登録検査機関</td>
+                </tr>
+                <tr>
+                    <th>詳細情報</th>
+                    <td><a href="https://www.meti.go.jp/policy/consumer/seian/denan/" target="_blank">経済産業省 電気用品安全法ページ</a></td>
+                </tr>
+            </table>
+        </div>
+        
+        <!-- CTA -->
+        <div class="cta-box">
+            <h3>ご不明な点がございますか？</h3>
+            <p>電気用品安全法に関するご質問や、製品の法規制適用に関するご相談はお気軽にお問い合わせください。</p>
+            <a href="/ja/contact/" class="cta-btn">お問い合わせ</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>製品一覧</h4>
+                    <ul>
+                        <li><a href="/ja/fcob-led/single-color/">単色シリーズ</a></li>
+                        <li><a href="/ja/fcob-led/cct/">調光調色(CCT)</a></li>
+                        <li><a href="/ja/fcob-led/rgb-series/">RGBフルカラー</a></li>
+                        <li><a href="/ja/fcob-led/mini-size/">ミニサイズ</a></li>
+                        <li><a href="/ja/fcob-led/waterproof/">防水(IP67)</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>技術資料</h4>
+                    <ul>
+                        <li><a href="/ja/technical/">技術資料トップ</a></li>
+                        <li><a href="/ja/technical/pse-guide/">電気用品安全法ガイド</a></li>
+                        <li><a href="/ja/technical/installation/">施工ガイド</a></li>
+                        <li><a href="/ja/technical/faq/">技術FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>企業情報</h4>
+                    <ul>
+                        <li><a href="/ja/company/">会社概要</a></li>
+                        <li><a href="/ja/company/quality/">品質管理</a></li>
+                        <li><a href="/ja/downloads/">資料ダウンロード</a></li>
+                        <li><a href="/ja/contact/">お問い合わせ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>法的情報</h4>
+                    <ul>
+                        <li><a href="/ja/company/privacy/">プライバシーポリシー</a></li>
+                        <li><a href="/ja/company/terms/">利用規約</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 SUNSEMI. All rights reserved.</p>
+                <p>FCOB LED Lighting Solutions</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
