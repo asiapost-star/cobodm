@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>お問い合わせ | SUNSEMI</title>
+    <title>Company | SUNSEMI</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -118,13 +118,13 @@
         }
 
         .lang-switch a:first-child {
-            background: var(--secondary);
-            color: var(--primary);
+            background: transparent;
+            color: var(--text);
         }
 
         .lang-switch a:last-child {
-            background: transparent;
-            color: var(--text);
+            background: var(--secondary);
+            color: var(--primary);
         }
 
         .hero {
@@ -191,114 +191,127 @@
             line-height: 1.8;
         }
 
-        .contact-section {
+        .about-section {
             padding: 80px 40px;
             background: var(--primary);
         }
 
-        .contact-inner {
+        .about-inner {
             max-width: 1400px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 60px;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
         }
 
-        .form-section h2 {
-            font-size: 24px;
+        .about-content h2 {
+            font-size: 32px;
             font-weight: 600;
             margin-bottom: 30px;
         }
 
-        .form-section h2 span { color: var(--secondary); }
+        .about-content h2 span { color: var(--secondary); }
 
-        .form-group {
-            margin-bottom: 24px;
+        .about-content p {
+            font-size: 16px;
+            color: var(--text-muted);
+            line-height: 1.8;
+            margin-bottom: 20px;
         }
 
-        .form-group label {
-            display: block;
-            font-size: 14px;
-            font-weight: 500;
-            margin-bottom: 8px;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 14px 18px;
-            background: var(--primary-light);
+        .about-visual {
+            aspect-ratio: 4/3;
+            background: linear-gradient(135deg, #1a1a25 0%, #252535 100%);
+            border-radius: 20px;
             border: 1px solid var(--border);
-            border-radius: 8px;
-            color: var(--text);
-            font-size: 15px;
-            font-family: inherit;
-            transition: border-color 0.3s;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--secondary);
-        }
-
-        .form-group textarea {
-            min-height: 150px;
-            resize: vertical;
-        }
-
-        .btn-submit {
-            display: inline-flex;
+            display: flex;
             align-items: center;
-            gap: 10px;
-            padding: 16px 40px;
-            background: var(--gradient-gold);
-            border: none;
-            border-radius: 8px;
-            color: var(--primary);
-            font-size: 15px;
+            justify-content: center;
+        }
+
+        .about-visual-content {
+            text-align: center;
+        }
+
+        .about-logo {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .about-logo span { color: var(--secondary); }
+
+        .about-tagline {
+            font-size: 16px;
+            color: var(--text-muted);
+        }
+
+        .values-section {
+            padding: 80px 40px;
+            background: var(--primary-light);
+            border-top: 1px solid var(--border);
+        }
+
+        .values-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: 32px;
             font-weight: 600;
-            cursor: pointer;
+        }
+
+        .section-title span { color: var(--secondary); }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .value-card {
+            background: var(--primary);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 40px 30px;
+            text-align: center;
             transition: all 0.3s;
         }
 
-        .btn-submit:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(201, 162, 39, 0.3);
+        .value-card:hover {
+            border-color: var(--secondary);
+            transform: translateY(-8px);
         }
 
-        .info-section {
-            background: var(--primary-light);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 40px;
+        .value-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--gradient-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin: 0 auto 24px;
         }
 
-        .info-section h3 {
-            font-size: 20px;
+        .value-title {
+            font-size: 22px;
             font-weight: 600;
-            margin-bottom: 30px;
+            margin-bottom: 16px;
         }
 
-        .info-section h3 span { color: var(--secondary); }
-
-        .info-item {
-            margin-bottom: 24px;
-        }
-
-        .info-item:last-child { margin-bottom: 0; }
-
-        .info-label {
-            font-size: 13px;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 8px;
-        }
-
-        .info-value {
+        .value-desc {
             font-size: 15px;
-            color: var(--text);
+            color: var(--text-muted);
+            line-height: 1.7;
         }
 
         .footer {
@@ -338,28 +351,30 @@
             .nav { display: none; }
             .hero { padding: 120px 20px 60px; }
             .hero-title { font-size: 32px; }
-            .contact-section { padding: 60px 20px; }
-            .contact-inner { grid-template-columns: 1fr; gap: 40px; }
+            .about-section { padding: 60px 20px; }
+            .about-inner { grid-template-columns: 1fr; gap: 40px; }
+            .values-section { padding: 60px 20px; }
+            .values-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/ja/" class="logo">
+            <a href="/en/" class="logo">
                 <div class="logo-icon">SUN</div>
                 <div class="logo-text">SUN<span>SEMI</span></div>
             </a>
             <nav class="nav">
-                <a href="/ja/">ホーム</a>
-                <a href="/ja/products/">製品情報</a>
-                <a href="/ja/technical/">技術資料</a>
-                <a href="/ja/company/">会社案内</a>
-                <a href="/ja/contact/" class="active">お問い合わせ</a>
+                <a href="/en/">Home</a>
+                <a href="/en/products/">Products</a>
+                <a href="/en/technical/">Technical</a>
+                <a href="/en/company/" class="active">Company</a>
+                <a href="/en/contact/">Contact</a>
             </nav>
             <div class="lang-switch">
-                <a href="/ja/contact/">JA</a>
-                <a href="/en/contact/">EN</a>
+                <a href="/ja/company/">JA</a>
+                <a href="/en/company/">EN</a>
             </div>
         </div>
     </header>
@@ -367,53 +382,53 @@
     <section class="hero">
         <div class="hero-inner">
             <div class="breadcrumb">
-                <a href="/ja/">ホーム</a>
+                <a href="/en/">Home</a>
                 <span>/</span>
-                <span style="color: var(--secondary);">お問い合わせ</span>
+                <span style="color: var(--secondary);">Company</span>
             </div>
-            <h1 class="hero-title">お問い合わせ</h1>
-            <p class="hero-subtitle">Contact Us</p>
-            <p class="hero-description">製品に関するお問い合わせ、カスタムオーダー、技術サポートなど、お気軽にお問い合わせください。</p>
+            <h1 class="hero-title">About Us</h1>
+            <p class="hero-subtitle">Company Profile</p>
+            <p class="hero-description">SUNSEMI is a professional manufacturer of FCOB LED tape lights, dedicated to developing and producing high-quality lighting products.</p>
         </div>
     </section>
 
-    <section class="contact-section">
-        <div class="contact-inner">
-            <div class="form-section">
-                <h2><span>お問い合わせフォーム</span></h2>
-                <form onsubmit="event.preventDefault(); alert('Message sent!');">
-                    <div class="form-group">
-                        <label>お名前</label>
-                        <input type="text" placeholder="" required>
-                    </div>
-                    <div class="form-group">
-                        <label>メールアドレス</label>
-                        <input type="email" placeholder="" required>
-                    </div>
-                    <div class="form-group">
-                        <label>会社名</label>
-                        <input type="text" placeholder="">
-                    </div>
-                    <div class="form-group">
-                        <label>お問い合わせ内容</label>
-                        <textarea placeholder="" required></textarea>
-                    </div>
-                    <button type="submit" class="btn-submit">送信する →</button>
-                </form>
+    <section class="about-section">
+        <div class="about-inner">
+            <div class="about-content">
+                <h2><span>Company Overview</span></h2>
+                <p>SUNSEMI is a professional manufacturer specializing in FCOB (Flip Chip On Board) LED tape lights.</p>
+        <p>Our products feature high CRI (Ra95+), dotless illumination, and ultra-thin design, trusted by professionals in commercial facilities, residential spaces, hotels, and retail stores worldwide.</p>
+        <p>Under our quality-first policy, we deliver the best lighting solutions through strict quality control and continuous technological innovation.</p>
             </div>
-            <div class="info-section">
-                <h3><span>連絡先情報</span></h3>
-                <div class="info-item">
-                    <div class="info-label">住所</div>
-                    <div class="info-value">中国広東省深圳市</div>
+            <div class="about-visual">
+                <div class="about-visual-content">
+                    <div class="about-logo">SUN<span>SEMI</span></div>
+                    <p class="about-tagline">Premium FCOB LED Solutions</p>
                 </div>
-                <div class="info-item">
-                    <div class="info-label">Email</div>
-                    <div class="info-value">info@sunsemi.com</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="values-section">
+        <div class="values-inner">
+            <div class="section-header">
+                <h2 class="section-title"><span>Values</span></h2>
+            </div>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">◈</div>
+                    <h3 class="value-title">Quality First</h3>
+                    <p class="value-desc">To bring high-quality, beautiful light to every space around the world. That is the mission of SUNSEMI.</p>
                 </div>
-                <div class="info-item">
-                    <div class="info-label">営業時間</div>
-                    <div class="info-value">月曜日〜金曜日 9:00〜18:00</div>
+                <div class="value-card">
+                    <div class="value-icon">✦</div>
+                    <h3 class="value-title">Innovation</h3>
+                    <p class="value-desc">We continue to provide lighting products that professionals can trust through cutting-edge FCOB technology and strict quality control.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">◉</div>
+                    <h3 class="value-title">Customer Focus</h3>
+                    <p class="value-desc">To bring high-quality, beautiful light to every space around the world. That is the mission of SUNSEMI.</p>
                 </div>
             </div>
         </div>

@@ -3,339 +3,358 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>会社概要｜SUNSEMI</title>
-    <meta name="description" content="SUNSEMI会社概要。FCOB LED照明のODM専門メーカー。高品質LED灯帯の設計・製造。日本の照明メーカー様向けOEM/ODM対応。">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>会社案内 | SUNSEMI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #1a237e;
-            --primary-light: #3949ab;
+            --primary: #0a0a0f;
+            --primary-light: #151520;
             --secondary: #c9a227;
-            --bg: #f5f5f5;
-            --text: #333;
-            --text-light: #666;
-            --white: #fff;
-            --shadow: 0 2px 8px rgba(0,0,0,0.1);
+            --secondary-light: #e5c158;
+            --text: #f5f5f5;
+            --text-muted: #a0a0a0;
+            --text-dark: #606060;
+            --border: #2a2a3a;
+            --gradient-gold: linear-gradient(135deg, #c9a227 0%, #e5c158 50%, #c9a227 100%);
+            --gradient-dark: linear-gradient(180deg, #0a0a0f 0%, #151520 100%);
         }
-        
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
+
         body {
-            font-family: 'Noto Sans JP', sans-serif;
-            background: var(--bg);
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+            background: var(--primary);
             color: var(--text);
             line-height: 1.6;
         }
-        
+
         .header {
-            background: var(--white);
-            box-shadow: var(--shadow);
-            position: sticky;
+            position: fixed;
             top: 0;
+            left: 0;
+            right: 0;
             z-index: 1000;
+            background: rgba(10, 10, 15, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
         }
-        
+
         .header-inner {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 0 40px;
+            height: 80px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            height: 70px;
         }
-        
+
         .logo {
-            font-size: 1.75rem;
-            font-weight: 700;
-            color: var(--primary);
-            letter-spacing: 0.1em;
+            display: flex;
+            align-items: center;
+            gap: 12px;
             text-decoration: none;
         }
-        
-        .logo span {
-            font-size: 0.65rem;
-            display: block;
-            color: var(--text-light);
-            letter-spacing: 0.05em;
-            font-weight: 400;
+
+        .logo-icon {
+            width: 45px;
+            height: 45px;
+            background: var(--gradient-gold);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 14px;
+            color: var(--primary);
         }
-        
-        .nav { display: flex; align-items: center; gap: 0.5rem; }
-        .nav-item { position: relative; }
-        .nav-link {
-            display: block;
-            padding: 0.75rem 1rem;
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text);
+            letter-spacing: 1px;
+        }
+
+        .logo-text span { color: var(--secondary); }
+
+        .nav { display: flex; gap: 40px; }
+
+        .nav a {
             color: var(--text);
             text-decoration: none;
-            font-size: 0.875rem;
+            font-size: 15px;
             font-weight: 500;
-            border-radius: 4px;
-            transition: all 0.2s;
+            transition: color 0.3s;
+            position: relative;
         }
-        .nav-link:hover { background: rgba(26,35,126,0.08); color: var(--primary); }
-        .nav-link.highlight { background: var(--primary); color: var(--white); }
-        .nav-link.highlight:hover { background: var(--primary-light); }
-        
-        .mega-menu {
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 520px;
-            background: var(--white);
-            border-radius: 8px;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.15);
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.2s;
-            padding: 1.5rem;
-            margin-top: 0;
-        }
-        .nav-item:hover .mega-menu { opacity: 1; visibility: visible; }
-        .nav-item::after {
+
+        .nav a:hover, .nav a.active { color: var(--secondary); }
+
+        .nav a.active::after {
             content: '';
             position: absolute;
-            top: 100%;
+            bottom: -8px;
             left: 0;
             right: 0;
-            height: 20px;
-            background: transparent;
+            height: 2px;
+            background: var(--gradient-gold);
         }
-        .mega-menu-inner {
+
+        .lang-switch {
+            display: flex;
+            gap: 10px;
+        }
+
+        .lang-switch a {
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 13px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .lang-switch a:first-child {
+            background: var(--secondary);
+            color: var(--primary);
+        }
+
+        .lang-switch a:last-child {
+            background: transparent;
+            color: var(--text);
+        }
+
+        .hero {
+            padding: 160px 40px 80px;
+            background: var(--gradient-dark);
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at top right, rgba(201, 162, 39, 0.1) 0%, transparent 50%);
+        }
+
+        .hero-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .breadcrumb {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+
+        .breadcrumb a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .breadcrumb a:hover { color: var(--secondary); }
+
+        .breadcrumb span { color: var(--secondary); }
+
+        .hero-title {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            background: var(--gradient-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 18px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        .hero-description {
+            font-size: 16px;
+            color: var(--text);
+            max-width: 600px;
+            line-height: 1.8;
+        }
+
+        .about-section {
+            padding: 80px 40px;
+            background: var(--primary);
+        }
+
+        .about-inner {
+            max-width: 1400px;
+            margin: 0 auto;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 2rem;
+            gap: 80px;
+            align-items: center;
         }
-        .mega-column h4 {
-            font-size: 0.75rem;
-            color: var(--text-light);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-bottom: 0.75rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 1px solid #eee;
+
+        .about-content h2 {
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 30px;
         }
-        .mega-list { list-style: none; }
-        .mega-list li { margin-bottom: 0.5rem; }
-        .mega-list a {
-            display: block;
-            padding: 0.4rem 0;
-            color: var(--text);
-            text-decoration: none;
-            font-size: 0.8125rem;
-            transition: color 0.2s;
-        }
-        .mega-list a:hover { color: var(--primary); }
-        .mega-list a small { display: block; color: #999; font-size: 0.7rem; }
-        
-        .breadcrumb {
-            background: #e8eaf6;
-            padding: 0.75rem 2rem;
-        }
-        .breadcrumb-inner {
-            max-width: 1400px;
-            margin: 0 auto;
-            font-size: 0.75rem;
-            color: var(--text-light);
-        }
-        .breadcrumb a {
-            color: var(--primary);
-            text-decoration: none;
-        }
-        .breadcrumb a:hover { text-decoration: underline; }
-        
-        .page-header {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-            color: var(--white);
-            padding: 4rem 2rem;
-        }
-        .page-header-inner {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-        .page-header h1 {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-        .page-header p {
-            opacity: 0.9;
-            font-size: 1rem;
-        }
-        
-        .section {
-            padding: 3rem 2rem;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-        
-        .section-title {
-            margin-bottom: 2rem;
-        }
-        .section-title h2 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--text);
-            margin-bottom: 0.5rem;
-        }
-        .section-title p {
-            color: var(--text-light);
-            font-size: 0.9375rem;
-        }
-        
-        .content-card {
-            background: var(--white);
-            border-radius: 16px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: var(--shadow);
-        }
-        .content-card h3 {
-            font-size: 1.25rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: var(--primary);
-        }
-        .content-card p {
-            font-size: 0.9375rem;
+
+        .about-content h2 span { color: var(--secondary); }
+
+        .about-content p {
+            font-size: 16px;
+            color: var(--text-muted);
             line-height: 1.8;
-            margin-bottom: 1rem;
+            margin-bottom: 20px;
         }
-        .content-card p:last-child {
-            margin-bottom: 0;
+
+        .about-visual {
+            aspect-ratio: 4/3;
+            background: linear-gradient(135deg, #1a1a25 0%, #252535 100%);
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        
-        .info-table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        .info-table th,
-        .info-table td {
-            padding: 1rem;
-            text-align: left;
-            border-bottom: 1px solid #eee;
-        }
-        .info-table th {
-            font-size: 0.8125rem;
-            color: var(--text-light);
-            font-weight: 500;
-            width: 30%;
-            background: #f8f9fa;
-        }
-        .info-table td {
-            font-size: 0.9375rem;
-        }
-        .info-table tr:last-child th,
-        .info-table tr:last-child td {
-            border-bottom: none;
-        }
-        
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-        .stat-card {
-            background: var(--white);
-            border-radius: 12px;
-            padding: 1.5rem;
+
+        .about-visual-content {
             text-align: center;
-            box-shadow: var(--shadow);
         }
-        .stat-card .number {
-            font-size: 2.5rem;
+
+        .about-logo {
+            font-size: 48px;
             font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 0.5rem;
+            margin-bottom: 20px;
         }
-        .stat-card .label {
-            font-size: 0.875rem;
-            color: var(--text-light);
+
+        .about-logo span { color: var(--secondary); }
+
+        .about-tagline {
+            font-size: 16px;
+            color: var(--text-muted);
         }
-        
-        .cert-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1rem;
-            margin: 2rem 0;
+
+        .values-section {
+            padding: 80px 40px;
+            background: var(--primary-light);
+            border-top: 1px solid var(--border);
         }
-        .cert-item {
-            background: var(--white);
-            border-radius: 8px;
-            padding: 1.5rem 1rem;
+
+        .values-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-header {
             text-align: center;
-            box-shadow: var(--shadow);
+            margin-bottom: 60px;
         }
-        .cert-item .icon {
-            width: 48px;
-            height: 48px;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+
+        .section-title {
+            font-size: 32px;
+            font-weight: 600;
+        }
+
+        .section-title span { color: var(--secondary); }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .value-card {
+            background: var(--primary);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .value-card:hover {
+            border-color: var(--secondary);
+            transform: translateY(-8px);
+        }
+
+        .value-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--gradient-gold);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 0.75rem;
-            color: var(--white);
-            font-size: 1rem;
-            font-weight: 700;
+            font-size: 28px;
+            margin: 0 auto 24px;
         }
-        .cert-item .name {
-            font-size: 0.875rem;
-            font-weight: 500;
-            margin-bottom: 0.25rem;
+
+        .value-title {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 16px;
         }
-        .cert-item .desc {
-            font-size: 0.75rem;
-            color: var(--text-light);
+
+        .value-desc {
+            font-size: 15px;
+            color: var(--text-muted);
+            line-height: 1.7;
         }
-        
+
         .footer {
-            background: #1a1a2e;
-            color: #aaa;
-            padding: 3rem 2rem 1.5rem;
-            margin-top: 3rem;
+            padding: 60px 40px 30px;
+            background: var(--primary);
+            border-top: 1px solid var(--border);
         }
-        .footer-inner { max-width: 1400px; margin: 0 auto; }
-        .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
+
+        .footer-inner {
+            max-width: 1400px;
+            margin: 0 auto;
         }
-        .footer-col h4 {
-            color: var(--white);
-            font-size: 0.875rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-        .footer-col ul { list-style: none; }
-        .footer-col li { margin-bottom: 0.5rem; }
-        .footer-col a {
-            color: #aaa;
-            text-decoration: none;
-            font-size: 0.8125rem;
-            transition: color 0.2s;
-        }
-        .footer-col a:hover { color: var(--white); }
+
         .footer-bottom {
-            border-top: 1px solid #333;
-            padding-top: 1.5rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
-            gap: 1rem;
+            padding-top: 30px;
+            border-top: 1px solid var(--border);
         }
-        .footer-bottom p { font-size: 0.75rem; }
-        
+
+        .footer-logo {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .footer-logo span { color: var(--secondary); }
+
+        .copyright {
+            font-size: 13px;
+            color: var(--text-dark);
+        }
+
         @media (max-width: 768px) {
+            .header-inner { padding: 0 20px; height: 70px; }
             .nav { display: none; }
-            .mega-menu { width: 100vw; left: 0; transform: none; }
-            .mega-menu-inner { grid-template-columns: 1fr; }
+            .hero { padding: 120px 20px 60px; }
+            .hero-title { font-size: 32px; }
+            .about-section { padding: 60px 20px; }
+            .about-inner { grid-template-columns: 1fr; gap: 40px; }
+            .values-section { padding: 60px 20px; }
+            .values-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -343,242 +362,83 @@
     <header class="header">
         <div class="header-inner">
             <a href="/ja/" class="logo">
-                SUNSEMI
-                <span>FCOB LED TECHNOLOGY</span>
+                <div class="logo-icon">SUN</div>
+                <div class="logo-text">SUN<span>SEMI</span></div>
             </a>
-            
             <nav class="nav">
-                <div class="nav-item">
-                    <a href="/ja/" class="nav-link">ホーム</a>
-                </div>
-                
-                <div class="nav-item">
-                    <a href="/ja/fcob-led/" class="nav-link">製品一覧</a>
-                    <div class="mega-menu">
-                        <div class="mega-menu-inner">
-                            <div class="mega-column">
-                                <h4>標準照明</h4>
-                                <ul class="mega-list">
-                                    <li><a href="/ja/fcob-led/single-color/">単色シリーズ<small>320D/480D/608D</small></a></li>
-                                    <li><a href="/ja/fcob-led/cct/">調光調色(CCT)<small>2700K-6500K</small></a></li>
-                                    <li><a href="/ja/fcob-led/rgb-series/">RGBフルカラー<small>RGB/RGBW/RGBCW</small></a></li>
-                                    <li><a href="/ja/fcob-led/mini-size/">ミニサイズ<small>2.7mm/4mm/5mm</small></a></li>
-                                </ul>
-                            </div>
-                            <div class="mega-column">
-                                <h4>特殊・高出力</h4>
-                                <ul class="mega-list">
-                                    <li><a href="/ja/fcob-led/high-efficiency/">高効率<small>HE Series</small></a></li>
-                                    <li><a href="/ja/fcob-led/high-power/">高出力<small>HP Series</small></a></li>
-                                    <li><a href="/ja/fcob-led/long-run/">超長連続<small>LR Series</small></a></li>
-                                    <li><a href="/ja/fcob-led/side-emitting/">側面発光<small>SE Series</small></a></li>
-                                    <li><a href="/ja/fcob-led/waterproof/">防水<small>IP67</small></a></li>
-                                    <li><a href="/ja/fcob-led/everywhere-cut/">任意カット<small>EC Series</small></a></li>
-                                    <li><a href="/ja/fcob-led/short-cut/">短カット<small>SC Series</small></a></li>
-                                    <li><a href="/ja/fcob-led/pixel-spi/">ピクセル制御(SPI)<small>360D-720D</small></a></li>
-                                    <li><a href="/ja/fcob-led/pixel-dmx/">ピクセル制御(DMX)<small>DMX512</small></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="nav-item">
-                    <a href="/ja/technical/" class="nav-link">技術資料</a>
-                </div>
-                
-                <div class="nav-item">
-                    <a href="/ja/applications/" class="nav-link">応用事例</a>
-                </div>
-                
-                <div class="nav-item">
-                    <a href="/ja/company/" class="nav-link">企業概要</a>
-                </div>
-                
-                <div class="nav-item">
-                    <a href="/ja/downloads/" class="nav-link">資料ダウンロード</a>
-                </div>
-                
-                <div class="nav-item">
-                    <a href="/ja/contact/" class="nav-link highlight">お問い合わせ</a>
-                </div>
+                <a href="/ja/">ホーム</a>
+                <a href="/ja/products/">製品情報</a>
+                <a href="/ja/technical/">技術資料</a>
+                <a href="/ja/company/" class="active">会社案内</a>
+                <a href="/ja/contact/">お問い合わせ</a>
             </nav>
+            <div class="lang-switch">
+                <a href="/ja/company/">JA</a>
+                <a href="/en/company/">EN</a>
+            </div>
         </div>
     </header>
 
-    <div class="breadcrumb">
-        <div class="breadcrumb-inner">
-            <a href="/ja/">ホーム</a> &gt; 会社概要
-        </div>
-    </div>
-
-    <section class="page-header">
-        <div class="page-header-inner">
-            <h1>会社概要</h1>
-            <p>FCOB LED照明のODM専門メーカーとして、高品質なLED灯帯を提供しています</p>
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="breadcrumb">
+                <a href="/ja/">ホーム</a>
+                <span>/</span>
+                <span style="color: var(--secondary);">会社案内</span>
+            </div>
+            <h1 class="hero-title">会社案内</h1>
+            <p class="hero-subtitle">About Us</p>
+            <p class="hero-description">SUNSEMIは、FCOB LEDテープライトの専業メーカーとして、高品質な照明製品の開発・製造を行っています。</p>
         </div>
     </section>
 
-    <section class="section">
-        <div class="section-title">
-            <h2>企業情報</h2>
-            <p>SUNSEMIの基本情報</p>
-        </div>
-        
-        <div class="content-card">
-            <table class="info-table">
-                <tr>
-                    <th>会社名</th>
-                    <td>SUNSEMI Co., Ltd.</td>
-                </tr>
-                <tr>
-                    <th>設立</th>
-                    <td>2010年</td>
-                </tr>
-                <tr>
-                    <th>所在地</th>
-                    <td>中国広東省深圳市</td>
-                </tr>
-                <tr>
-                    <th>事業内容</th>
-                    <td>FCOB LED灯帯の設計・製造・販売、ODM/OEM対応</td>
-                </tr>
-                <tr>
-                    <th>主要製品</th>
-                    <td>FCOB LEDフレキシブル灯帯（単色、調光調色、RGB、特殊仕様等）</td>
-                </tr>
-                <tr>
-                    <th>主要市場</th>
-                    <td>日本、欧州、北米、東南アジア</td>
-                </tr>
-            </table>
-        </div>
-        
-        <div class="section-title">
-            <h2>企業実績</h2>
-            <p>SUNSEMIの数字で見る実績</p>
-        </div>
-        
-        <div class="stats-grid">
-            <div class="stat-card">
-                <div class="number">14</div>
-                <div class="label">創業年数</div>
+    <section class="about-section">
+        <div class="about-inner">
+            <div class="about-content">
+                <h2><span>企業概要</span></h2>
+                <p>SUNSEMIは、FCOB（Flip Chip On Board）技術を核としたLEDテープライトの専業メーカーです。</p>
+        <p>高演色性（Ra95+）、ドットレス発光、超薄型設計を特長とする製品を提供し、商業施設、住宅、ホテル、小売店など、幅広い分野でご愛用いただいています。</p>
+        <p>品質第一の方針のもと、厳格な品質管理と継続的な技術革新により、お客様に最高の照明ソリューションをお届けします。</p>
             </div>
-            <div class="stat-card">
-                <div class="number">500+</div>
-                <div class="label">取引先企業</div>
-            </div>
-            <div class="stat-card">
-                <div class="number">13</div>
-                <div class="label">製品シリーズ</div>
-            </div>
-            <div class="stat-card">
-                <div class="number">50M+</div>
-                <div class="label">年間生産量(m)</div>
+            <div class="about-visual">
+                <div class="about-visual-content">
+                    <div class="about-logo">SUN<span>SEMI</span></div>
+                    <p class="about-tagline">Premium FCOB LED Solutions</p>
+                </div>
             </div>
         </div>
-        
-        <div class="section-title">
-            <h2>認証・規格</h2>
-            <p>取得している認証と規格</p>
-        </div>
-        
-        <div class="cert-grid">
-            <div class="cert-item">
-                <div class="icon">UL</div>
-                <div class="name">UL E354137</div>
-                <div class="desc">北米安全規格</div>
+    </section>
+
+    <section class="values-section">
+        <div class="values-inner">
+            <div class="section-header">
+                <h2 class="section-title"><span>バリュー</span></h2>
             </div>
-            <div class="cert-item">
-                <div class="icon">CE</div>
-                <div class="name">CEマーク</div>
-                <div class="desc">欧州適合規格</div>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">◈</div>
+                    <h3 class="value-title">品質第一</h3>
+                    <p class="value-desc">世界中のあらゆる空間に、高品質で美しい光を届けること。それがSUNSEMIの使命です。</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">✦</div>
+                    <h3 class="value-title">技術革新</h3>
+                    <p class="value-desc">最先端のFCOB技術と厳格な品質管理により、プロフェッショナルが信頼できる照明製品を提供し続けます。</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">◉</div>
+                    <h3 class="value-title">顧客本位</h3>
+                    <p class="value-desc">世界中のあらゆる空間に、高品質で美しい光を届けること。それがSUNSEMIの使命です。</p>
+                </div>
             </div>
-            <div class="cert-item">
-                <div class="icon">RoHS</div>
-                <div class="name">RoHS</div>
-                <div class="desc">有害物質規制</div>
-            </div>
-            <div class="cert-item">
-                <div class="icon">ISO</div>
-                <div class="name">ISO9001</div>
-                <div class="desc">品質管理システム</div>
-            </div>
-        </div>
-        
-        <div class="section-title">
-            <h2>企業理念</h2>
-            <p>SUNSEMIの考え方</p>
-        </div>
-        
-        <div class="content-card">
-            <h3>品質第一</h3>
-            <p>
-                私たちは常に品質を最優先に考えます。製品の設計から製造、出荷に至るまで、厳格な品質管理を徹底しています。お客様に安心してご使用いただける製品を提供することが、私たちの使命です。
-            </p>
-        </div>
-        
-        <div class="content-card">
-            <h3>技術革新</h3>
-            <p>
-                FCOB技術をコアとしたLED照明の技術革新を追求しています。独自の開発能力と柔軟な生産体制により、お客様のニーズに合わせたカスタマイズにも迅速に対応します。
-            </p>
-        </div>
-        
-        <div class="content-card">
-            <h3>顧客志向</h3>
-            <p>
-                お客様の成功が私たちの成功です。日本の照明メーカー様をはじめ、世界中のパートナー様と緊密に連携し、最適な照明ソリューションを提供します。
-            </p>
         </div>
     </section>
 
     <footer class="footer">
         <div class="footer-inner">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h4>製品一覧</h4>
-                    <ul>
-                        <li><a href="/ja/fcob-led/single-color/">単色シリーズ</a></li>
-                        <li><a href="/ja/fcob-led/cct/">調光調色(CCT)</a></li>
-                        <li><a href="/ja/fcob-led/rgb-series/">RGBフルカラー</a></li>
-                        <li><a href="/ja/fcob-led/mini-size/">ミニサイズ</a></li>
-                        <li><a href="/ja/fcob-led/waterproof/">防水(IP67)</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-col">
-                    <h4>技術資料</h4>
-                    <ul>
-                        <li><a href="/ja/technical/">技術資料トップ</a></li>
-                        <li><a href="/ja/technical/pse-guide/">電気用品安全法ガイド</a></li>
-                        <li><a href="/ja/technical/installation/">施工ガイド</a></li>
-                        <li><a href="/ja/technical/faq/">技術FAQ</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-col">
-                    <h4>企業情報</h4>
-                    <ul>
-                        <li><a href="/ja/company/">会社概要</a></li>
-                        <li><a href="/ja/company/quality/">品質管理</a></li>
-                        <li><a href="/ja/downloads/">資料ダウンロード</a></li>
-                        <li><a href="/ja/contact/">お問い合わせ</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-col">
-                    <h4>法的情報</h4>
-                    <ul>
-                        <li><a href="/ja/company/privacy/">プライバシーポリシー</a></li>
-                        <li><a href="/ja/company/terms/">利用規約</a></li>
-                    </ul>
-                </div>
-            </div>
-            
             <div class="footer-bottom">
-                <p>&copy; 2024 SUNSEMI. All rights reserved.</p>
-                <p>FCOB LED Lighting Solutions</p>
+                <div class="footer-logo">SUN<span>SEMI</span></div>
+                <p class="copyright">© 2024 SUNSEMI. All rights reserved.</p>
             </div>
         </div>
     </footer>

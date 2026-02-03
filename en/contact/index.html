@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>お問い合わせ | SUNSEMI</title>
+    <title>Contact | SUNSEMI</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -118,13 +118,13 @@
         }
 
         .lang-switch a:first-child {
-            background: var(--secondary);
-            color: var(--primary);
+            background: transparent;
+            color: var(--text);
         }
 
         .lang-switch a:last-child {
-            background: transparent;
-            color: var(--text);
+            background: var(--secondary);
+            color: var(--primary);
         }
 
         .hero {
@@ -346,16 +346,16 @@
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/ja/" class="logo">
+            <a href="/en/" class="logo">
                 <div class="logo-icon">SUN</div>
                 <div class="logo-text">SUN<span>SEMI</span></div>
             </a>
             <nav class="nav">
-                <a href="/ja/">ホーム</a>
-                <a href="/ja/products/">製品情報</a>
-                <a href="/ja/technical/">技術資料</a>
-                <a href="/ja/company/">会社案内</a>
-                <a href="/ja/contact/" class="active">お問い合わせ</a>
+                <a href="/en/">Home</a>
+                <a href="/en/products/">Products</a>
+                <a href="/en/technical/">Technical</a>
+                <a href="/en/company/">Company</a>
+                <a href="/en/contact/" class="active">Contact</a>
             </nav>
             <div class="lang-switch">
                 <a href="/ja/contact/">JA</a>
@@ -367,53 +367,53 @@
     <section class="hero">
         <div class="hero-inner">
             <div class="breadcrumb">
-                <a href="/ja/">ホーム</a>
+                <a href="/en/">Home</a>
                 <span>/</span>
-                <span style="color: var(--secondary);">お問い合わせ</span>
+                <span style="color: var(--secondary);">Contact</span>
             </div>
-            <h1 class="hero-title">お問い合わせ</h1>
-            <p class="hero-subtitle">Contact Us</p>
-            <p class="hero-description">製品に関するお問い合わせ、カスタムオーダー、技術サポートなど、お気軽にお問い合わせください。</p>
+            <h1 class="hero-title">Contact Us</h1>
+            <p class="hero-subtitle">Get in Touch</p>
+            <p class="hero-description">Feel free to contact us for product inquiries, custom orders, technical support, or any questions.</p>
         </div>
     </section>
 
     <section class="contact-section">
         <div class="contact-inner">
             <div class="form-section">
-                <h2><span>お問い合わせフォーム</span></h2>
+                <h2><span>Contact Form</span></h2>
                 <form onsubmit="event.preventDefault(); alert('Message sent!');">
                     <div class="form-group">
-                        <label>お名前</label>
+                        <label>Name</label>
                         <input type="text" placeholder="" required>
                     </div>
                     <div class="form-group">
-                        <label>メールアドレス</label>
+                        <label>Email</label>
                         <input type="email" placeholder="" required>
                     </div>
                     <div class="form-group">
-                        <label>会社名</label>
+                        <label>Company</label>
                         <input type="text" placeholder="">
                     </div>
                     <div class="form-group">
-                        <label>お問い合わせ内容</label>
+                        <label>Message</label>
                         <textarea placeholder="" required></textarea>
                     </div>
-                    <button type="submit" class="btn-submit">送信する →</button>
+                    <button type="submit" class="btn-submit">Send Message →</button>
                 </form>
             </div>
             <div class="info-section">
-                <h3><span>連絡先情報</span></h3>
+                <h3><span>Contact Information</span></h3>
                 <div class="info-item">
-                    <div class="info-label">住所</div>
-                    <div class="info-value">中国広東省深圳市</div>
+                    <div class="info-label">Address</div>
+                    <div class="info-value">Shenzhen, Guangdong, China</div>
                 </div>
                 <div class="info-item">
                     <div class="info-label">Email</div>
                     <div class="info-value">info@sunsemi.com</div>
                 </div>
                 <div class="info-item">
-                    <div class="info-label">営業時間</div>
-                    <div class="info-value">月曜日〜金曜日 9:00〜18:00</div>
+                    <div class="info-label">Business Hours</div>
+                    <div class="info-value">Monday - Friday 9:00-18:00</div>
                 </div>
             </div>
         </div>

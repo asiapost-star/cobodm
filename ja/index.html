@@ -3,43 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FCOB LED・COB LED ODM製造メーカー｜SUNSEMI</title>
-    <meta name="description" content="高品質FCOB LEDフレキシブル灯帯のODM専門メーカー。10mm基板・8mmカット・3Mテープ付。UL/E354137、RoHS、CE認証取得。日本の照明メーカー向けOEM/ODM対応。">
-    <meta name="keywords" content="FCOB LED,COB LED,LED灯帯,ODM,OEM,照明メーカー,フレキシブルLED,日本">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>次世代 FCOB LED テープライト | 高演色・ドットレス技術の専門サイト | SUNSEMI</title>
+    <meta name="description" content="SUNSEMI FCOB LEDテープライト。Ra90高演色性、IP67防水等級、シリコン一体押出成形。業界最先端の均一発光技術によるプロフェッショナル照明ソリューション。">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #1a237e;
-            --primary-light: #3949ab;
+            --primary: #0a0a0f;
+            --primary-light: #1a1a2e;
             --secondary: #c9a227;
-            --bg: #f5f5f5;
-            --text: #333;
-            --text-light: #666;
-            --white: #fff;
-            --shadow: 0 2px 8px rgba(0,0,0,0.1);
+            --secondary-light: #e5c158;
+            --bg: #0a0a0f;
+            --bg-light: #12121a;
+            --text: #ffffff;
+            --text-muted: #888899;
+            --border: #2a2a3a;
+            --gradient-gold: linear-gradient(135deg, #c9a227 0%, #e5c158 50%, #c9a227 100%);
         }
         
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        html { scroll-behavior: smooth; }
         
         body {
-            font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'Noto Sans JP', sans-serif;
             background: var(--bg);
             color: var(--text);
             line-height: 1.6;
+            overflow-x: hidden;
         }
         
         /* Header */
         .header {
-            background: var(--white);
-            box-shadow: var(--shadow);
-            position: sticky;
+            background: rgba(10, 10, 15, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            position: fixed;
             top: 0;
+            left: 0;
+            right: 0;
             z-index: 1000;
         }
         
@@ -50,144 +51,128 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            height: 70px;
+            height: 80px;
         }
         
         .logo {
-            font-size: 1.75rem;
-            font-weight: 700;
-            color: var(--primary);
-            letter-spacing: 0.1em;
+            display: flex;
+            flex-direction: column;
             text-decoration: none;
         }
         
-        .logo span {
-            font-size: 0.65rem;
-            display: block;
-            color: var(--text-light);
-            letter-spacing: 0.05em;
-            font-weight: 400;
+        .logo-main {
+            font-size: 1.75rem;
+            font-weight: 700;
+            background: var(--gradient-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: 0.15em;
         }
         
-        /* Navigation */
-        .nav {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
+        .logo-sub {
+            font-size: 0.6rem;
+            color: var(--text-muted);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
         }
         
-        .nav-item {
-            position: relative;
-        }
-        
+        .nav { display: flex; align-items: center; gap: 0.5rem; }
+        .nav-item { position: relative; }
         .nav-link {
             display: block;
-            padding: 0.75rem 1rem;
+            padding: 0.75rem 1.25rem;
             color: var(--text);
             text-decoration: none;
             font-size: 0.875rem;
             font-weight: 500;
-            border-radius: 4px;
-            transition: all 0.2s;
+            border-radius: 8px;
+            transition: all 0.3s;
         }
-        
-        .nav-link:hover {
-            background: rgba(26,35,126,0.08);
+        .nav-link:hover { 
+            color: var(--secondary); 
+            background: rgba(201, 162, 39, 0.1);
+        }
+        .nav-link.highlight { 
+            background: var(--gradient-gold);
             color: var(--primary);
+            font-weight: 700;
+        }
+        .nav-link.highlight:hover { 
+            box-shadow: 0 4px 20px rgba(201, 162, 39, 0.4);
         }
         
-        .nav-link.highlight {
-            background: var(--primary);
-            color: var(--white);
-        }
-        
-        .nav-link.highlight:hover {
-            background: var(--primary-light);
-        }
-        
-        /* Mega Menu - Two Column */
         .mega-menu {
             position: absolute;
             top: 100%;
             left: 50%;
             transform: translateX(-50%);
-            width: 520px;
-            background: var(--white);
-            border-radius: 8px;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+            width: 560px;
+            background: rgba(18, 18, 26, 0.98);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
             opacity: 0;
             visibility: hidden;
-            transition: all 0.2s;
-            padding: 1.5rem;
-            margin-top: 0;
+            transition: all 0.3s;
+            padding: 2rem;
+            margin-top: 1rem;
         }
-        
-        .nav-item:hover .mega-menu {
-            opacity: 1;
-            visibility: visible;
-        }
-        
-        /* Buffer zone to prevent mouseout */
-        .nav-item::after {
-            content: '';
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            height: 20px;
-            background: transparent;
-        }
-        
+        .nav-item:hover .mega-menu { opacity: 1; visibility: visible; }
         .mega-menu-inner {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 2rem;
         }
-        
         .mega-column h4 {
             font-size: 0.75rem;
-            color: var(--text-light);
+            color: var(--secondary);
             text-transform: uppercase;
-            letter-spacing: 0.05em;
-            margin-bottom: 0.75rem;
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
             padding-bottom: 0.5rem;
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid var(--border);
         }
-        
-        .mega-list {
-            list-style: none;
-        }
-        
-        .mega-list li {
-            margin-bottom: 0.5rem;
-        }
-        
+        .mega-list { list-style: none; }
+        .mega-list li { margin-bottom: 0.75rem; }
         .mega-list a {
             display: block;
-            padding: 0.4rem 0;
+            padding: 0.5rem 0;
             color: var(--text);
             text-decoration: none;
-            font-size: 0.8125rem;
-            transition: color 0.2s;
+            font-size: 0.875rem;
+            transition: all 0.2s;
+        }
+        .mega-list a:hover { color: var(--secondary); padding-left: 0.5rem; }
+        .mega-list a small { display: block; color: var(--text-muted); font-size: 0.7rem; margin-top: 0.25rem; }
+        
+        .lang-switch {
+            display: flex;
+            gap: 0.5rem;
+            margin-left: 1rem;
+        }
+        .lang-switch a {
+            padding: 0.375rem 0.75rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.75rem;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            transition: all 0.2s;
+        }
+        .lang-switch a:hover, .lang-switch a.active {
+            color: var(--secondary);
+            border-color: var(--secondary);
         }
         
-        .mega-list a:hover {
-            color: var(--primary);
-        }
-        
-        .mega-list a small {
-            display: block;
-            color: #999;
-            font-size: 0.7rem;
-        }
-        
-        /* Hero Section */
+        /* Hero */
         .hero {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-            color: var(--white);
-            padding: 5rem 2rem;
-            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             position: relative;
+            padding: 120px 2rem 4rem;
             overflow: hidden;
         }
         
@@ -198,58 +183,83 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-            opacity: 0.5;
+            background: 
+                radial-gradient(ellipse at 20% 50%, rgba(201, 162, 39, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 50%, rgba(201, 162, 39, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        
+        .hero-glow {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(201, 162, 39, 0.15) 0%, transparent 70%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
         }
         
         .hero-content {
+            text-align: center;
+            max-width: 900px;
             position: relative;
             z-index: 1;
-            max-width: 900px;
-            margin: 0 auto;
+        }
+        
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: rgba(201, 162, 39, 0.1);
+            border: 1px solid rgba(201, 162, 39, 0.3);
+            border-radius: 100px;
+            font-size: 0.75rem;
+            color: var(--secondary);
+            margin-bottom: 2rem;
+        }
+        
+        .hero-badge::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: var(--secondary);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
         }
         
         .hero h1 {
-            font-size: 2.5rem;
+            font-size: 3.5rem;
             font-weight: 700;
-            margin-bottom: 1rem;
-            line-height: 1.3;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+        }
+        
+        .hero h1 span {
+            background: var(--gradient-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
         
         .hero p {
             font-size: 1.125rem;
-            opacity: 0.9;
-            margin-bottom: 2rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 2.5rem;
         }
         
-        .hero-badges {
+        .hero-buttons {
             display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-            margin-top: 2rem;
-        }
-        
-        .hero-badge {
-            text-align: center;
-        }
-        
-        .hero-badge .number {
-            font-size: 2rem;
-            font-weight: 700;
-            display: block;
-        }
-        
-        .hero-badge .label {
-            font-size: 0.75rem;
-            opacity: 0.8;
-        }
-        
-        /* CTA Buttons */
-        .cta-group {
-            display: flex;
-            justify-content: center;
             gap: 1rem;
+            justify-content: center;
             flex-wrap: wrap;
         }
         
@@ -257,244 +267,295 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            padding: 0.875rem 2rem;
-            border-radius: 4px;
+            padding: 1rem 2rem;
+            border-radius: 8px;
             font-size: 0.9375rem;
             font-weight: 500;
             text-decoration: none;
-            transition: all 0.2s;
+            transition: all 0.3s;
         }
         
         .btn-primary {
-            background: var(--secondary);
-            color: var(--text);
+            background: var(--gradient-gold);
+            color: var(--primary);
         }
-        
         .btn-primary:hover {
-            background: #b8941f;
+            box-shadow: 0 8px 30px rgba(201, 162, 39, 0.4);
             transform: translateY(-2px);
         }
         
-        .btn-outline {
+        .btn-secondary {
             background: transparent;
-            color: var(--white);
-            border: 2px solid rgba(255,255,255,0.3);
-        }
-        
-        .btn-outline:hover {
-            border-color: var(--white);
-            background: rgba(255,255,255,0.1);
-        }
-        
-        /* Section */
-        .section {
-            padding: 4rem 2rem;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-        
-        .section-title h2 {
-            font-size: 1.75rem;
-            font-weight: 700;
             color: var(--text);
-            margin-bottom: 0.5rem;
+            border: 1px solid var(--border);
+        }
+        .btn-secondary:hover {
+            border-color: var(--secondary);
+            color: var(--secondary);
         }
         
-        .section-title p {
-            color: var(--text-light);
-            font-size: 0.9375rem;
-        }
-        
-        /* Product Categories */
-        .product-grid {
+        /* Features Bar */
+        .features-bar {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-        }
-        
-        .product-card {
-            background: var(--white);
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: all 0.3s;
-            text-decoration: none;
-            color: var(--text);
-        }
-        
-        .product-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-        }
-        
-        .product-card-image {
-            height: 160px;
-            background: linear-gradient(135deg, #e8eaf6 0%, #c5cae9 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
-        
-        .product-card-image::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 60px;
-            background: linear-gradient(to top, rgba(26,35,126,0.1), transparent);
-        }
-        
-        .product-card-icon {
-            width: 64px;
-            height: 64px;
-            background: var(--primary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            font-size: 1.5rem;
-            z-index: 1;
-        }
-        
-        .product-card-body {
-            padding: 1.25rem;
-        }
-        
-        .product-card h3 {
-            font-size: 1rem;
-            font-weight: 700;
-            margin-bottom: 0.25rem;
-        }
-        
-        .product-card .en {
-            font-size: 0.75rem;
-            color: var(--text-light);
-            margin-bottom: 0.75rem;
-        }
-        
-        .product-card p {
-            font-size: 0.8125rem;
-            color: var(--text-light);
-            line-height: 1.6;
-        }
-        
-        .product-card-tags {
-            display: flex;
-            gap: 0.5rem;
-            margin-top: 1rem;
-            flex-wrap: wrap;
-        }
-        
-        .tag {
-            font-size: 0.6875rem;
-            padding: 0.25rem 0.5rem;
-            background: #e8eaf6;
-            color: var(--primary);
-            border-radius: 3px;
-            font-weight: 500;
-        }
-        
-        /* Features */
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(4, 1fr);
             gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+            border-top: 1px solid var(--border);
         }
         
         .feature-item {
             text-align: center;
-            padding: 2rem;
-            background: var(--white);
-            border-radius: 8px;
-            box-shadow: var(--shadow);
         }
         
-        .feature-icon {
-            width: 72px;
-            height: 72px;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-            border-radius: 50%;
+        .feature-item .number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: var(--gradient-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+        
+        .feature-item .label {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+        
+        /* Section */
+        .section {
+            padding: 6rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .section-header h2 span {
+            background: var(--gradient-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 1.125rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Product Series */
+        .series-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+        
+        .series-card {
+            background: var(--bg-light);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2rem;
+            text-decoration: none;
+            color: var(--text);
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .series-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient-gold);
+            transform: scaleX(0);
+            transition: transform 0.3s;
+        }
+        
+        .series-card:hover {
+            border-color: var(--secondary);
+            transform: translateY(-4px);
+        }
+        
+        .series-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .series-card .icon {
+            width: 56px;
+            height: 56px;
+            background: rgba(201, 162, 39, 0.1);
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 1.25rem;
-            color: var(--white);
-            font-size: 1.75rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
         }
         
-        .feature-item h3 {
+        .series-card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .series-card .en {
+            font-size: 0.75rem;
+            color: var(--secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
+        }
+        
+        .series-card p {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+        
+        .series-card .arrow {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1.5rem;
+            color: var(--secondary);
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        
+        /* Featured Products */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+        
+        .product-card {
+            background: var(--bg-light);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+        
+        .product-card:hover {
+            border-color: var(--secondary);
+            transform: translateY(-4px);
+        }
+        
+        .product-image {
+            height: 180px;
+            background: linear-gradient(135deg, #1a1a2e 0%, #0a0a0f 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .product-image::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient-gold);
+            box-shadow: 0 0 30px rgba(201, 162, 39, 0.5);
+        }
+        
+        .product-badges {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+        .product-badge {
+            padding: 0.25rem 0.5rem;
+            background: rgba(10, 10, 15, 0.8);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            font-size: 0.625rem;
+            color: var(--secondary);
+        }
+        
+        .product-info {
+            padding: 1.5rem;
+        }
+        
+        .product-info h4 {
             font-size: 1rem;
             font-weight: 700;
             margin-bottom: 0.5rem;
         }
         
-        .feature-item p {
+        .product-info p {
             font-size: 0.8125rem;
-            color: var(--text-light);
+            color: var(--text-muted);
+            line-height: 1.5;
+            margin-bottom: 1rem;
         }
         
-        /* Certifications */
-        .cert-section {
-            background: var(--white);
-            padding: 3rem 2rem;
-        }
-        
-        .cert-grid {
+        .product-specs {
             display: flex;
-            justify-content: center;
-            gap: 3rem;
-            flex-wrap: wrap;
-            max-width: 1000px;
-            margin: 0 auto;
+            gap: 1rem;
         }
         
-        .cert-item {
+        .product-spec {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+        
+        .product-spec span {
+            color: var(--secondary);
+            font-weight: 500;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: var(--bg-light);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            padding: 6rem 2rem;
             text-align: center;
         }
         
-        .cert-icon {
-            width: 64px;
-            height: 64px;
-            background: #f5f5f5;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 0.75rem;
-            font-size: 1.5rem;
+        .cta-section h2 {
+            font-size: 2.5rem;
             font-weight: 700;
-            color: var(--primary);
+            margin-bottom: 1rem;
         }
         
-        .cert-item h4 {
-            font-size: 0.875rem;
-            font-weight: 700;
-            margin-bottom: 0.25rem;
-        }
-        
-        .cert-item p {
-            font-size: 0.6875rem;
-            color: var(--text-light);
-        }
-        
-        .cert-item a {
-            color: var(--primary);
-            text-decoration: none;
+        .cta-section p {
+            color: var(--text-muted);
+            font-size: 1.125rem;
+            max-width: 500px;
+            margin: 0 auto 2rem;
         }
         
         /* Footer */
         .footer {
-            background: #1a1a2e;
-            color: #aaa;
-            padding: 3rem 2rem 1.5rem;
+            background: var(--bg-light);
+            padding: 4rem 2rem 2rem;
+            border-top: 1px solid var(--border);
         }
         
         .footer-inner {
@@ -504,94 +565,66 @@
         
         .footer-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
+            grid-template-columns: 2fr repeat(3, 1fr);
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-brand .logo-main {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-brand p {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+            line-height: 1.6;
         }
         
         .footer-col h4 {
-            color: var(--white);
             font-size: 0.875rem;
             font-weight: 700;
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
+            margin-bottom: 1.5rem;
+            color: var(--text);
         }
         
-        .footer-col ul {
-            list-style: none;
-        }
-        
-        .footer-col li {
-            margin-bottom: 0.5rem;
-        }
-        
+        .footer-col ul { list-style: none; }
+        .footer-col li { margin-bottom: 0.75rem; }
         .footer-col a {
-            color: #aaa;
+            color: var(--text-muted);
             text-decoration: none;
-            font-size: 0.8125rem;
+            font-size: 0.875rem;
             transition: color 0.2s;
         }
-        
-        .footer-col a:hover {
-            color: var(--white);
-        }
+        .footer-col a:hover { color: var(--secondary); }
         
         .footer-bottom {
-            border-top: 1px solid #333;
-            padding-top: 1.5rem;
+            border-top: 1px solid var(--border);
+            padding-top: 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
-            gap: 1rem;
         }
         
         .footer-bottom p {
+            color: var(--text-muted);
             font-size: 0.75rem;
         }
         
-        .footer-bottom a {
-            color: #aaa;
-            text-decoration: none;
-            font-size: 0.75rem;
+        @media (max-width: 1024px) {
+            .series-grid { grid-template-columns: repeat(2, 1fr); }
+            .products-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
         }
         
-        /* Mobile */
         @media (max-width: 768px) {
-            .header-inner {
-                padding: 0 1rem;
-            }
-            
-            .nav {
-                display: none;
-            }
-            
-            .hero {
-                padding: 3rem 1rem;
-            }
-            
-            .hero h1 {
-                font-size: 1.75rem;
-            }
-            
-            .mega-menu {
-                width: 100vw;
-                left: 0;
-                transform: none;
-            }
-            
-            .mega-menu-inner {
-                grid-template-columns: 1fr;
-            }
-            
-            .section {
-                padding: 2.5rem 1rem;
-            }
-            
-            .product-grid {
-                grid-template-columns: 1fr;
-            }
+            .nav { display: none; }
+            .hero h1 { font-size: 2rem; }
+            .features-bar { grid-template-columns: repeat(2, 1fr); }
+            .series-grid { grid-template-columns: 1fr; }
+            .products-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
         }
     </style>
 </head>
@@ -600,41 +633,29 @@
     <header class="header">
         <div class="header-inner">
             <a href="/ja/" class="logo">
-                SUNSEMI
-                <span>FCOB LED TECHNOLOGY</span>
+                <span class="logo-main">SUNSEMI</span>
+                <span class="logo-sub">FCOB LED TECHNOLOGY</span>
             </a>
             
             <nav class="nav">
                 <div class="nav-item">
-                    <a href="/ja/" class="nav-link">ホーム</a>
-                </div>
-                
-                <div class="nav-item">
-                    <a href="/ja/fcob-led/" class="nav-link">製品一覧</a>
-                    <!-- Mega Menu -->
+                    <a href="/ja/products/" class="nav-link">製品情報</a>
                     <div class="mega-menu">
                         <div class="mega-menu-inner">
                             <div class="mega-column">
                                 <h4>標準照明</h4>
                                 <ul class="mega-list">
-                                    <li><a href="/ja/fcob-led/single-color/">単色シリーズ<small>320D/480D/608D</small></a></li>
-                                    <li><a href="/ja/fcob-led/cct/">調光調色(CCT)<small>2700K-6500K</small></a></li>
-                                    <li><a href="/ja/fcob-led/rgb-series/">RGBフルカラー<small>RGB/RGBW/RGBCW</small></a></li>
-                                    <li><a href="/ja/fcob-led/mini-size/">ミニサイズ<small>2.7mm/4mm/5mm</small></a></li>
+                                    <li><a href="/ja/products/single-color/">単色シリーズ<small>320D/480D/608D</small></a></li>
+                                    <li><a href="/ja/products/tunable-white/">調光調色シリーズ<small>2700K-6500K</small></a></li>
+                                    <li><a href="/ja/products/rgb/">RGBシリーズ<small>RGB/RGBW/RGBCW</small></a></li>
                                 </ul>
                             </div>
                             <div class="mega-column">
-                                <h4>特殊・高出力</h4>
+                                <h4>特殊仕様</h4>
                                 <ul class="mega-list">
-                                    <li><a href="/ja/fcob-led/high-efficiency/">高効率<small>HE Series</small></a></li>
-                                    <li><a href="/ja/fcob-led/high-power/">高出力<small>HP Series</small></a></li>
-                                    <li><a href="/ja/fcob-led/long-run/">超長連続<small>LR Series</small></a></li>
-                                    <li><a href="/ja/fcob-led/side-emitting/">側面発光<small>SE Series</small></a></li>
-                                    <li><a href="/ja/fcob-led/waterproof/">防水<small>IP67</small></a></li>
-                                    <li><a href="/ja/fcob-led/everywhere-cut/">任意カット<small>EC Series</small></a></li>
-                                    <li><a href="/ja/fcob-led/short-cut/">短カット<small>SC Series</small></a></li>
-                                    <li><a href="/ja/fcob-led/pixel-spi/">ピクセル制御(SPI)<small>360D-720D</small></a></li>
-                                    <li><a href="/ja/fcob-led/pixel-dmx/">ピクセル制御(DMX)<small>DMX512</small></a></li>
+                                    <li><a href="/ja/products/neon/">ネオンフレックス<small>シリコン一体成形</small></a></li>
+                                    <li><a href="/ja/products/ip67/">IP67防水シリーズ<small>屋外対応</small></a></li>
+                                    <li><a href="/ja/products/high-voltage/">高圧シリーズ<small>AC 220V</small></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -642,11 +663,11 @@
                 </div>
                 
                 <div class="nav-item">
-                    <a href="/ja/technical/" class="nav-link">技術資料</a>
+                    <a href="/ja/technology/" class="nav-link">技術資料</a>
                 </div>
                 
                 <div class="nav-item">
-                    <a href="/ja/applications/" class="nav-link">応用事例</a>
+                    <a href="/ja/cases/" class="nav-link">応用事例</a>
                 </div>
                 
                 <div class="nav-item">
@@ -654,283 +675,222 @@
                 </div>
                 
                 <div class="nav-item">
-                    <a href="/ja/downloads/" class="nav-link">資料ダウンロード</a>
+                    <a href="/ja/inquiry/" class="nav-link highlight">お問い合わせ</a>
                 </div>
                 
-                <div class="nav-item">
-                    <a href="/ja/contact/" class="nav-link highlight">お問い合わせ</a>
+                <div class="lang-switch">
+                    <a href="/ja/" class="active">JA</a>
+                    <a href="/en/">EN</a>
                 </div>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section class="hero">
+        <div class="hero-glow"></div>
         <div class="hero-content">
-            <h1>次世代FCOB LED照明の<br>ODMパートナー</h1>
-            <p>高密度COB実装技術による均一発光。日本の照明メーカー様向けにOEM/ODM対応。</p>
-            
-            <div class="cta-group">
-                <a href="/ja/fcob-led/" class="btn btn-primary">製品一覧を見る</a>
-                <a href="/ja/contact/" class="btn btn-outline">お問い合わせ</a>
-            </div>
-            
-            <div class="hero-badges">
-                <div class="hero-badge">
-                    <span class="number">10mm</span>
-                    <span class="label">基板幅</span>
-                </div>
-                <div class="hero-badge">
-                    <span class="number">8mm</span>
-                    <span class="label">カットピッチ</span>
-                </div>
-                <div class="hero-badge">
-                    <span class="number">CRI90+</span>
-                    <span class="label">高演色性</span>
-                </div>
-                <div class="hero-badge">
-                    <span class="number">3M</span>
-                    <span class="label">両面テープ</span>
-                </div>
+            <div class="hero-badge">3-Step SDCM 色容差管理技術</div>
+            <h1>次世代 <span>FCOB LED</span><br>ドットレス技術</h1>
+            <p>Ra90高演色性、IP67防水等級、シリコン一体押出成形。業界最先端の均一発光技術によるプロフェッショナル照明ソリューション。</p>
+            <div class="hero-buttons">
+                <a href="/ja/products/" class="btn btn-primary">製品一覧</a>
+                <a href="/ja/inquiry/" class="btn btn-secondary">お問い合わせ</a>
             </div>
         </div>
     </section>
 
-    <!-- Product Categories -->
+    <!-- Features Bar -->
+    <div class="features-bar">
+        <div class="feature-item">
+            <div class="number">Ra90+</div>
+            <div class="label">高演色性</div>
+        </div>
+        <div class="feature-item">
+            <div class="number">3-Step</div>
+            <div class="label">SDCM管理</div>
+        </div>
+        <div class="feature-item">
+            <div class="number">IP67</div>
+            <div class="label">防水等級</div>
+        </div>
+        <div class="feature-item">
+            <div class="number">5年</div>
+            <div class="label">品質保証</div>
+        </div>
+    </div>
+
+    <!-- Product Series -->
     <section class="section">
-        <div class="section-title">
+        <div class="section-header">
             <h2>製品シリーズ</h2>
-            <p>用途に合わせて選べる豊富なラインナップ</p>
+            <p>多様な照明ニーズに対応する6大製品シリーズ</p>
         </div>
         
-        <div class="product-grid">
-            <a href="/ja/fcob-led/single-color/" class="product-card">
-                <div class="product-card-image">
-                    <div class="product-card-icon">SC</div>
-                </div>
-                <div class="product-card-body">
-                    <h3>単色シリーズ</h3>
-                    <div class="en">Single Color Series</div>
-                    <p>高演色性Ra90+の単色LED灯帯。320D/480D/608Dの高密度実装ラインアップ。</p>
-                    <div class="product-card-tags">
-                        <span class="tag">2700K-6500K</span>
-                        <span class="tag">Ra90+</span>
-                    </div>
-                </div>
+        <div class="series-grid">
+            <a href="/ja/products/single-color/" class="series-card">
+                <div class="icon">&#128161;</div>
+                <h3>単色シリーズ</h3>
+                <div class="en">Single Color</div>
+                <p>プロフェッショナル照明向け高演色単色FCOB LEDテープ</p>
+                <div class="arrow">詳細 &#8594;</div>
             </a>
             
-            <a href="/ja/fcob-led/cct/" class="product-card">
-                <div class="product-card-image">
-                    <div class="product-card-icon">CCT</div>
-                </div>
-                <div class="product-card-body">
-                    <h3>調光調色(CCT)</h3>
-                    <div class="en">Tunable White Series</div>
-                    <p>2700Kから6500Kまで色温度可変。2線式/3線式制御対応。</p>
-                    <div class="product-card-tags">
-                        <span class="tag">2700K-6500K</span>
-                        <span class="tag">2Wire/3Wire</span>
-                    </div>
-                </div>
+            <a href="/ja/products/tunable-white/" class="series-card">
+                <div class="icon">&#9728;</div>
+                <h3>調光調色シリーズ</h3>
+                <div class="en">Tunable White</div>
+                <p>電球色から昼光色まで調光調色可能なFCOB LEDテープ</p>
+                <div class="arrow">詳細 &#8594;</div>
             </a>
             
-            <a href="/ja/fcob-led/rgb-series/" class="product-card">
-                <div class="product-card-image">
-                    <div class="product-card-icon">RGB</div>
-                </div>
-                <div class="product-card-body">
-                    <h3>RGBフルカラー</h3>
-                    <div class="en">RGB Full Color Series</div>
-                    <p>RGB/RGBW/RGBCW対応。演出照明やアクセント照明に最適。</p>
-                    <div class="product-card-tags">
-                        <span class="tag">RGB</span>
-                        <span class="tag">RGBW</span>
-                        <span class="tag">RGBCW</span>
-                    </div>
-                </div>
+            <a href="/ja/products/rgb/" class="series-card">
+                <div class="icon">&#127912;</div>
+                <h3>RGBシリーズ</h3>
+                <div class="en">RGB Series</div>
+                <p>フルカラー演出照明向けRGB FCOB LEDテープ</p>
+                <div class="arrow">詳細 &#8594;</div>
             </a>
             
-            <a href="/ja/fcob-led/mini-size/" class="product-card">
-                <div class="product-card-image">
-                    <div class="product-card-icon">MN</div>
-                </div>
-                <div class="product-card-body">
-                    <h3>ミニサイズ</h3>
-                    <div class="en">Mini Size Series</div>
-                    <p>2.7mm/4mm/5mmの超窄幅。狭い空間や細部の照明に。</p>
-                    <div class="product-card-tags">
-                        <span class="tag">2.7mm</span>
-                        <span class="tag">4mm</span>
-                        <span class="tag">5mm</span>
-                    </div>
-                </div>
+            <a href="/ja/products/neon/" class="series-card">
+                <div class="icon">&#11044;</div>
+                <h3>ネオンフレックスシリーズ</h3>
+                <div class="en">Neon Flex</div>
+                <p>シームレスな発光効果を実現するシリコンネオンフレックス</p>
+                <div class="arrow">詳細 &#8594;</div>
             </a>
             
-            <a href="/ja/fcob-led/high-efficiency/" class="product-card">
-                <div class="product-card-image">
-                    <div class="product-card-icon">HE</div>
-                </div>
-                <div class="product-card-body">
-                    <h3>高効率</h3>
-                    <div class="en">High Efficiency Series</div>
-                    <p>省エネを重視した高効率タイプ。長時間点灯の商業施設に。</p>
-                    <div class="product-card-tags">
-                        <span class="tag">150lm/W+</span>
-                        <span class="tag">省エネ</span>
-                    </div>
-                </div>
+            <a href="/ja/products/ip67/" class="series-card">
+                <div class="icon">&#128167;</div>
+                <h3>IP67防水シリーズ</h3>
+                <div class="en">IP67 Waterproof</div>
+                <p>IP67防水等級を取得した屋外用FCOB LEDテープ</p>
+                <div class="arrow">詳細 &#8594;</div>
             </a>
             
-            <a href="/ja/fcob-led/high-power/" class="product-card">
-                <div class="product-card-image">
-                    <div class="product-card-icon">HP</div>
-                </div>
-                <div class="product-card-body">
-                    <h3>高出力</h3>
-                    <div class="en">High Power Series</div>
-                    <p>高輝度が必要な用途向け。明るさを重視した設計。</p>
-                    <div class="product-card-tags">
-                        <span class="tag">High Lumen</span>
-                        <span class="tag">20W/m</span>
-                    </div>
-                </div>
-            </a>
-            
-            <a href="/ja/fcob-led/long-run/" class="product-card">
-                <div class="product-card-image">
-                    <div class="product-card-icon">LR</div>
-                </div>
-                <div class="product-card-body">
-                    <h3>超長連続</h3>
-                    <div class="en">Long Run Series</div>
-                    <p>15m連続点灯可能。電圧降下を抑えた特殊設計。</p>
-                    <div class="product-card-tags">
-                        <span class="tag">15m連続</span>
-                        <span class="tag">無輝度低下</span>
-                    </div>
-                </div>
-            </a>
-            
-            <a href="/ja/fcob-led/waterproof/" class="product-card">
-                <div class="product-card-image">
-                    <div class="product-card-icon">WP</div>
-                </div>
-                <div class="product-card-body">
-                    <h3>防水(IP67)</h3>
-                    <div class="en">Waterproof Series</div>
-                    <p>屋外使用可能なIP67等級。シリコン押出成形構造。</p>
-                    <div class="product-card-tags">
-                        <span class="tag">IP67</span>
-                        <span class="tag">屋外対応</span>
-                    </div>
-                </div>
+            <a href="/ja/products/high-voltage/" class="series-card">
+                <div class="icon">&#9889;</div>
+                <h3>高圧シリーズ</h3>
+                <div class="en">High Voltage</div>
+                <p>長距離配線向けAC 220V高圧FCOB LEDテープ</p>
+                <div class="arrow">詳細 &#8594;</div>
             </a>
         </div>
     </section>
 
-    <!-- Features -->
-    <section class="section" style="background: var(--white); margin: 0; max-width: none; padding: 4rem 2rem;">
-        <div class="section-title">
-            <h2>技術特長</h2>
-            <p>FCOB技術が実現する高品質照明</p>
+    <!-- Featured Products -->
+    <section class="section">
+        <div class="section-header">
+            <h2>代表製品</h2>
+            <p>高品質FCOB LEDテープライト製品ラインナップ</p>
         </div>
         
-        <div class="features-grid" style="max-width: 1400px; margin: 0 auto;">
-            <div class="feature-item">
-                <div class="feature-icon">FCOB</div>
-                <h3>高密度COB実装</h3>
-                <p>320D-720Dの高密度LED実装により、光斑のない均一な発光を実現。</p>
-            </div>
+        <div class="products-grid">
+            <a href="/ja/products/single-color/320d-12v-5mm/" class="product-card">
+                <div class="product-image">
+                    <div class="product-badges">
+                        <span class="product-badge">Ra&gt;90</span>
+                        <span class="product-badge">IP20</span>
+                        <span class="product-badge">3Step</span>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h4>320D-12V-5MM</h4>
+                    <p>5mm超窄幅FCOB LEDテープ。1mあたり320チップ搭載。狭い空間や細部の照明に最適。</p>
+                </div>
+            </a>
             
-            <div class="feature-item">
-                <div class="feature-icon">CRI</div>
-                <h3>高演色性 Ra90+</h3>
-                <p>被照物体の本来の色を忠実に再現。商業施設の商品陳列に最適。</p>
-            </div>
+            <a href="/ja/products/single-color/320d-24v-5mm/" class="product-card">
+                <div class="product-image">
+                    <div class="product-badges">
+                        <span class="product-badge">Ra&gt;90</span>
+                        <span class="product-badge">IP20</span>
+                        <span class="product-badge">3Step</span>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h4>320D-24V-5MM</h4>
+                    <p>24V版5mm超窄幅FCOB LEDテープ。同じドットレス性能で長距離配線が可能。</p>
+                </div>
+            </a>
             
-            <div class="feature-item">
-                <div class="feature-icon">CUT</div>
-                <h3>8mmカットピッチ</h3>
-                <p>8mm間隔でカット可能。必要な長さに自在に調整できます。</p>
-            </div>
+            <a href="/ja/products/single-color/320d-12v-8mm/" class="product-card">
+                <div class="product-image">
+                    <div class="product-badges">
+                        <span class="product-badge">Ra&gt;90</span>
+                        <span class="product-badge">IP20</span>
+                        <span class="product-badge">3Step</span>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h4>320D-12V-8MM</h4>
+                    <p>標準的な8mm幅FCOB LEDテープ。優れた放熱性能と均一な発光を実現。</p>
+                </div>
+            </a>
             
-            <div class="feature-item">
-                <div class="feature-icon">TAPE</div>
-                <h3>3M両面テープ</h3>
-                <p>高品質3M製両面テープ付属。確実な固定と簡単施工。</p>
-            </div>
+            <a href="/ja/products/single-color/320d-24v-8mm/" class="product-card">
+                <div class="product-image">
+                    <div class="product-badges">
+                        <span class="product-badge">Ra&gt;90</span>
+                        <span class="product-badge">IP20</span>
+                        <span class="product-badge">3Step</span>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h4>320D-24V-8MM</h4>
+                    <p>24V版標準8mm幅FCOB LEDテープ。長距離設置でも均一な輝度を維持。</p>
+                </div>
+            </a>
+        </div>
+        
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="/ja/products/" class="btn btn-secondary">全製品一覧</a>
         </div>
     </section>
 
-    <!-- Certifications -->
-    <section class="cert-section">
-        <div class="cert-grid">
-            <div class="cert-item">
-                <div class="cert-icon">UL</div>
-                <h4>UL E354137</h4>
-                <p>北米安全規格</p>
-            </div>
-            
-            <div class="cert-item">
-                <div class="cert-icon">CE</div>
-                <h4>CEマーキング</h4>
-                <p>欧州適合宣言</p>
-            </div>
-            
-            <div class="cert-item">
-                <div class="cert-icon">RoHS</div>
-                <h4>RoHS指令</h4>
-                <p>有害物質規制対応</p>
-            </div>
-            
-            <div class="cert-item">
-                <div class="cert-icon">&#9878;</div>
-                <h4><a href="/ja/technical/pse-guide/">電気用品安全法ガイド</a></h4>
-                <p>PSE法における位置づけ</p>
-            </div>
-        </div>
+    <!-- CTA -->
+    <section class="cta-section">
+        <h2>お問い合わせ</h2>
+        <p>製品に関するご質問やお見積りのご依頼は、お気軽にお問い合わせください。</p>
+        <a href="/ja/inquiry/" class="btn btn-primary">お問い合わせフォーム</a>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-inner">
             <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo-main">SUNSEMI</div>
+                    <p>FCOB LEDテープライトの専門メーカー。<br>高演色性・ドットレス技術で、プロフェッショナルな照明ソリューションを提供します。</p>
+                </div>
+                
                 <div class="footer-col">
-                    <h4>製品一覧</h4>
+                    <h4>製品情報</h4>
                     <ul>
-                        <li><a href="/ja/fcob-led/single-color/">単色シリーズ</a></li>
-                        <li><a href="/ja/fcob-led/cct/">調光調色(CCT)</a></li>
-                        <li><a href="/ja/fcob-led/rgb-series/">RGBフルカラー</a></li>
-                        <li><a href="/ja/fcob-led/mini-size/">ミニサイズ</a></li>
-                        <li><a href="/ja/fcob-led/waterproof/">防水(IP67)</a></li>
+                        <li><a href="/ja/products/single-color/">単色シリーズ</a></li>
+                        <li><a href="/ja/products/tunable-white/">調光調色シリーズ</a></li>
+                        <li><a href="/ja/products/rgb/">RGBシリーズ</a></li>
+                        <li><a href="/ja/products/neon/">ネオンフレックス</a></li>
+                        <li><a href="/ja/products/ip67/">IP67防水シリーズ</a></li>
+                        <li><a href="/ja/products/high-voltage/">高圧シリーズ</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-col">
-                    <h4>技術資料</h4>
+                    <h4>サポート</h4>
                     <ul>
-                        <li><a href="/ja/technical/">技術資料トップ</a></li>
-                        <li><a href="/ja/technical/pse-guide/">電気用品安全法ガイド</a></li>
-                        <li><a href="/ja/technical/installation/">施工ガイド</a></li>
-                        <li><a href="/ja/technical/faq/">技術FAQ</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-col">
-                    <h4>企業情報</h4>
-                    <ul>
-                        <li><a href="/ja/company/">会社概要</a></li>
-                        <li><a href="/ja/company/quality/">品質管理</a></li>
-                        <li><a href="/ja/downloads/">資料ダウンロード</a></li>
-                        <li><a href="/ja/contact/">お問い合わせ</a></li>
+                        <li><a href="/ja/technology/">技術資料</a></li>
+                        <li><a href="/ja/cases/">応用事例</a></li>
+                        <li><a href="/ja/company/">企業概要</a></li>
+                        <li><a href="/ja/inquiry/">お問い合わせ</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-col">
                     <h4>法的情報</h4>
                     <ul>
-                        <li><a href="/ja/company/privacy/">プライバシーポリシー</a></li>
-                        <li><a href="/ja/company/terms/">利用規約</a></li>
+                        <li><a href="/ja/privacy/">プライバシーポリシー</a></li>
+                        <li><a href="/ja/terms/">利用規約</a></li>
                     </ul>
                 </div>
             </div>

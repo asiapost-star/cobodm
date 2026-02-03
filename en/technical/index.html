@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>お問い合わせ | SUNSEMI</title>
+    <title>Technical Data | SUNSEMI</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -118,13 +118,13 @@
         }
 
         .lang-switch a:first-child {
-            background: var(--secondary);
-            color: var(--primary);
+            background: transparent;
+            color: var(--text);
         }
 
         .lang-switch a:last-child {
-            background: transparent;
-            color: var(--text);
+            background: var(--secondary);
+            color: var(--primary);
         }
 
         .hero {
@@ -191,114 +191,85 @@
             line-height: 1.8;
         }
 
-        .contact-section {
+        .content-section {
             padding: 80px 40px;
             background: var(--primary);
         }
 
-        .contact-inner {
+        .content-inner {
             max-width: 1400px;
             margin: 0 auto;
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 60px;
         }
 
-        .form-section h2 {
-            font-size: 24px;
+        .section-title {
+            font-size: 28px;
             font-weight: 600;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
         }
 
-        .form-section h2 span { color: var(--secondary); }
+        .section-title span { color: var(--secondary); }
 
-        .form-group {
-            margin-bottom: 24px;
+        .doc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 24px;
         }
 
-        .form-group label {
-            display: block;
-            font-size: 14px;
-            font-weight: 500;
-            margin-bottom: 8px;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 14px 18px;
+        .doc-card {
             background: var(--primary-light);
             border: 1px solid var(--border);
-            border-radius: 8px;
-            color: var(--text);
-            font-size: 15px;
-            font-family: inherit;
-            transition: border-color 0.3s;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--secondary);
-        }
-
-        .form-group textarea {
-            min-height: 150px;
-            resize: vertical;
-        }
-
-        .btn-submit {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 16px 40px;
-            background: var(--gradient-gold);
-            border: none;
-            border-radius: 8px;
-            color: var(--primary);
-            font-size: 15px;
-            font-weight: 600;
-            cursor: pointer;
+            border-radius: 12px;
+            padding: 30px;
             transition: all 0.3s;
         }
 
-        .btn-submit:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(201, 162, 39, 0.3);
+        .doc-card:hover {
+            border-color: var(--secondary);
+            transform: translateY(-4px);
         }
 
-        .info-section {
-            background: var(--primary-light);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 40px;
-        }
-
-        .info-section h3 {
+        .doc-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-gold);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .doc-title {
+            font-size: 18px;
             font-weight: 600;
-            margin-bottom: 30px;
-        }
-
-        .info-section h3 span { color: var(--secondary); }
-
-        .info-item {
-            margin-bottom: 24px;
-        }
-
-        .info-item:last-child { margin-bottom: 0; }
-
-        .info-label {
-            font-size: 13px;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 1px;
             margin-bottom: 8px;
         }
 
-        .info-value {
-            font-size: 15px;
-            color: var(--text);
+        .doc-desc {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        .btn-download {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background: transparent;
+            border: 1px solid var(--secondary);
+            border-radius: 8px;
+            color: var(--secondary);
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .btn-download:hover {
+            background: var(--secondary);
+            color: var(--primary);
         }
 
         .footer {
@@ -338,28 +309,28 @@
             .nav { display: none; }
             .hero { padding: 120px 20px 60px; }
             .hero-title { font-size: 32px; }
-            .contact-section { padding: 60px 20px; }
-            .contact-inner { grid-template-columns: 1fr; gap: 40px; }
+            .content-section { padding: 60px 20px; }
+            .doc-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
     <header class="header">
         <div class="header-inner">
-            <a href="/ja/" class="logo">
+            <a href="/en/" class="logo">
                 <div class="logo-icon">SUN</div>
                 <div class="logo-text">SUN<span>SEMI</span></div>
             </a>
             <nav class="nav">
-                <a href="/ja/">ホーム</a>
-                <a href="/ja/products/">製品情報</a>
-                <a href="/ja/technical/">技術資料</a>
-                <a href="/ja/company/">会社案内</a>
-                <a href="/ja/contact/" class="active">お問い合わせ</a>
+                <a href="/en/">Home</a>
+                <a href="/en/products/">Products</a>
+                <a href="/en/technical/" class="active">Technical</a>
+                <a href="/en/company/">Company</a>
+                <a href="/en/contact/">Contact</a>
             </nav>
             <div class="lang-switch">
-                <a href="/ja/contact/">JA</a>
-                <a href="/en/contact/">EN</a>
+                <a href="/ja/technical/">JA</a>
+                <a href="/en/technical/">EN</a>
             </div>
         </div>
     </header>
@@ -367,53 +338,57 @@
     <section class="hero">
         <div class="hero-inner">
             <div class="breadcrumb">
-                <a href="/ja/">ホーム</a>
+                <a href="/en/">Home</a>
                 <span>/</span>
-                <span style="color: var(--secondary);">お問い合わせ</span>
+                <span style="color: var(--secondary);">Technical</span>
             </div>
-            <h1 class="hero-title">お問い合わせ</h1>
-            <p class="hero-subtitle">Contact Us</p>
-            <p class="hero-description">製品に関するお問い合わせ、カスタムオーダー、技術サポートなど、お気軽にお問い合わせください。</p>
+            <h1 class="hero-title">Technical Data</h1>
+            <p class="hero-subtitle">Download Center</p>
+            <p class="hero-description">Download product catalogs, specifications, IES files and other technical documents.</p>
         </div>
     </section>
 
-    <section class="contact-section">
-        <div class="contact-inner">
-            <div class="form-section">
-                <h2><span>お問い合わせフォーム</span></h2>
-                <form onsubmit="event.preventDefault(); alert('Message sent!');">
-                    <div class="form-group">
-                        <label>お名前</label>
-                        <input type="text" placeholder="" required>
-                    </div>
-                    <div class="form-group">
-                        <label>メールアドレス</label>
-                        <input type="email" placeholder="" required>
-                    </div>
-                    <div class="form-group">
-                        <label>会社名</label>
-                        <input type="text" placeholder="">
-                    </div>
-                    <div class="form-group">
-                        <label>お問い合わせ内容</label>
-                        <textarea placeholder="" required></textarea>
-                    </div>
-                    <button type="submit" class="btn-submit">送信する →</button>
-                </form>
+    <section class="content-section">
+        <div class="content-inner">
+            <h2 class="section-title"><span>Product Catalogs</span></h2>
+            <div class="doc-grid">
+                <div class="doc-card">
+                    <div class="doc-icon">📄</div>
+                    <h3 class="doc-title">FCOB LED Tape Catalog 2024</h3>
+                    <p class="doc-desc">Coming Soon</p>
+                    <a href="#" class="btn-download">Download ↓</a>
+                </div>
+                <div class="doc-card">
+                    <div class="doc-icon">📊</div>
+                    <h3 class="doc-title">Product Selection Guide</h3>
+                    <p class="doc-desc">Coming Soon</p>
+                    <a href="#" class="btn-download">Download ↓</a>
+                </div>
             </div>
-            <div class="info-section">
-                <h3><span>連絡先情報</span></h3>
-                <div class="info-item">
-                    <div class="info-label">住所</div>
-                    <div class="info-value">中国広東省深圳市</div>
+        </div>
+    </section>
+
+    <section class="content-section" style="background: var(--primary-light); border-top: 1px solid var(--border);">
+        <div class="content-inner">
+            <h2 class="section-title"><span>Specifications</span></h2>
+            <div class="doc-grid">
+                <div class="doc-card">
+                    <div class="doc-icon">📋</div>
+                    <h3 class="doc-title">Single Color Series Spec</h3>
+                    <p class="doc-desc">Coming Soon</p>
+                    <a href="#" class="btn-download">Download ↓</a>
                 </div>
-                <div class="info-item">
-                    <div class="info-label">Email</div>
-                    <div class="info-value">info@sunsemi.com</div>
+                <div class="doc-card">
+                    <div class="doc-icon">📋</div>
+                    <h3 class="doc-title">Tunable White Series Spec</h3>
+                    <p class="doc-desc">Coming Soon</p>
+                    <a href="#" class="btn-download">Download ↓</a>
                 </div>
-                <div class="info-item">
-                    <div class="info-label">営業時間</div>
-                    <div class="info-value">月曜日〜金曜日 9:00〜18:00</div>
+                <div class="doc-card">
+                    <div class="doc-icon">📋</div>
+                    <h3 class="doc-title">RGB Series Spec</h3>
+                    <p class="doc-desc">Coming Soon</p>
+                    <a href="#" class="btn-download">Download ↓</a>
                 </div>
             </div>
         </div>
