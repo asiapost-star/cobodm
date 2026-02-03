@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RGB/RGBWシリーズ | FCOB LED Tape | SUNSEMI</title>
+    <title>RGB/RGBW/RGBCWシリーズ | FCOB LED Tape | SUNSEMI</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -117,24 +117,11 @@
             font-weight: 500;
             text-decoration: none;
             transition: all 0.3s;
-        }
-
-        .lang-switch a:first-child {
             background: transparent;
             color: var(--text);
         }
 
-        .lang-switch a:last-child {
-            background: transparent;
-            color: var(--text);
-        }
-
-        .lang-switch a:hover {
-            background: var(--secondary);
-            color: var(--primary);
-        }
-
-        .lang-switch a.active {
+        .lang-switch a:hover, .lang-switch a.active {
             background: var(--secondary);
             color: var(--primary);
         }
@@ -277,6 +264,15 @@
             color: var(--secondary);
         }
 
+        /* Section Title */
+        .section-title {
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 40px;
+        }
+
+        .section-title span { color: var(--secondary); }
+
         /* Responsive */
         @media (max-width: 768px) {
             .header-inner { padding: 0 20px; height: 70px; }
@@ -383,8 +379,8 @@
                 <a href="/ja/" class="">ホーム</a><a href="/ja/products/" class="active">製品情報</a><a href="/ja/technical/" class="">技術資料</a><a href="/ja/company/" class="">企業概要</a><a href="/ja/contact/" class="">お問い合わせ</a>
             </nav>
             <div class="lang-switch">
-                <a href="/ja/products/" class="active">JA</a>
-                <a href="/en/products/" class="">EN</a>
+                <a href="/ja/" class="active">JA</a>
+                <a href="/en/" class="">EN</a>
             </div>
         </div>
     </header>
@@ -393,38 +389,60 @@
     <section class="hero">
         <div class="hero-inner">
             <div class="breadcrumb">
-                <a href="/ja/">ホーム</a><span>/</span><a href="/ja/products/">製品情報</a><span>/</span>
-                <span style="color: var(--secondary);">RGB/RGBWシリーズ</span>
+                <a href="/ja/">ホーム</a>
+                <span>/</span>
+                <a href="/ja/products/">製品情報</a>
+                <span>/</span>
+                <span style="color: var(--secondary);">RGB/RGBW/RGBCWシリーズ</span>
             </div>
-            <h1 class="hero-title">RGB/RGBWシリーズ</h1>
-            <p class="hero-subtitle">RGB/RGBW Series</p>
-            <p class="hero-description">鮮やかなフルカラー表現が可能なRGB/RGBW LEDテープライト。演出照明やサイン照明に最適です。</p>
+            <h1 class="hero-title">RGB/RGBW/RGBCWシリーズ</h1>
+            <p class="hero-description">鮮やかなフルカラー表現が可能。演出照明、サイン照明に最適。</p>
         </div>
     </section>
 
     <section class="products-section">
         <div class="products-inner">
-            <h2 class="section-title" style="margin-bottom: 40px;"><span>シリーズ製品</span></h2>
+            <h2 class="section-title"><span>シリーズ製品</span></h2>
             <div class="products-grid">
                 
                 <div class="product-card">
                     <div class="product-image">
-                        <span class="product-model">RGB-320D-24V-10MM</span>
+                        <span class="product-model">840D-24V-10MM-RGB</span>
                     </div>
                     <div class="product-info">
-                        <h3 class="product-name">RGB-320D-24V-10MM</h3>
-                        <p class="product-spec">320/m | DC 24V | 10mm | -</p>
-                        <a href="/ja/products/rgb/rgb-320d-24v-10mm/" class="btn-view">詳細を見る →</a>
+                        <h3 class="product-name">840D-24V-10MM-RGB</h3>
+                        <p class="product-spec">840/m | DC 24V | 10mm | -</p>
+                        <a href="/ja/products/rgb/840d-24v-10mm-rgb/" class="btn-view">詳細を見る →</a>
                     </div>
                 </div>
                 <div class="product-card">
                     <div class="product-image">
-                        <span class="product-model">RGBW-320D-24V-12MM</span>
+                        <span class="product-model">896D-24V-12MM-RGBW</span>
                     </div>
                     <div class="product-info">
-                        <h3 class="product-name">RGBW-320D-24V-12MM</h3>
-                        <p class="product-spec">320/m | DC 24V | 12mm | Ra >80</p>
-                        <a href="/ja/products/rgb/rgbw-320d-24v-12mm/" class="btn-view">詳細を見る →</a>
+                        <h3 class="product-name">896D-24V-12MM-RGBW</h3>
+                        <p class="product-spec">896/m | DC 24V | 12mm | Ra>80</p>
+                        <a href="/ja/products/rgb/896d-24v-12mm-rgbw/" class="btn-view">詳細を見る →</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="product-model">840D-24V-12MM-RGBCW</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">840D-24V-12MM-RGBCW</h3>
+                        <p class="product-spec">840/m | DC 24V | 12mm | Ra>80</p>
+                        <a href="/ja/products/rgb/840d-24v-12mm-rgbcw/" class="btn-view">詳細を見る →</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="product-model">960D-24V-12MM-RGBCW</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">960D-24V-12MM-RGBCW</h3>
+                        <p class="product-spec">960/m | DC 24V | 12mm | Ra>80</p>
+                        <a href="/ja/products/rgb/960d-24v-12mm-rgbcw/" class="btn-view">詳細を見る →</a>
                     </div>
                 </div>
             </div>

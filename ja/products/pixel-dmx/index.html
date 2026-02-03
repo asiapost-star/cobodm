@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>製品情報 | SUNSEMI</title>
+    <title>ピクセルDMXシリーズ | FCOB LED Tape | SUNSEMI</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -282,60 +282,88 @@
             .footer-bottom { flex-direction: column; gap: 20px; text-align: center; }
         }
 
-        .series-section {
+        .products-section {
             padding: 80px 40px;
             background: var(--primary);
         }
-        .series-inner {
+        .products-inner {
             max-width: 1400px;
             margin: 0 auto;
         }
-        .series-grid {
+        .products-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 30px;
         }
-        .series-card {
+        .product-card {
             background: var(--primary-light);
             border: 1px solid var(--border);
             border-radius: 16px;
-            padding: 40px 30px;
-            text-align: center;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            color: var(--text);
+            overflow: hidden;
+            transition: all 0.3s;
         }
-        .series-card:hover {
+        .product-card:hover {
             transform: translateY(-8px);
             border-color: var(--secondary);
             box-shadow: 0 20px 40px rgba(201, 162, 39, 0.15);
         }
-        .series-name {
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 12px;
+        .product-image {
+            aspect-ratio: 4/3;
+            background: linear-gradient(135deg, #1a1a25 0%, #252535 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
         }
-        .series-desc {
+        .product-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at center, rgba(201, 162, 39, 0.1) 0%, transparent 60%);
+        }
+        .product-model {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--secondary);
+            z-index: 1;
+        }
+        .product-info {
+            padding: 24px;
+        }
+        .product-name {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .product-spec {
             font-size: 14px;
             color: var(--text-muted);
-            line-height: 1.7;
-            margin-bottom: 16px;
+            margin-bottom: 20px;
         }
-        .series-count {
-            display: inline-block;
-            padding: 6px 16px;
-            background: rgba(201, 162, 39, 0.1);
-            border: 1px solid var(--secondary);
-            border-radius: 20px;
-            font-size: 12px;
+        .btn-view {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 12px 24px;
+            background: transparent;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text);
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .btn-view:hover {
+            border-color: var(--secondary);
             color: var(--secondary);
         }
-        @media (max-width: 1024px) {
-            .series-grid { grid-template-columns: repeat(2, 1fr); }
-        }
         @media (max-width: 768px) {
-            .series-section { padding: 60px 20px; }
-            .series-grid { grid-template-columns: 1fr; }
+            .products-section { padding: 60px 20px; }
+            .products-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -363,84 +391,30 @@
             <div class="breadcrumb">
                 <a href="/ja/">ホーム</a>
                 <span>/</span>
-                <span style="color: var(--secondary);">製品情報</span>
+                <a href="/ja/products/">製品情報</a>
+                <span>/</span>
+                <span style="color: var(--secondary);">ピクセルDMXシリーズ</span>
             </div>
-            <h1 class="hero-title">製品情報</h1>
-            <p class="hero-subtitle">Products</p>
-            <p class="hero-description">高品質FCOB LEDテープライトの全製品ラインナップ。13の製品シリーズ、31製品を取り揃えています。</p>
+            <h1 class="hero-title">ピクセルDMXシリーズ</h1>
+            <p class="hero-description">DMX512制御によるプロフェッショナルな演出照明。舞台照明、イベントに最適。</p>
         </div>
     </section>
 
-    <section class="series-section">
-        <div class="series-inner">
-            <h2 class="section-title"><span>製品シリーズ</span></h2>
-            <div class="series-grid">
+    <section class="products-section">
+        <div class="products-inner">
+            <h2 class="section-title"><span>シリーズ製品</span></h2>
+            <div class="products-grid">
                 
-                <a href="/ja/products/single-color/" class="series-card">
-                    <h3 class="series-name">単色シリーズ</h3>
-                    <p class="series-desc">高演色Ra90+の単色LEDテープライト。均一発光、ドットレス設計。</p>
-                    <span class="series-count">5 製品</span>
-                </a>
-                <a href="/ja/products/pixel-spi/" class="series-card">
-                    <h3 class="series-name">ピクセルSPIシリーズ</h3>
-                    <p class="series-desc">SPI制御によるセグメント制御が可能なLEDテープ。音楽階段などの演出照明に最適。</p>
-                    <span class="series-count">6 製品</span>
-                </a>
-                <a href="/ja/products/pixel-dmx/" class="series-card">
-                    <h3 class="series-name">ピクセルDMXシリーズ</h3>
-                    <p class="series-desc">DMX512制御によるプロフェッショナルな演出照明。舞台照明、イベントに最適。</p>
-                    <span class="series-count">1 製品</span>
-                </a>
-                <a href="/ja/products/cct/" class="series-card">
-                    <h3 class="series-name">調光調色(CCT)シリーズ</h3>
-                    <p class="series-desc">2700K〜6500Kの色温度を自由に調整可能。住宅・商業施設のあらゆるシーンに対応。</p>
-                    <span class="series-count">1 製品</span>
-                </a>
-                <a href="/ja/products/rgb/" class="series-card">
-                    <h3 class="series-name">RGB/RGBW/RGBCWシリーズ</h3>
-                    <p class="series-desc">鮮やかなフルカラー表現が可能。演出照明、サイン照明に最適。</p>
-                    <span class="series-count">4 製品</span>
-                </a>
-                <a href="/ja/products/mini-size/" class="series-card">
-                    <h3 class="series-name">超小サイズシリーズ</h3>
-                    <p class="series-desc">2.7mm〜5mmの超窄幅設計。狭い空間や細部の照明に最適。</p>
-                    <span class="series-count">5 製品</span>
-                </a>
-                <a href="/ja/products/high-efficiency/" class="series-card">
-                    <h3 class="series-name">高効率シリーズ</h3>
-                    <p class="series-desc">高効率設計で省エネを実現。環境に優しい照明ソリューション。</p>
-                    <span class="series-count">1 製品</span>
-                </a>
-                <a href="/ja/products/high-power/" class="series-card">
-                    <h3 class="series-name">高輝度シリーズ</h3>
-                    <p class="series-desc">高輝度設計で明るい照明を実現。商業施設のメイン照明に最適。</p>
-                    <span class="series-count">1 製品</span>
-                </a>
-                <a href="/ja/products/long-run/" class="series-card">
-                    <h3 class="series-name">長距離シリーズ</h3>
-                    <p class="series-desc">長距離配線が可能。大規模施設の照明に最適。</p>
-                    <span class="series-count">1 製品</span>
-                </a>
-                <a href="/ja/products/side-emitting/" class="series-card">
-                    <h3 class="series-name">側面発光シリーズ</h3>
-                    <p class="series-desc">側面からの均一な発光。間接照明や什器照明に最適。</p>
-                    <span class="series-count">2 製品</span>
-                </a>
-                <a href="/ja/products/everywhere-cut/" class="series-card">
-                    <h3 class="series-name">任意裁剪シリーズ</h3>
-                    <p class="series-desc">任意の位置で裁剪可能。柔軟な設計に対応。</p>
-                    <span class="series-count">1 製品</span>
-                </a>
-                <a href="/ja/products/short-cut/" class="series-card">
-                    <h3 class="series-name">短裁剪シリーズ</h3>
-                    <p class="series-desc">短い裁剪単位で細かい調整が可能。看板照明に最適。</p>
-                    <span class="series-count">2 製品</span>
-                </a>
-                <a href="/ja/products/waterproof/" class="series-card">
-                    <h3 class="series-name">防水シリーズ</h3>
-                    <p class="series-desc">IP67防水等級。屋外使用に対応した防水設計。</p>
-                    <span class="series-count">1 製品</span>
-                </a>
+                <div class="product-card">
+                    <div class="product-image">
+                        <span class="product-model">630D-12/24V-16MM-RGB-DMX512</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">630D-12/24V-16MM-RGB-DMX512</h3>
+                        <p class="product-spec">630/m | DC 12/24V | 16mm | -</p>
+                        <a href="/ja/products/pixel-dmx/630d-12-24v-16mm-rgb-dmx512/" class="btn-view">詳細を見る →</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

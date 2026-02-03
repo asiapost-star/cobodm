@@ -117,24 +117,11 @@
             font-weight: 500;
             text-decoration: none;
             transition: all 0.3s;
-        }
-
-        .lang-switch a:first-child {
             background: transparent;
             color: var(--text);
         }
 
-        .lang-switch a:last-child {
-            background: transparent;
-            color: var(--text);
-        }
-
-        .lang-switch a:hover {
-            background: var(--secondary);
-            color: var(--primary);
-        }
-
-        .lang-switch a.active {
+        .lang-switch a:hover, .lang-switch a.active {
             background: var(--secondary);
             color: var(--primary);
         }
@@ -277,6 +264,15 @@
             color: var(--secondary);
         }
 
+        /* Section Title */
+        .section-title {
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 40px;
+        }
+
+        .section-title span { color: var(--secondary); }
+
         /* Responsive */
         @media (max-width: 768px) {
             .header-inner { padding: 0 20px; height: 70px; }
@@ -398,8 +394,8 @@
                 <a href="/ja/" class="">ホーム</a><a href="/ja/products/" class="">製品情報</a><a href="/ja/technical/" class="">技術資料</a><a href="/ja/company/" class="">企業概要</a><a href="/ja/contact/" class="active">お問い合わせ</a>
             </nav>
             <div class="lang-switch">
-                <a href="/ja/contact/" class="active">JA</a>
-                <a href="/en/contact/" class="">EN</a>
+                <a href="/ja/" class="active">JA</a>
+                <a href="/en/" class="">EN</a>
             </div>
         </div>
     </header>

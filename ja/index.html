@@ -117,24 +117,11 @@
             font-weight: 500;
             text-decoration: none;
             transition: all 0.3s;
-        }
-
-        .lang-switch a:first-child {
             background: transparent;
             color: var(--text);
         }
 
-        .lang-switch a:last-child {
-            background: transparent;
-            color: var(--text);
-        }
-
-        .lang-switch a:hover {
-            background: var(--secondary);
-            color: var(--primary);
-        }
-
-        .lang-switch a.active {
+        .lang-switch a:hover, .lang-switch a.active {
             background: var(--secondary);
             color: var(--primary);
         }
@@ -277,6 +264,15 @@
             color: var(--secondary);
         }
 
+        /* Section Title */
+        .section-title {
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 40px;
+        }
+
+        .section-title span { color: var(--secondary); }
+
         /* Responsive */
         @media (max-width: 768px) {
             .header-inner { padding: 0 20px; height: 70px; }
@@ -286,7 +282,6 @@
             .footer-bottom { flex-direction: column; gap: 20px; text-align: center; }
         }
 
-        /* Hero */
         .hero { min-height: 100vh; display: flex; align-items: center; padding: 120px 40px 80px; }
         .hero-content { max-width: 600px; }
         .hero-badge {
@@ -319,7 +314,6 @@
         }
         .hero-buttons { display: flex; gap: 20px; }
 
-        /* Stats Bar */
         .stats-bar {
             padding: 40px;
             background: var(--primary-light);
@@ -349,7 +343,6 @@
             margin-top: 8px;
         }
 
-        /* Series Section */
         .series-section {
             padding: 100px 40px;
             background: var(--primary);
@@ -393,14 +386,14 @@
         }
         .series-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
         }
         .series-card {
             background: var(--primary-light);
             border: 1px solid var(--border);
             border-radius: 16px;
-            padding: 40px 30px;
+            padding: 30px 20px;
             text-align: center;
             transition: all 0.3s ease;
             text-decoration: none;
@@ -412,23 +405,14 @@
             box-shadow: 0 20px 40px rgba(201, 162, 39, 0.15);
         }
         .series-name {
-            font-size: 22px;
+            font-size: 16px;
             font-weight: 600;
-            margin-bottom: 12px;
+            margin-bottom: 8px;
         }
         .series-desc {
-            font-size: 14px;
+            font-size: 13px;
             color: var(--text-muted);
-            line-height: 1.7;
-            margin-bottom: 20px;
-        }
-        .series-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            color: var(--secondary);
-            font-size: 14px;
-            font-weight: 500;
+            line-height: 1.6;
         }
 
         @media (max-width: 1024px) {
@@ -470,11 +454,7 @@
                     <span>✦</span>
                     <span>FCOB LED TECHNOLOGY</span>
                 </div>
-                <h1 class="hero-title">
-                    次世代<br>
-                    FCOB LED<br>
-                    ドットレス技術
-                </h1>
+                <h1 class="hero-title">次世代<br>FCOB LED<br>ドットレス技術</h1>
                 <p class="hero-desc">Ra90高演色性、IP67防水等級、シリコン一体押出成形。業界最先端の均一発光技術によるプロフェッショナル照明ソリューション。</p>
                 <div class="hero-buttons">
                     <a href="/ja/products/" class="btn-primary">
@@ -515,40 +495,61 @@
         <div class="series-inner">
             <div class="section-header">
                 <div class="section-label">製品シリーズ</div>
-                <h2 class="section-title">多様な照明ニ <span>ーズに対応する6大製品シリーズ</span></h2>
-                <p class="section-desc">多様な照明ニーズに対応する6大製品シリーズ</p>
+                <h2 class="section-title"><span>13</span> 大製品シリーズ</h2>
+                <p class="section-desc">多様な照明ニーズに対応する13大製品シリーズ</p>
             </div>
             <div class="series-grid">
-                
                 <a href="/ja/products/single-color/" class="series-card">
                     <h3 class="series-name">単色シリーズ</h3>
-                    <p class="series-desc">高演色Ra95+の単色LEDテープライト</p>
-                    <span class="series-link">シリーズを見る →</span>
+                    <p class="series-desc">5 製品</p>
                 </a>
-                <a href="/ja/products/tunable-white/" class="series-card">
-                    <h3 class="series-name">調光調色シリーズ</h3>
-                    <p class="series-desc">2700K〜6500Kの色温度調整が可能</p>
-                    <span class="series-link">シリーズを見る →</span>
+                <a href="/ja/products/pixel-spi/" class="series-card">
+                    <h3 class="series-name">Pixel SPI</h3>
+                    <p class="series-desc">6 製品</p>
+                </a>
+                <a href="/ja/products/pixel-dmx/" class="series-card">
+                    <h3 class="series-name">Pixel DMX</h3>
+                    <p class="series-desc">1 製品</p>
+                </a>
+                <a href="/ja/products/cct/" class="series-card">
+                    <h3 class="series-name">CCT</h3>
+                    <p class="series-desc">1 製品</p>
                 </a>
                 <a href="/ja/products/rgb/" class="series-card">
                     <h3 class="series-name">RGB/RGBW</h3>
-                    <p class="series-desc">鮮やかなフルカラー表現が可能</p>
-                    <span class="series-link">シリーズを見る →</span>
+                    <p class="series-desc">4 製品</p>
                 </a>
-                <a href="/ja/products/neon/" class="series-card">
-                    <h3 class="series-name">ネオンシリーズ</h3>
-                    <p class="series-desc">柔軟で曲げやすいネオンタイプ</p>
-                    <span class="series-link">シリーズを見る →</span>
+                <a href="/ja/products/mini-size/" class="series-card">
+                    <h3 class="series-name">超小サイズ</h3>
+                    <p class="series-desc">5 製品</p>
                 </a>
-                <a href="/ja/products/ip67/" class="series-card">
-                    <h3 class="series-name">防水IP67シリーズ</h3>
-                    <p class="series-desc">屋外使用に対応した防水設計</p>
-                    <span class="series-link">シリーズを見る →</span>
+                <a href="/ja/products/high-efficiency/" class="series-card">
+                    <h3 class="series-name">高効率</h3>
+                    <p class="series-desc">1 製品</p>
                 </a>
-                <a href="/ja/products/high-voltage/" class="series-card">
-                    <h3 class="series-name">高圧シリーズ</h3>
-                    <p class="series-desc">220V高電圧直接駆動</p>
-                    <span class="series-link">シリーズを見る →</span>
+                <a href="/ja/products/high-power/" class="series-card">
+                    <h3 class="series-name">高輝度</h3>
+                    <p class="series-desc">1 製品</p>
+                </a>
+                <a href="/ja/products/long-run/" class="series-card">
+                    <h3 class="series-name">長距離</h3>
+                    <p class="series-desc">1 製品</p>
+                </a>
+                <a href="/ja/products/side-emitting/" class="series-card">
+                    <h3 class="series-name">側面発光</h3>
+                    <p class="series-desc">2 製品</p>
+                </a>
+                <a href="/ja/products/everywhere-cut/" class="series-card">
+                    <h3 class="series-name">任意裁剪</h3>
+                    <p class="series-desc">1 製品</p>
+                </a>
+                <a href="/ja/products/short-cut/" class="series-card">
+                    <h3 class="series-name">短裁剪</h3>
+                    <p class="series-desc">2 製品</p>
+                </a>
+                <a href="/ja/products/waterproof/" class="series-card">
+                    <h3 class="series-name">防水</h3>
+                    <p class="series-desc">1 製品</p>
                 </a>
             </div>
         </div>
