@@ -13,6 +13,7 @@
             --primary-light: #151520;
             --secondary: #c9a227;
             --secondary-light: #e5c158;
+            --accent: #f0d878;
             --text: #f5f5f5;
             --text-muted: #a0a0a0;
             --text-dark: #606060;
@@ -30,6 +31,7 @@
             line-height: 1.6;
         }
 
+        /* Header */
         .header {
             position: fixed;
             top: 0;
@@ -118,8 +120,8 @@
         }
 
         .lang-switch a:first-child {
-            background: var(--secondary);
-            color: var(--primary);
+            background: transparent;
+            color: var(--text);
         }
 
         .lang-switch a:last-child {
@@ -127,6 +129,17 @@
             color: var(--text);
         }
 
+        .lang-switch a:hover {
+            background: var(--secondary);
+            color: var(--primary);
+        }
+
+        .lang-switch a.active {
+            background: var(--secondary);
+            color: var(--primary);
+        }
+
+        /* Hero Section */
         .hero {
             padding: 160px 40px 80px;
             background: var(--gradient-dark);
@@ -187,120 +200,11 @@
         .hero-description {
             font-size: 16px;
             color: var(--text);
-            max-width: 600px;
+            max-width: 700px;
             line-height: 1.8;
         }
 
-        .contact-section {
-            padding: 80px 40px;
-            background: var(--primary);
-        }
-
-        .contact-inner {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 60px;
-        }
-
-        .form-section h2 {
-            font-size: 24px;
-            font-weight: 600;
-            margin-bottom: 30px;
-        }
-
-        .form-section h2 span { color: var(--secondary); }
-
-        .form-group {
-            margin-bottom: 24px;
-        }
-
-        .form-group label {
-            display: block;
-            font-size: 14px;
-            font-weight: 500;
-            margin-bottom: 8px;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 14px 18px;
-            background: var(--primary-light);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            color: var(--text);
-            font-size: 15px;
-            font-family: inherit;
-            transition: border-color 0.3s;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--secondary);
-        }
-
-        .form-group textarea {
-            min-height: 150px;
-            resize: vertical;
-        }
-
-        .btn-submit {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 16px 40px;
-            background: var(--gradient-gold);
-            border: none;
-            border-radius: 8px;
-            color: var(--primary);
-            font-size: 15px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .btn-submit:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(201, 162, 39, 0.3);
-        }
-
-        .info-section {
-            background: var(--primary-light);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 40px;
-        }
-
-        .info-section h3 {
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 30px;
-        }
-
-        .info-section h3 span { color: var(--secondary); }
-
-        .info-item {
-            margin-bottom: 24px;
-        }
-
-        .info-item:last-child { margin-bottom: 0; }
-
-        .info-label {
-            font-size: 13px;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 8px;
-        }
-
-        .info-value {
-            font-size: 15px;
-            color: var(--text);
-        }
-
+        /* Footer */
         .footer {
             padding: 60px 40px 30px;
             background: var(--primary);
@@ -333,17 +237,157 @@
             color: var(--text-dark);
         }
 
+        /* Buttons */
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 32px;
+            background: var(--gradient-gold);
+            border-radius: 8px;
+            color: var(--primary);
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(201, 162, 39, 0.3);
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 32px;
+            background: transparent;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text);
+            font-size: 15px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--secondary);
+            color: var(--secondary);
+        }
+
+        /* Responsive */
         @media (max-width: 768px) {
             .header-inner { padding: 0 20px; height: 70px; }
             .nav { display: none; }
             .hero { padding: 120px 20px 60px; }
             .hero-title { font-size: 32px; }
+            .footer-bottom { flex-direction: column; gap: 20px; text-align: center; }
+        }
+
+        .contact-section {
+            padding: 80px 40px;
+            background: var(--primary);
+        }
+        .contact-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 60px;
+        }
+        .form-section h2 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+        .form-section h2 span { color: var(--secondary); }
+        .form-group {
+            margin-bottom: 24px;
+        }
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 18px;
+            background: var(--primary-light);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text);
+            font-size: 15px;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--secondary);
+        }
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        .btn-submit {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 40px;
+            background: var(--gradient-gold);
+            border: none;
+            border-radius: 8px;
+            color: var(--primary);
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(201, 162, 39, 0.3);
+        }
+        .info-section {
+            background: var(--primary-light);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 40px;
+        }
+        .info-section h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+        .info-section h3 span { color: var(--secondary); }
+        .info-item {
+            margin-bottom: 24px;
+        }
+        .info-item:last-child { margin-bottom: 0; }
+        .info-label {
+            font-size: 13px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+        .info-value {
+            font-size: 15px;
+            color: var(--text);
+        }
+        @media (max-width: 1024px) {
+            .contact-inner { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 768px) {
             .contact-section { padding: 60px 20px; }
-            .contact-inner { grid-template-columns: 1fr; gap: 40px; }
         }
     </style>
 </head>
 <body>
+
     <header class="header">
         <div class="header-inner">
             <a href="/ja/" class="logo">
@@ -351,18 +395,15 @@
                 <div class="logo-text">SUN<span>SEMI</span></div>
             </a>
             <nav class="nav">
-                <a href="/ja/">ホーム</a>
-                <a href="/ja/products/">製品情報</a>
-                <a href="/ja/technical/">技術資料</a>
-                <a href="/ja/company/">会社案内</a>
-                <a href="/ja/contact/" class="active">お問い合わせ</a>
+                <a href="/ja/" class="">ホーム</a><a href="/ja/products/" class="">製品情報</a><a href="/ja/technical/" class="">技術資料</a><a href="/ja/company/" class="">企業概要</a><a href="/ja/contact/" class="active">お問い合わせ</a>
             </nav>
             <div class="lang-switch">
-                <a href="/ja/contact/">JA</a>
-                <a href="/en/contact/">EN</a>
+                <a href="/ja/contact/" class="active">JA</a>
+                <a href="/en/contact/" class="">EN</a>
             </div>
         </div>
     </header>
+
 
     <section class="hero">
         <div class="hero-inner">
@@ -384,19 +425,19 @@
                 <form onsubmit="event.preventDefault(); alert('Message sent!');">
                     <div class="form-group">
                         <label>お名前</label>
-                        <input type="text" placeholder="" required>
+                        <input type="text" required>
                     </div>
                     <div class="form-group">
                         <label>メールアドレス</label>
-                        <input type="email" placeholder="" required>
+                        <input type="email" required>
                     </div>
                     <div class="form-group">
                         <label>会社名</label>
-                        <input type="text" placeholder="">
+                        <input type="text">
                     </div>
                     <div class="form-group">
                         <label>お問い合わせ内容</label>
-                        <textarea placeholder="" required></textarea>
+                        <textarea required></textarea>
                     </div>
                     <button type="submit" class="btn-submit">送信する →</button>
                 </form>
@@ -419,6 +460,7 @@
         </div>
     </section>
 
+
     <footer class="footer">
         <div class="footer-inner">
             <div class="footer-bottom">
@@ -427,5 +469,6 @@
             </div>
         </div>
     </footer>
+
 </body>
 </html>

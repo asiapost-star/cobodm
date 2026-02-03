@@ -4,178 +4,148 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>次世代 FCOB LED テープライト | 高演色・ドットレス技術の専門サイト | SUNSEMI</title>
-    <meta name="description" content="SUNSEMI FCOB LEDテープライト。Ra90高演色性、IP67防水等級、シリコン一体押出成形。業界最先端の均一発光技術によるプロフェッショナル照明ソリューション。">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary: #0a0a0f;
-            --primary-light: #1a1a2e;
+            --primary-light: #151520;
             --secondary: #c9a227;
             --secondary-light: #e5c158;
-            --bg: #0a0a0f;
-            --bg-light: #12121a;
-            --text: #ffffff;
-            --text-muted: #888899;
+            --accent: #f0d878;
+            --text: #f5f5f5;
+            --text-muted: #a0a0a0;
+            --text-dark: #606060;
             --border: #2a2a3a;
             --gradient-gold: linear-gradient(135deg, #c9a227 0%, #e5c158 50%, #c9a227 100%);
+            --gradient-dark: linear-gradient(180deg, #0a0a0f 0%, #151520 100%);
         }
-        
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        html { scroll-behavior: smooth; }
-        
+
         body {
-            font-family: 'Noto Sans JP', sans-serif;
-            background: var(--bg);
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+            background: var(--primary);
             color: var(--text);
             line-height: 1.6;
-            overflow-x: hidden;
         }
-        
+
         /* Header */
         .header {
-            background: rgba(10, 10, 15, 0.95);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--border);
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
             z-index: 1000;
+            background: rgba(10, 10, 15, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
         }
-        
+
         .header-inner {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 0 40px;
+            height: 80px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            height: 80px;
         }
-        
+
         .logo {
             display: flex;
-            flex-direction: column;
+            align-items: center;
+            gap: 12px;
             text-decoration: none;
         }
-        
-        .logo-main {
-            font-size: 1.75rem;
-            font-weight: 700;
+
+        .logo-icon {
+            width: 45px;
+            height: 45px;
             background: var(--gradient-gold);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            letter-spacing: 0.15em;
-        }
-        
-        .logo-sub {
-            font-size: 0.6rem;
-            color: var(--text-muted);
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-        }
-        
-        .nav { display: flex; align-items: center; gap: 0.5rem; }
-        .nav-item { position: relative; }
-        .nav-link {
-            display: block;
-            padding: 0.75rem 1.25rem;
-            color: var(--text);
-            text-decoration: none;
-            font-size: 0.875rem;
-            font-weight: 500;
-            border-radius: 8px;
-            transition: all 0.3s;
-        }
-        .nav-link:hover { 
-            color: var(--secondary); 
-            background: rgba(201, 162, 39, 0.1);
-        }
-        .nav-link.highlight { 
-            background: var(--gradient-gold);
-            color: var(--primary);
-            font-weight: 700;
-        }
-        .nav-link.highlight:hover { 
-            box-shadow: 0 4px 20px rgba(201, 162, 39, 0.4);
-        }
-        
-        .mega-menu {
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 560px;
-            background: rgba(18, 18, 26, 0.98);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s;
-            padding: 2rem;
-            margin-top: 1rem;
-        }
-        .nav-item:hover .mega-menu { opacity: 1; visibility: visible; }
-        .mega-menu-inner {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-        }
-        .mega-column h4 {
-            font-size: 0.75rem;
-            color: var(--secondary);
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            margin-bottom: 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 1px solid var(--border);
-        }
-        .mega-list { list-style: none; }
-        .mega-list li { margin-bottom: 0.75rem; }
-        .mega-list a {
-            display: block;
-            padding: 0.5rem 0;
-            color: var(--text);
-            text-decoration: none;
-            font-size: 0.875rem;
-            transition: all 0.2s;
-        }
-        .mega-list a:hover { color: var(--secondary); padding-left: 0.5rem; }
-        .mega-list a small { display: block; color: var(--text-muted); font-size: 0.7rem; margin-top: 0.25rem; }
-        
-        .lang-switch {
-            display: flex;
-            gap: 0.5rem;
-            margin-left: 1rem;
-        }
-        .lang-switch a {
-            padding: 0.375rem 0.75rem;
-            color: var(--text-muted);
-            text-decoration: none;
-            font-size: 0.75rem;
-            border: 1px solid var(--border);
-            border-radius: 4px;
-            transition: all 0.2s;
-        }
-        .lang-switch a:hover, .lang-switch a.active {
-            color: var(--secondary);
-            border-color: var(--secondary);
-        }
-        
-        /* Hero */
-        .hero {
-            min-height: 100vh;
+            border-radius: 10px;
             display: flex;
             align-items: center;
             justify-content: center;
-            position: relative;
-            padding: 120px 2rem 4rem;
-            overflow: hidden;
+            font-weight: 700;
+            font-size: 14px;
+            color: var(--primary);
         }
-        
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text);
+            letter-spacing: 1px;
+        }
+
+        .logo-text span { color: var(--secondary); }
+
+        .nav { display: flex; gap: 40px; }
+
+        .nav a {
+            color: var(--text);
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .nav a:hover, .nav a.active { color: var(--secondary); }
+
+        .nav a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--gradient-gold);
+        }
+
+        .lang-switch {
+            display: flex;
+            gap: 10px;
+        }
+
+        .lang-switch a {
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 13px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .lang-switch a:first-child {
+            background: transparent;
+            color: var(--text);
+        }
+
+        .lang-switch a:last-child {
+            background: transparent;
+            color: var(--text);
+        }
+
+        .lang-switch a:hover {
+            background: var(--secondary);
+            color: var(--primary);
+        }
+
+        .lang-switch a.active {
+            background: var(--secondary);
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 160px 40px 80px;
+            background: var(--gradient-dark);
+            position: relative;
+        }
+
         .hero::before {
             content: '';
             position: absolute;
@@ -183,723 +153,416 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: 
-                radial-gradient(ellipse at 20% 50%, rgba(201, 162, 39, 0.08) 0%, transparent 50%),
-                radial-gradient(ellipse at 80% 50%, rgba(201, 162, 39, 0.05) 0%, transparent 50%);
-            pointer-events: none;
+            background: radial-gradient(ellipse at top right, rgba(201, 162, 39, 0.1) 0%, transparent 50%);
         }
-        
-        .hero-glow {
-            position: absolute;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(201, 162, 39, 0.15) 0%, transparent 70%);
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            pointer-events: none;
-        }
-        
-        .hero-content {
-            text-align: center;
-            max-width: 900px;
+
+        .hero-inner {
+            max-width: 1400px;
+            margin: 0 auto;
             position: relative;
             z-index: 1;
         }
-        
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.5rem 1rem;
-            background: rgba(201, 162, 39, 0.1);
-            border: 1px solid rgba(201, 162, 39, 0.3);
-            border-radius: 100px;
-            font-size: 0.75rem;
-            color: var(--secondary);
-            margin-bottom: 2rem;
-        }
-        
-        .hero-badge::before {
-            content: '';
-            width: 8px;
-            height: 8px;
-            background: var(--secondary);
-            border-radius: 50%;
-            animation: pulse 2s infinite;
-        }
-        
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
-        
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 1.5rem;
-            letter-spacing: -0.02em;
-        }
-        
-        .hero h1 span {
-            background: var(--gradient-gold);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .hero p {
-            font-size: 1.125rem;
-            color: var(--text-muted);
-            max-width: 600px;
-            margin: 0 auto 2.5rem;
-        }
-        
-        .hero-buttons {
+
+        .breadcrumb {
             display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        
-        .btn {
-            display: inline-flex;
+            gap: 12px;
             align-items: center;
-            gap: 0.5rem;
-            padding: 1rem 2rem;
-            border-radius: 8px;
-            font-size: 0.9375rem;
-            font-weight: 500;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+
+        .breadcrumb a {
+            color: var(--text-muted);
             text-decoration: none;
-            transition: all 0.3s;
+            transition: color 0.3s;
         }
-        
-        .btn-primary {
-            background: var(--gradient-gold);
-            color: var(--primary);
-        }
-        .btn-primary:hover {
-            box-shadow: 0 8px 30px rgba(201, 162, 39, 0.4);
-            transform: translateY(-2px);
-        }
-        
-        .btn-secondary {
-            background: transparent;
-            color: var(--text);
-            border: 1px solid var(--border);
-        }
-        .btn-secondary:hover {
-            border-color: var(--secondary);
-            color: var(--secondary);
-        }
-        
-        /* Features Bar */
-        .features-bar {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 3rem 2rem;
-            border-top: 1px solid var(--border);
-        }
-        
-        .feature-item {
-            text-align: center;
-        }
-        
-        .feature-item .number {
-            font-size: 2.5rem;
+
+        .breadcrumb a:hover { color: var(--secondary); }
+
+        .breadcrumb span { color: var(--secondary); }
+
+        .hero-title {
+            font-size: 48px;
             font-weight: 700;
-            background: var(--gradient-gold);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 0.5rem;
-        }
-        
-        .feature-item .label {
-            font-size: 0.875rem;
-            color: var(--text-muted);
-        }
-        
-        /* Section */
-        .section {
-            padding: 6rem 2rem;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-        
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-        
-        .section-header h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-        
-        .section-header h2 span {
+            margin-bottom: 10px;
             background: var(--gradient-gold);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        
-        .section-header p {
+
+        .hero-subtitle {
+            font-size: 18px;
             color: var(--text-muted);
-            font-size: 1.125rem;
-            max-width: 600px;
-            margin: 0 auto;
+            margin-bottom: 20px;
         }
-        
-        /* Product Series */
-        .series-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-        }
-        
-        .series-card {
-            background: var(--bg-light);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 2rem;
-            text-decoration: none;
+
+        .hero-description {
+            font-size: 16px;
             color: var(--text);
-            transition: all 0.3s;
-            position: relative;
-            overflow: hidden;
+            max-width: 700px;
+            line-height: 1.8;
         }
-        
-        .series-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: var(--gradient-gold);
-            transform: scaleX(0);
-            transition: transform 0.3s;
-        }
-        
-        .series-card:hover {
-            border-color: var(--secondary);
-            transform: translateY(-4px);
-        }
-        
-        .series-card:hover::before {
-            transform: scaleX(1);
-        }
-        
-        .series-card .icon {
-            width: 56px;
-            height: 56px;
-            background: rgba(201, 162, 39, 0.1);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-            font-size: 1.5rem;
-        }
-        
-        .series-card h3 {
-            font-size: 1.25rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-        
-        .series-card .en {
-            font-size: 0.75rem;
-            color: var(--secondary);
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            margin-bottom: 1rem;
-        }
-        
-        .series-card p {
-            font-size: 0.875rem;
-            color: var(--text-muted);
-            line-height: 1.6;
-        }
-        
-        .series-card .arrow {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin-top: 1.5rem;
-            color: var(--secondary);
-            font-size: 0.875rem;
-            font-weight: 500;
-        }
-        
-        /* Featured Products */
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1.5rem;
-        }
-        
-        .product-card {
-            background: var(--bg-light);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            overflow: hidden;
-            transition: all 0.3s;
-        }
-        
-        .product-card:hover {
-            border-color: var(--secondary);
-            transform: translateY(-4px);
-        }
-        
-        .product-image {
-            height: 180px;
-            background: linear-gradient(135deg, #1a1a2e 0%, #0a0a0f 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .product-image::before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 4px;
-            background: var(--gradient-gold);
-            box-shadow: 0 0 30px rgba(201, 162, 39, 0.5);
-        }
-        
-        .product-badges {
-            position: absolute;
-            top: 1rem;
-            left: 1rem;
-            display: flex;
-            gap: 0.5rem;
-        }
-        
-        .product-badge {
-            padding: 0.25rem 0.5rem;
-            background: rgba(10, 10, 15, 0.8);
-            border: 1px solid var(--border);
-            border-radius: 4px;
-            font-size: 0.625rem;
-            color: var(--secondary);
-        }
-        
-        .product-info {
-            padding: 1.5rem;
-        }
-        
-        .product-info h4 {
-            font-size: 1rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-        
-        .product-info p {
-            font-size: 0.8125rem;
-            color: var(--text-muted);
-            line-height: 1.5;
-            margin-bottom: 1rem;
-        }
-        
-        .product-specs {
-            display: flex;
-            gap: 1rem;
-        }
-        
-        .product-spec {
-            display: flex;
-            align-items: center;
-            gap: 0.25rem;
-            font-size: 0.75rem;
-            color: var(--text-muted);
-        }
-        
-        .product-spec span {
-            color: var(--secondary);
-            font-weight: 500;
-        }
-        
-        /* CTA Section */
-        .cta-section {
-            background: var(--bg-light);
-            border-top: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
-            padding: 6rem 2rem;
-            text-align: center;
-        }
-        
-        .cta-section h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-        
-        .cta-section p {
-            color: var(--text-muted);
-            font-size: 1.125rem;
-            max-width: 500px;
-            margin: 0 auto 2rem;
-        }
-        
+
         /* Footer */
         .footer {
-            background: var(--bg-light);
-            padding: 4rem 2rem 2rem;
+            padding: 60px 40px 30px;
+            background: var(--primary);
             border-top: 1px solid var(--border);
         }
-        
+
         .footer-inner {
             max-width: 1400px;
             margin: 0 auto;
         }
-        
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 2fr repeat(3, 1fr);
-            gap: 3rem;
-            margin-bottom: 3rem;
-        }
-        
-        .footer-brand .logo-main {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .footer-brand p {
-            color: var(--text-muted);
-            font-size: 0.875rem;
-            line-height: 1.6;
-        }
-        
-        .footer-col h4 {
-            font-size: 0.875rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            color: var(--text);
-        }
-        
-        .footer-col ul { list-style: none; }
-        .footer-col li { margin-bottom: 0.75rem; }
-        .footer-col a {
-            color: var(--text-muted);
-            text-decoration: none;
-            font-size: 0.875rem;
-            transition: color 0.2s;
-        }
-        .footer-col a:hover { color: var(--secondary); }
-        
+
         .footer-bottom {
-            border-top: 1px solid var(--border);
-            padding-top: 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding-top: 30px;
+            border-top: 1px solid var(--border);
         }
-        
-        .footer-bottom p {
+
+        .footer-logo {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .footer-logo span { color: var(--secondary); }
+
+        .copyright {
+            font-size: 13px;
+            color: var(--text-dark);
+        }
+
+        /* Buttons */
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 32px;
+            background: var(--gradient-gold);
+            border-radius: 8px;
+            color: var(--primary);
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(201, 162, 39, 0.3);
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 32px;
+            background: transparent;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text);
+            font-size: 15px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--secondary);
+            color: var(--secondary);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner { padding: 0 20px; height: 70px; }
+            .nav { display: none; }
+            .hero { padding: 120px 20px 60px; }
+            .hero-title { font-size: 32px; }
+            .footer-bottom { flex-direction: column; gap: 20px; text-align: center; }
+        }
+
+        /* Hero */
+        .hero { min-height: 100vh; display: flex; align-items: center; padding: 120px 40px 80px; }
+        .hero-content { max-width: 600px; }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: rgba(201, 162, 39, 0.1);
+            border: 1px solid var(--secondary);
+            border-radius: 20px;
+            font-size: 13px;
+            color: var(--secondary);
+            margin-bottom: 30px;
+        }
+        .hero-title {
+            font-size: 56px;
+            font-weight: 700;
+            line-height: 1.15;
+            margin-bottom: 24px;
+            background: var(--gradient-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero-desc {
+            font-size: 18px;
             color: var(--text-muted);
-            font-size: 0.75rem;
+            line-height: 1.8;
+            margin-bottom: 40px;
         }
-        
+        .hero-buttons { display: flex; gap: 20px; }
+
+        /* Stats Bar */
+        .stats-bar {
+            padding: 40px;
+            background: var(--primary-light);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .stats-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+        .stat-item { text-align: center; }
+        .stat-value {
+            font-size: 42px;
+            font-weight: 700;
+            background: var(--gradient-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .stat-label {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-top: 8px;
+        }
+
+        /* Series Section */
+        .series-section {
+            padding: 100px 40px;
+            background: var(--primary);
+        }
+        .series-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .section-label {
+            display: inline-block;
+            padding: 6px 16px;
+            background: rgba(201, 162, 39, 0.1);
+            border: 1px solid var(--secondary);
+            border-radius: 20px;
+            font-size: 12px;
+            color: var(--secondary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+        .section-title {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        .section-title span {
+            background: var(--gradient-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .section-desc {
+            font-size: 18px;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .series-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .series-card {
+            background: var(--primary-light);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: var(--text);
+        }
+        .series-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--secondary);
+            box-shadow: 0 20px 40px rgba(201, 162, 39, 0.15);
+        }
+        .series-name {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        .series-desc {
+            font-size: 14px;
+            color: var(--text-muted);
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        .series-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--secondary);
+            font-size: 14px;
+            font-weight: 500;
+        }
+
         @media (max-width: 1024px) {
             .series-grid { grid-template-columns: repeat(2, 1fr); }
-            .products-grid { grid-template-columns: repeat(2, 1fr); }
-            .footer-grid { grid-template-columns: repeat(2, 1fr); }
         }
-        
         @media (max-width: 768px) {
-            .nav { display: none; }
-            .hero h1 { font-size: 2rem; }
-            .features-bar { grid-template-columns: repeat(2, 1fr); }
+            .hero { padding: 100px 20px 60px; }
+            .hero-title { font-size: 36px; }
+            .hero-buttons { flex-direction: column; }
+            .series-section { padding: 60px 20px; }
             .series-grid { grid-template-columns: 1fr; }
-            .products-grid { grid-template-columns: 1fr; }
-            .footer-grid { grid-template-columns: 1fr; }
-            .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
+            .section-title { font-size: 32px; }
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
+
     <header class="header">
         <div class="header-inner">
             <a href="/ja/" class="logo">
-                <span class="logo-main">SUNSEMI</span>
-                <span class="logo-sub">FCOB LED TECHNOLOGY</span>
+                <div class="logo-icon">SUN</div>
+                <div class="logo-text">SUN<span>SEMI</span></div>
             </a>
-            
             <nav class="nav">
-                <div class="nav-item">
-                    <a href="/ja/products/" class="nav-link">製品情報</a>
-                    <div class="mega-menu">
-                        <div class="mega-menu-inner">
-                            <div class="mega-column">
-                                <h4>標準照明</h4>
-                                <ul class="mega-list">
-                                    <li><a href="/ja/products/single-color/">単色シリーズ<small>320D/480D/608D</small></a></li>
-                                    <li><a href="/ja/products/tunable-white/">調光調色シリーズ<small>2700K-6500K</small></a></li>
-                                    <li><a href="/ja/products/rgb/">RGBシリーズ<small>RGB/RGBW/RGBCW</small></a></li>
-                                </ul>
-                            </div>
-                            <div class="mega-column">
-                                <h4>特殊仕様</h4>
-                                <ul class="mega-list">
-                                    <li><a href="/ja/products/neon/">ネオンフレックス<small>シリコン一体成形</small></a></li>
-                                    <li><a href="/ja/products/ip67/">IP67防水シリーズ<small>屋外対応</small></a></li>
-                                    <li><a href="/ja/products/high-voltage/">高圧シリーズ<small>AC 220V</small></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="nav-item">
-                    <a href="/ja/technology/" class="nav-link">技術資料</a>
-                </div>
-                
-                <div class="nav-item">
-                    <a href="/ja/cases/" class="nav-link">応用事例</a>
-                </div>
-                
-                <div class="nav-item">
-                    <a href="/ja/company/" class="nav-link">企業概要</a>
-                </div>
-                
-                <div class="nav-item">
-                    <a href="/ja/inquiry/" class="nav-link highlight">お問い合わせ</a>
-                </div>
-                
-                <div class="lang-switch">
-                    <a href="/ja/" class="active">JA</a>
-                    <a href="/en/">EN</a>
-                </div>
+                <a href="/ja/" class="active">ホーム</a><a href="/ja/products/" class="">製品情報</a><a href="/ja/technical/" class="">技術資料</a><a href="/ja/company/" class="">企業概要</a><a href="/ja/contact/" class="">お問い合わせ</a>
             </nav>
+            <div class="lang-switch">
+                <a href="/ja/" class="active">JA</a>
+                <a href="/en/" class="">EN</a>
+            </div>
         </div>
     </header>
 
-    <!-- Hero -->
+
     <section class="hero">
-        <div class="hero-glow"></div>
-        <div class="hero-content">
-            <div class="hero-badge">3-Step SDCM 色容差管理技術</div>
-            <h1>次世代 <span>FCOB LED</span><br>ドットレス技術</h1>
-            <p>Ra90高演色性、IP67防水等級、シリコン一体押出成形。業界最先端の均一発光技術によるプロフェッショナル照明ソリューション。</p>
-            <div class="hero-buttons">
-                <a href="/ja/products/" class="btn btn-primary">製品一覧</a>
-                <a href="/ja/inquiry/" class="btn btn-secondary">お問い合わせ</a>
+        <div class="hero-inner">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span>✦</span>
+                    <span>FCOB LED TECHNOLOGY</span>
+                </div>
+                <h1 class="hero-title">
+                    次世代<br>
+                    FCOB LED<br>
+                    ドットレス技術
+                </h1>
+                <p class="hero-desc">Ra90高演色性、IP67防水等級、シリコン一体押出成形。業界最先端の均一発光技術によるプロフェッショナル照明ソリューション。</p>
+                <div class="hero-buttons">
+                    <a href="/ja/products/" class="btn-primary">
+                        <span>製品一覧</span>
+                        <span>→</span>
+                    </a>
+                    <a href="/ja/contact/" class="btn-secondary">
+                        <span>お問い合わせ</span>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Features Bar -->
-    <div class="features-bar">
-        <div class="feature-item">
-            <div class="number">Ra90+</div>
-            <div class="label">高演色性</div>
-        </div>
-        <div class="feature-item">
-            <div class="number">3-Step</div>
-            <div class="label">SDCM管理</div>
-        </div>
-        <div class="feature-item">
-            <div class="number">IP67</div>
-            <div class="label">防水等級</div>
-        </div>
-        <div class="feature-item">
-            <div class="number">5年</div>
-            <div class="label">品質保証</div>
-        </div>
-    </div>
-
-    <!-- Product Series -->
-    <section class="section">
-        <div class="section-header">
-            <h2>製品シリーズ</h2>
-            <p>多様な照明ニーズに対応する6大製品シリーズ</p>
-        </div>
-        
-        <div class="series-grid">
-            <a href="/ja/products/single-color/" class="series-card">
-                <div class="icon">&#128161;</div>
-                <h3>単色シリーズ</h3>
-                <div class="en">Single Color</div>
-                <p>プロフェッショナル照明向け高演色単色FCOB LEDテープ</p>
-                <div class="arrow">詳細 &#8594;</div>
-            </a>
+    <section class="stats-bar">
+        <div class="stats-inner">
             
-            <a href="/ja/products/tunable-white/" class="series-card">
-                <div class="icon">&#9728;</div>
-                <h3>調光調色シリーズ</h3>
-                <div class="en">Tunable White</div>
-                <p>電球色から昼光色まで調光調色可能なFCOB LEDテープ</p>
-                <div class="arrow">詳細 &#8594;</div>
-            </a>
-            
-            <a href="/ja/products/rgb/" class="series-card">
-                <div class="icon">&#127912;</div>
-                <h3>RGBシリーズ</h3>
-                <div class="en">RGB Series</div>
-                <p>フルカラー演出照明向けRGB FCOB LEDテープ</p>
-                <div class="arrow">詳細 &#8594;</div>
-            </a>
-            
-            <a href="/ja/products/neon/" class="series-card">
-                <div class="icon">&#11044;</div>
-                <h3>ネオンフレックスシリーズ</h3>
-                <div class="en">Neon Flex</div>
-                <p>シームレスな発光効果を実現するシリコンネオンフレックス</p>
-                <div class="arrow">詳細 &#8594;</div>
-            </a>
-            
-            <a href="/ja/products/ip67/" class="series-card">
-                <div class="icon">&#128167;</div>
-                <h3>IP67防水シリーズ</h3>
-                <div class="en">IP67 Waterproof</div>
-                <p>IP67防水等級を取得した屋外用FCOB LEDテープ</p>
-                <div class="arrow">詳細 &#8594;</div>
-            </a>
-            
-            <a href="/ja/products/high-voltage/" class="series-card">
-                <div class="icon">&#9889;</div>
-                <h3>高圧シリーズ</h3>
-                <div class="en">High Voltage</div>
-                <p>長距離配線向けAC 220V高圧FCOB LEDテープ</p>
-                <div class="arrow">詳細 &#8594;</div>
-            </a>
+                <div class="stat-item">
+                    <div class="stat-value">Ra90+</div>
+                    <div class="stat-label">高演色性</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">3-Step</div>
+                    <div class="stat-label">SDCM管理</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">IP67</div>
+                    <div class="stat-label">防水等級</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">5年</div>
+                    <div class="stat-label">品質保証</div>
+                </div>
         </div>
     </section>
 
-    <!-- Featured Products -->
-    <section class="section">
-        <div class="section-header">
-            <h2>代表製品</h2>
-            <p>高品質FCOB LEDテープライト製品ラインナップ</p>
-        </div>
-        
-        <div class="products-grid">
-            <a href="/ja/products/single-color/320d-12v-5mm/" class="product-card">
-                <div class="product-image">
-                    <div class="product-badges">
-                        <span class="product-badge">Ra&gt;90</span>
-                        <span class="product-badge">IP20</span>
-                        <span class="product-badge">3Step</span>
-                    </div>
-                </div>
-                <div class="product-info">
-                    <h4>320D-12V-5MM</h4>
-                    <p>5mm超窄幅FCOB LEDテープ。1mあたり320チップ搭載。狭い空間や細部の照明に最適。</p>
-                </div>
-            </a>
-            
-            <a href="/ja/products/single-color/320d-24v-5mm/" class="product-card">
-                <div class="product-image">
-                    <div class="product-badges">
-                        <span class="product-badge">Ra&gt;90</span>
-                        <span class="product-badge">IP20</span>
-                        <span class="product-badge">3Step</span>
-                    </div>
-                </div>
-                <div class="product-info">
-                    <h4>320D-24V-5MM</h4>
-                    <p>24V版5mm超窄幅FCOB LEDテープ。同じドットレス性能で長距離配線が可能。</p>
-                </div>
-            </a>
-            
-            <a href="/ja/products/single-color/320d-12v-8mm/" class="product-card">
-                <div class="product-image">
-                    <div class="product-badges">
-                        <span class="product-badge">Ra&gt;90</span>
-                        <span class="product-badge">IP20</span>
-                        <span class="product-badge">3Step</span>
-                    </div>
-                </div>
-                <div class="product-info">
-                    <h4>320D-12V-8MM</h4>
-                    <p>標準的な8mm幅FCOB LEDテープ。優れた放熱性能と均一な発光を実現。</p>
-                </div>
-            </a>
-            
-            <a href="/ja/products/single-color/320d-24v-8mm/" class="product-card">
-                <div class="product-image">
-                    <div class="product-badges">
-                        <span class="product-badge">Ra&gt;90</span>
-                        <span class="product-badge">IP20</span>
-                        <span class="product-badge">3Step</span>
-                    </div>
-                </div>
-                <div class="product-info">
-                    <h4>320D-24V-8MM</h4>
-                    <p>24V版標準8mm幅FCOB LEDテープ。長距離設置でも均一な輝度を維持。</p>
-                </div>
-            </a>
-        </div>
-        
-        <div style="text-align: center; margin-top: 3rem;">
-            <a href="/ja/products/" class="btn btn-secondary">全製品一覧</a>
+    <section class="series-section">
+        <div class="series-inner">
+            <div class="section-header">
+                <div class="section-label">製品シリーズ</div>
+                <h2 class="section-title">多様な照明ニ <span>ーズに対応する6大製品シリーズ</span></h2>
+                <p class="section-desc">多様な照明ニーズに対応する6大製品シリーズ</p>
+            </div>
+            <div class="series-grid">
+                
+                <a href="/ja/products/single-color/" class="series-card">
+                    <h3 class="series-name">単色シリーズ</h3>
+                    <p class="series-desc">高演色Ra95+の単色LEDテープライト</p>
+                    <span class="series-link">シリーズを見る →</span>
+                </a>
+                <a href="/ja/products/tunable-white/" class="series-card">
+                    <h3 class="series-name">調光調色シリーズ</h3>
+                    <p class="series-desc">2700K〜6500Kの色温度調整が可能</p>
+                    <span class="series-link">シリーズを見る →</span>
+                </a>
+                <a href="/ja/products/rgb/" class="series-card">
+                    <h3 class="series-name">RGB/RGBW</h3>
+                    <p class="series-desc">鮮やかなフルカラー表現が可能</p>
+                    <span class="series-link">シリーズを見る →</span>
+                </a>
+                <a href="/ja/products/neon/" class="series-card">
+                    <h3 class="series-name">ネオンシリーズ</h3>
+                    <p class="series-desc">柔軟で曲げやすいネオンタイプ</p>
+                    <span class="series-link">シリーズを見る →</span>
+                </a>
+                <a href="/ja/products/ip67/" class="series-card">
+                    <h3 class="series-name">防水IP67シリーズ</h3>
+                    <p class="series-desc">屋外使用に対応した防水設計</p>
+                    <span class="series-link">シリーズを見る →</span>
+                </a>
+                <a href="/ja/products/high-voltage/" class="series-card">
+                    <h3 class="series-name">高圧シリーズ</h3>
+                    <p class="series-desc">220V高電圧直接駆動</p>
+                    <span class="series-link">シリーズを見る →</span>
+                </a>
+            </div>
         </div>
     </section>
 
-    <!-- CTA -->
-    <section class="cta-section">
-        <h2>お問い合わせ</h2>
-        <p>製品に関するご質問やお見積りのご依頼は、お気軽にお問い合わせください。</p>
-        <a href="/ja/inquiry/" class="btn btn-primary">お問い合わせフォーム</a>
-    </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="footer-inner">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <div class="logo-main">SUNSEMI</div>
-                    <p>FCOB LEDテープライトの専門メーカー。<br>高演色性・ドットレス技術で、プロフェッショナルな照明ソリューションを提供します。</p>
-                </div>
-                
-                <div class="footer-col">
-                    <h4>製品情報</h4>
-                    <ul>
-                        <li><a href="/ja/products/single-color/">単色シリーズ</a></li>
-                        <li><a href="/ja/products/tunable-white/">調光調色シリーズ</a></li>
-                        <li><a href="/ja/products/rgb/">RGBシリーズ</a></li>
-                        <li><a href="/ja/products/neon/">ネオンフレックス</a></li>
-                        <li><a href="/ja/products/ip67/">IP67防水シリーズ</a></li>
-                        <li><a href="/ja/products/high-voltage/">高圧シリーズ</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-col">
-                    <h4>サポート</h4>
-                    <ul>
-                        <li><a href="/ja/technology/">技術資料</a></li>
-                        <li><a href="/ja/cases/">応用事例</a></li>
-                        <li><a href="/ja/company/">企業概要</a></li>
-                        <li><a href="/ja/inquiry/">お問い合わせ</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-col">
-                    <h4>法的情報</h4>
-                    <ul>
-                        <li><a href="/ja/privacy/">プライバシーポリシー</a></li>
-                        <li><a href="/ja/terms/">利用規約</a></li>
-                    </ul>
-                </div>
-            </div>
-            
             <div class="footer-bottom">
-                <p>&copy; 2024 SUNSEMI. All rights reserved.</p>
-                <p>FCOB LED Lighting Solutions</p>
+                <div class="footer-logo">SUN<span>SEMI</span></div>
+                <p class="copyright">© 2024 SUNSEMI. All rights reserved.</p>
             </div>
         </div>
     </footer>
+
 </body>
 </html>

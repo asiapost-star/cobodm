@@ -13,6 +13,7 @@
             --primary-light: #151520;
             --secondary: #c9a227;
             --secondary-light: #e5c158;
+            --accent: #f0d878;
             --text: #f5f5f5;
             --text-muted: #a0a0a0;
             --text-dark: #606060;
@@ -30,6 +31,7 @@
             line-height: 1.6;
         }
 
+        /* Header */
         .header {
             position: fixed;
             top: 0;
@@ -123,10 +125,21 @@
         }
 
         .lang-switch a:last-child {
+            background: transparent;
+            color: var(--text);
+        }
+
+        .lang-switch a:hover {
             background: var(--secondary);
             color: var(--primary);
         }
 
+        .lang-switch a.active {
+            background: var(--secondary);
+            color: var(--primary);
+        }
+
+        /* Hero Section */
         .hero {
             padding: 160px 40px 80px;
             background: var(--gradient-dark);
@@ -187,133 +200,11 @@
         .hero-description {
             font-size: 16px;
             color: var(--text);
-            max-width: 600px;
+            max-width: 700px;
             line-height: 1.8;
         }
 
-        .about-section {
-            padding: 80px 40px;
-            background: var(--primary);
-        }
-
-        .about-inner {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
-        }
-
-        .about-content h2 {
-            font-size: 32px;
-            font-weight: 600;
-            margin-bottom: 30px;
-        }
-
-        .about-content h2 span { color: var(--secondary); }
-
-        .about-content p {
-            font-size: 16px;
-            color: var(--text-muted);
-            line-height: 1.8;
-            margin-bottom: 20px;
-        }
-
-        .about-visual {
-            aspect-ratio: 4/3;
-            background: linear-gradient(135deg, #1a1a25 0%, #252535 100%);
-            border-radius: 20px;
-            border: 1px solid var(--border);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .about-visual-content {
-            text-align: center;
-        }
-
-        .about-logo {
-            font-size: 48px;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-
-        .about-logo span { color: var(--secondary); }
-
-        .about-tagline {
-            font-size: 16px;
-            color: var(--text-muted);
-        }
-
-        .values-section {
-            padding: 80px 40px;
-            background: var(--primary-light);
-            border-top: 1px solid var(--border);
-        }
-
-        .values-inner {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .section-title {
-            font-size: 32px;
-            font-weight: 600;
-        }
-
-        .section-title span { color: var(--secondary); }
-
-        .values-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-        }
-
-        .value-card {
-            background: var(--primary);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 40px 30px;
-            text-align: center;
-            transition: all 0.3s;
-        }
-
-        .value-card:hover {
-            border-color: var(--secondary);
-            transform: translateY(-8px);
-        }
-
-        .value-icon {
-            width: 70px;
-            height: 70px;
-            background: var(--gradient-gold);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 28px;
-            margin: 0 auto 24px;
-        }
-
-        .value-title {
-            font-size: 22px;
-            font-weight: 600;
-            margin-bottom: 16px;
-        }
-
-        .value-desc {
-            font-size: 15px;
-            color: var(--text-muted);
-            line-height: 1.7;
-        }
-
+        /* Footer */
         .footer {
             padding: 60px 40px 30px;
             background: var(--primary);
@@ -346,19 +237,153 @@
             color: var(--text-dark);
         }
 
+        /* Buttons */
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 32px;
+            background: var(--gradient-gold);
+            border-radius: 8px;
+            color: var(--primary);
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(201, 162, 39, 0.3);
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 32px;
+            background: transparent;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text);
+            font-size: 15px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--secondary);
+            color: var(--secondary);
+        }
+
+        /* Responsive */
         @media (max-width: 768px) {
             .header-inner { padding: 0 20px; height: 70px; }
             .nav { display: none; }
             .hero { padding: 120px 20px 60px; }
             .hero-title { font-size: 32px; }
-            .about-section { padding: 60px 20px; }
+            .footer-bottom { flex-direction: column; gap: 20px; text-align: center; }
+        }
+
+        .about-section {
+            padding: 80px 40px;
+            background: var(--primary);
+        }
+        .about-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+        .about-content h2 {
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+        .about-content h2 span { color: var(--secondary); }
+        .about-content p {
+            font-size: 16px;
+            color: var(--text-muted);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        .about-visual {
+            aspect-ratio: 4/3;
+            background: linear-gradient(135deg, #1a1a25 0%, #252535 100%);
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .about-logo {
+            font-size: 48px;
+            font-weight: 700;
+        }
+        .about-logo span { color: var(--secondary); }
+        .about-tagline {
+            font-size: 16px;
+            color: var(--text-muted);
+            margin-top: 10px;
+        }
+        .values-section {
+            padding: 80px 40px;
+            background: var(--primary-light);
+            border-top: 1px solid var(--border);
+        }
+        .values-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .section-title {
+            font-size: 32px;
+            font-weight: 600;
+        }
+        .section-title span { color: var(--secondary); }
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .value-card {
+            background: var(--primary);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        .value-card:hover {
+            border-color: var(--secondary);
+        }
+        .value-title {
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+        .value-desc {
+            font-size: 15px;
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+        @media (max-width: 1024px) {
             .about-inner { grid-template-columns: 1fr; gap: 40px; }
-            .values-section { padding: 60px 20px; }
             .values-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 768px) {
+            .about-section, .values-section { padding: 60px 20px; }
         }
     </style>
 </head>
 <body>
+
     <header class="header">
         <div class="header-inner">
             <a href="/en/" class="logo">
@@ -366,25 +391,22 @@
                 <div class="logo-text">SUN<span>SEMI</span></div>
             </a>
             <nav class="nav">
-                <a href="/en/">Home</a>
-                <a href="/en/products/">Products</a>
-                <a href="/en/technical/">Technical</a>
-                <a href="/en/company/" class="active">Company</a>
-                <a href="/en/contact/">Contact</a>
+                <a href="/en/" class="">Home</a><a href="/en/products/" class="">Products</a><a href="/en/technical/" class="">Technical</a><a href="/en/company/" class="active">Company</a><a href="/en/contact/" class="">Contact</a>
             </nav>
             <div class="lang-switch">
-                <a href="/ja/company/">JA</a>
-                <a href="/en/company/">EN</a>
+                <a href="/ja/company/" class="">JA</a>
+                <a href="/en/company/" class="active">EN</a>
             </div>
         </div>
     </header>
+
 
     <section class="hero">
         <div class="hero-inner">
             <div class="breadcrumb">
                 <a href="/en/">Home</a>
                 <span>/</span>
-                <span style="color: var(--secondary);">Company</span>
+                <span style="color: var(--secondary);">About Us</span>
             </div>
             <h1 class="hero-title">About Us</h1>
             <p class="hero-subtitle">Company Profile</p>
@@ -401,7 +423,7 @@
         <p>Under our quality-first policy, we deliver the best lighting solutions through strict quality control and continuous technological innovation.</p>
             </div>
             <div class="about-visual">
-                <div class="about-visual-content">
+                <div style="text-align: center;">
                     <div class="about-logo">SUN<span>SEMI</span></div>
                     <p class="about-tagline">Premium FCOB LED Solutions</p>
                 </div>
@@ -415,24 +437,23 @@
                 <h2 class="section-title"><span>Values</span></h2>
             </div>
             <div class="values-grid">
+                
                 <div class="value-card">
-                    <div class="value-icon">◈</div>
                     <h3 class="value-title">Quality First</h3>
                     <p class="value-desc">To bring high-quality, beautiful light to every space around the world. That is the mission of SUNSEMI.</p>
                 </div>
                 <div class="value-card">
-                    <div class="value-icon">✦</div>
                     <h3 class="value-title">Innovation</h3>
                     <p class="value-desc">We continue to provide lighting products that professionals can trust through cutting-edge FCOB technology and strict quality control.</p>
                 </div>
                 <div class="value-card">
-                    <div class="value-icon">◉</div>
                     <h3 class="value-title">Customer Focus</h3>
-                    <p class="value-desc">To bring high-quality, beautiful light to every space around the world. That is the mission of SUNSEMI.</p>
+                    <p class="value-desc">We provide customization according to customer needs and rapid, courteous support.</p>
                 </div>
             </div>
         </div>
     </section>
+
 
     <footer class="footer">
         <div class="footer-inner">
@@ -442,5 +463,6 @@
             </div>
         </div>
     </footer>
+
 </body>
 </html>
