@@ -117,24 +117,11 @@
             font-weight: 500;
             text-decoration: none;
             transition: all 0.3s;
-        }
-
-        .lang-switch a:first-child {
             background: transparent;
             color: var(--text);
         }
 
-        .lang-switch a:last-child {
-            background: transparent;
-            color: var(--text);
-        }
-
-        .lang-switch a:hover {
-            background: var(--secondary);
-            color: var(--primary);
-        }
-
-        .lang-switch a.active {
+        .lang-switch a:hover, .lang-switch a.active {
             background: var(--secondary);
             color: var(--primary);
         }
@@ -277,6 +264,15 @@
             color: var(--secondary);
         }
 
+        /* Section Title */
+        .section-title {
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 40px;
+        }
+
+        .section-title span { color: var(--secondary); }
+
         /* Responsive */
         @media (max-width: 768px) {
             .header-inner { padding: 0 20px; height: 70px; }
@@ -394,8 +390,8 @@
                 <a href="/en/" class="">Home</a><a href="/en/products/" class="">Products</a><a href="/en/technical/" class="">Technical</a><a href="/en/company/" class="active">Company</a><a href="/en/contact/" class="">Contact</a>
             </nav>
             <div class="lang-switch">
-                <a href="/ja/company/" class="">JA</a>
-                <a href="/en/company/" class="active">EN</a>
+                <a href="/ja/" class="">JA</a>
+                <a href="/en/" class="active">EN</a>
             </div>
         </div>
     </header>
@@ -419,7 +415,7 @@
             <div class="about-content">
                 <h2><span>Company Overview</span></h2>
                 <p>SUNSEMI is a professional manufacturer specializing in FCOB (Flip Chip On Board) LED tape lights.</p>
-        <p>Our products feature high CRI (Ra95+), dotless illumination, and ultra-thin design, trusted by professionals in commercial facilities, residential spaces, hotels, and retail stores worldwide.</p>
+        <p>Our products feature high CRI (Ra90+), dotless illumination, and ultra-thin design, trusted by professionals in commercial facilities, residential spaces, hotels, and retail stores worldwide.</p>
         <p>Under our quality-first policy, we deliver the best lighting solutions through strict quality control and continuous technological innovation.</p>
             </div>
             <div class="about-visual">

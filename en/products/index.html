@@ -117,24 +117,11 @@
             font-weight: 500;
             text-decoration: none;
             transition: all 0.3s;
-        }
-
-        .lang-switch a:first-child {
             background: transparent;
             color: var(--text);
         }
 
-        .lang-switch a:last-child {
-            background: transparent;
-            color: var(--text);
-        }
-
-        .lang-switch a:hover {
-            background: var(--secondary);
-            color: var(--primary);
-        }
-
-        .lang-switch a.active {
+        .lang-switch a:hover, .lang-switch a.active {
             background: var(--secondary);
             color: var(--primary);
         }
@@ -277,6 +264,15 @@
             color: var(--secondary);
         }
 
+        /* Section Title */
+        .section-title {
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 40px;
+        }
+
+        .section-title span { color: var(--secondary); }
+
         /* Responsive */
         @media (max-width: 768px) {
             .header-inner { padding: 0 20px; height: 70px; }
@@ -315,7 +311,7 @@
             box-shadow: 0 20px 40px rgba(201, 162, 39, 0.15);
         }
         .series-name {
-            font-size: 22px;
+            font-size: 20px;
             font-weight: 600;
             margin-bottom: 12px;
         }
@@ -323,15 +319,16 @@
             font-size: 14px;
             color: var(--text-muted);
             line-height: 1.7;
-            margin-bottom: 20px;
+            margin-bottom: 16px;
         }
-        .series-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
+        .series-count {
+            display: inline-block;
+            padding: 6px 16px;
+            background: rgba(201, 162, 39, 0.1);
+            border: 1px solid var(--secondary);
+            border-radius: 20px;
+            font-size: 12px;
             color: var(--secondary);
-            font-size: 14px;
-            font-weight: 500;
         }
         @media (max-width: 1024px) {
             .series-grid { grid-template-columns: repeat(2, 1fr); }
@@ -354,8 +351,8 @@
                 <a href="/en/" class="">Home</a><a href="/en/products/" class="active">Products</a><a href="/en/technical/" class="">Technical</a><a href="/en/company/" class="">Company</a><a href="/en/contact/" class="">Contact</a>
             </nav>
             <div class="lang-switch">
-                <a href="/ja/products/" class="">JA</a>
-                <a href="/en/products/" class="active">EN</a>
+                <a href="/ja/" class="">JA</a>
+                <a href="/en/" class="active">EN</a>
             </div>
         </div>
     </header>
@@ -370,44 +367,79 @@
             </div>
             <h1 class="hero-title">Products</h1>
             <p class="hero-subtitle">Product Lineup</p>
-            <p class="hero-description">Complete lineup of high-quality FCOB LED tape lights. Single color, tunable white, RGB, neon, waterproof, and high voltage series available.</p>
+            <p class="hero-description">Complete lineup of high-quality FCOB LED tape lights. 13 product series, 31 products available.</p>
         </div>
     </section>
 
     <section class="series-section">
         <div class="series-inner">
-            <h2 class="section-title" style="margin-bottom: 40px;"><span>Product Series</span></h2>
+            <h2 class="section-title"><span>Product Series</span></h2>
             <div class="series-grid">
                 
                 <a href="/en/products/single-color/" class="series-card">
                     <h3 class="series-name">Single Color</h3>
-                    <p class="series-desc">High CRI Ra95+ single color LED tape</p>
-                    <span class="series-link">View Series →</span>
+                    <p class="series-desc">High CRI Ra90+ single color LED tape lights. Uniform illumination, dotless design.</p>
+                    <span class="series-count">5 Products</span>
                 </a>
-                <a href="/en/products/tunable-white/" class="series-card">
-                    <h3 class="series-name">Tunable White</h3>
-                    <p class="series-desc">CCT adjustable 2700K-6500K</p>
-                    <span class="series-link">View Series →</span>
+                <a href="/en/products/pixel-spi/" class="series-card">
+                    <h3 class="series-name">Pixel Strip - SPI</h3>
+                    <p class="series-desc">LED tape with segment control via SPI. Ideal for decorative lighting like music stairs.</p>
+                    <span class="series-count">6 Products</span>
+                </a>
+                <a href="/en/products/pixel-dmx/" class="series-card">
+                    <h3 class="series-name">Pixel Strip - DMX</h3>
+                    <p class="series-desc">Professional stage lighting with DMX512 control. Ideal for events and stage lighting.</p>
+                    <span class="series-count">1 Products</span>
+                </a>
+                <a href="/en/products/cct/" class="series-card">
+                    <h3 class="series-name">CCT Tunable White</h3>
+                    <p class="series-desc">Color temperature adjustable from 2700K to 6500K. Suitable for all residential and commercial scenes.</p>
+                    <span class="series-count">1 Products</span>
                 </a>
                 <a href="/en/products/rgb/" class="series-card">
-                    <h3 class="series-name">RGB/RGBW</h3>
-                    <p class="series-desc">Vivid full-color expression</p>
-                    <span class="series-link">View Series →</span>
+                    <h3 class="series-name">RGB/RGBW/RGBCW</h3>
+                    <p class="series-desc">Vivid full-color expression. Ideal for decorative and signage lighting.</p>
+                    <span class="series-count">4 Products</span>
                 </a>
-                <a href="/en/products/neon/" class="series-card">
-                    <h3 class="series-name">Neon Series</h3>
-                    <p class="series-desc">Flexible neon-type LED lights</p>
-                    <span class="series-link">View Series →</span>
+                <a href="/en/products/mini-size/" class="series-card">
+                    <h3 class="series-name">Mini Size</h3>
+                    <p class="series-desc">Ultra-narrow design from 2.7mm to 5mm. Ideal for narrow spaces and detailed lighting.</p>
+                    <span class="series-count">5 Products</span>
                 </a>
-                <a href="/en/products/ip67/" class="series-card">
-                    <h3 class="series-name">Waterproof IP67</h3>
-                    <p class="series-desc">Outdoor-rated waterproof design</p>
-                    <span class="series-link">View Series →</span>
+                <a href="/en/products/high-efficiency/" class="series-card">
+                    <h3 class="series-name">High Efficiency</h3>
+                    <p class="series-desc">High efficiency design for energy saving. Eco-friendly lighting solution.</p>
+                    <span class="series-count">1 Products</span>
                 </a>
-                <a href="/en/products/high-voltage/" class="series-card">
-                    <h3 class="series-name">High Voltage</h3>
-                    <p class="series-desc">220V direct drive LED tape</p>
-                    <span class="series-link">View Series →</span>
+                <a href="/en/products/high-power/" class="series-card">
+                    <h3 class="series-name">High Power</h3>
+                    <p class="series-desc">High brightness design for bright illumination. Ideal for main lighting in commercial facilities.</p>
+                    <span class="series-count">1 Products</span>
+                </a>
+                <a href="/en/products/long-run/" class="series-card">
+                    <h3 class="series-name">Long Run</h3>
+                    <p class="series-desc">Capable of long-distance wiring. Ideal for large-scale facility lighting.</p>
+                    <span class="series-count">1 Products</span>
+                </a>
+                <a href="/en/products/side-emitting/" class="series-card">
+                    <h3 class="series-name">Side-emitting</h3>
+                    <p class="series-desc">Uniform light emission from the side. Ideal for indirect and display lighting.</p>
+                    <span class="series-count">2 Products</span>
+                </a>
+                <a href="/en/products/everywhere-cut/" class="series-card">
+                    <h3 class="series-name">Everywhere Cut</h3>
+                    <p class="series-desc">Can be cut at any position. Supports flexible design.</p>
+                    <span class="series-count">1 Products</span>
+                </a>
+                <a href="/en/products/short-cut/" class="series-card">
+                    <h3 class="series-name">Short Cut</h3>
+                    <p class="series-desc">Short cutting unit for fine adjustment. Ideal for signage lighting.</p>
+                    <span class="series-count">2 Products</span>
+                </a>
+                <a href="/en/products/waterproof/" class="series-card">
+                    <h3 class="series-name">Waterproof</h3>
+                    <p class="series-desc">IP67 waterproof rating. Waterproof design for outdoor use.</p>
+                    <span class="series-count">1 Products</span>
                 </a>
             </div>
         </div>

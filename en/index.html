@@ -117,24 +117,11 @@
             font-weight: 500;
             text-decoration: none;
             transition: all 0.3s;
-        }
-
-        .lang-switch a:first-child {
             background: transparent;
             color: var(--text);
         }
 
-        .lang-switch a:last-child {
-            background: transparent;
-            color: var(--text);
-        }
-
-        .lang-switch a:hover {
-            background: var(--secondary);
-            color: var(--primary);
-        }
-
-        .lang-switch a.active {
+        .lang-switch a:hover, .lang-switch a.active {
             background: var(--secondary);
             color: var(--primary);
         }
@@ -277,6 +264,15 @@
             color: var(--secondary);
         }
 
+        /* Section Title */
+        .section-title {
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 40px;
+        }
+
+        .section-title span { color: var(--secondary); }
+
         /* Responsive */
         @media (max-width: 768px) {
             .header-inner { padding: 0 20px; height: 70px; }
@@ -286,7 +282,6 @@
             .footer-bottom { flex-direction: column; gap: 20px; text-align: center; }
         }
 
-        /* Hero */
         .hero { min-height: 100vh; display: flex; align-items: center; padding: 120px 40px 80px; }
         .hero-content { max-width: 600px; }
         .hero-badge {
@@ -319,7 +314,6 @@
         }
         .hero-buttons { display: flex; gap: 20px; }
 
-        /* Stats Bar */
         .stats-bar {
             padding: 40px;
             background: var(--primary-light);
@@ -349,7 +343,6 @@
             margin-top: 8px;
         }
 
-        /* Series Section */
         .series-section {
             padding: 100px 40px;
             background: var(--primary);
@@ -393,14 +386,14 @@
         }
         .series-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
         }
         .series-card {
             background: var(--primary-light);
             border: 1px solid var(--border);
             border-radius: 16px;
-            padding: 40px 30px;
+            padding: 30px 20px;
             text-align: center;
             transition: all 0.3s ease;
             text-decoration: none;
@@ -412,23 +405,14 @@
             box-shadow: 0 20px 40px rgba(201, 162, 39, 0.15);
         }
         .series-name {
-            font-size: 22px;
+            font-size: 16px;
             font-weight: 600;
-            margin-bottom: 12px;
+            margin-bottom: 8px;
         }
         .series-desc {
-            font-size: 14px;
+            font-size: 13px;
             color: var(--text-muted);
-            line-height: 1.7;
-            margin-bottom: 20px;
-        }
-        .series-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            color: var(--secondary);
-            font-size: 14px;
-            font-weight: 500;
+            line-height: 1.6;
         }
 
         @media (max-width: 1024px) {
@@ -470,12 +454,8 @@
                     <span>✦</span>
                     <span>FCOB LED TECHNOLOGY</span>
                 </div>
-                <h1 class="hero-title">
-                    Premium LED<br>
-                    Tape Light<br>
-                    Solutions
-                </h1>
-                <p class="hero-desc">SUNSEMI specializes in FCOB LED tape lights with Ra95+ high CRI, dotless illumination, and ultra-thin design. Providing professional lighting solutions for commercial and residential spaces.</p>
+                <h1 class="hero-title">Next-Gen<br>FCOB LED<br>Dotless Technology</h1>
+                <p class="hero-desc">Ra90+ high CRI, IP67 waterproof rating, silicone extrusion. Professional lighting solutions with industry-leading uniform illumination technology.</p>
                 <div class="hero-buttons">
                     <a href="/en/products/" class="btn-primary">
                         <span>View Products</span>
@@ -493,20 +473,20 @@
         <div class="stats-inner">
             
                 <div class="stat-item">
-                    <div class="stat-value">Ra95+</div>
+                    <div class="stat-value">Ra90+</div>
                     <div class="stat-label">High CRI</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-value">5mm</div>
-                    <div class="stat-label">Ultra Thin</div>
+                    <div class="stat-value">3-Step</div>
+                    <div class="stat-label">SDCM</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-value">50,000h</div>
-                    <div class="stat-label">Lifespan</div>
+                    <div class="stat-value">IP67</div>
+                    <div class="stat-label">Waterproof</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-value">3</div>
-                    <div class="stat-label">Year Warranty</div>
+                    <div class="stat-value">5Y</div>
+                    <div class="stat-label">Warranty</div>
                 </div>
         </div>
     </section>
@@ -515,40 +495,61 @@
         <div class="series-inner">
             <div class="section-header">
                 <div class="section-label">Product Series</div>
-                <h2 class="section-title">Complete <span>needs</span></h2>
-                <p class="section-desc">Complete lineup for diverse lighting needs</p>
+                <h2 class="section-title"><span>13</span> Product Series</h2>
+                <p class="section-desc">13 product series for diverse lighting needs</p>
             </div>
             <div class="series-grid">
-                
                 <a href="/en/products/single-color/" class="series-card">
                     <h3 class="series-name">Single Color</h3>
-                    <p class="series-desc">High CRI Ra95+ single color LED tape</p>
-                    <span class="series-link">View Series →</span>
+                    <p class="series-desc">5 Products</p>
                 </a>
-                <a href="/en/products/tunable-white/" class="series-card">
-                    <h3 class="series-name">Tunable White</h3>
-                    <p class="series-desc">CCT adjustable 2700K-6500K</p>
-                    <span class="series-link">View Series →</span>
+                <a href="/en/products/pixel-spi/" class="series-card">
+                    <h3 class="series-name">Pixel SPI</h3>
+                    <p class="series-desc">6 Products</p>
+                </a>
+                <a href="/en/products/pixel-dmx/" class="series-card">
+                    <h3 class="series-name">Pixel DMX</h3>
+                    <p class="series-desc">1 Product</p>
+                </a>
+                <a href="/en/products/cct/" class="series-card">
+                    <h3 class="series-name">CCT</h3>
+                    <p class="series-desc">1 Product</p>
                 </a>
                 <a href="/en/products/rgb/" class="series-card">
                     <h3 class="series-name">RGB/RGBW</h3>
-                    <p class="series-desc">Vivid full-color expression</p>
-                    <span class="series-link">View Series →</span>
+                    <p class="series-desc">4 Products</p>
                 </a>
-                <a href="/en/products/neon/" class="series-card">
-                    <h3 class="series-name">Neon Series</h3>
-                    <p class="series-desc">Flexible neon-type LED lights</p>
-                    <span class="series-link">View Series →</span>
+                <a href="/en/products/mini-size/" class="series-card">
+                    <h3 class="series-name">Mini Size</h3>
+                    <p class="series-desc">5 Products</p>
                 </a>
-                <a href="/en/products/ip67/" class="series-card">
-                    <h3 class="series-name">Waterproof IP67</h3>
-                    <p class="series-desc">Outdoor-rated waterproof design</p>
-                    <span class="series-link">View Series →</span>
+                <a href="/en/products/high-efficiency/" class="series-card">
+                    <h3 class="series-name">High Efficiency</h3>
+                    <p class="series-desc">1 Product</p>
                 </a>
-                <a href="/en/products/high-voltage/" class="series-card">
-                    <h3 class="series-name">High Voltage</h3>
-                    <p class="series-desc">220V direct drive LED tape</p>
-                    <span class="series-link">View Series →</span>
+                <a href="/en/products/high-power/" class="series-card">
+                    <h3 class="series-name">High Power</h3>
+                    <p class="series-desc">1 Product</p>
+                </a>
+                <a href="/en/products/long-run/" class="series-card">
+                    <h3 class="series-name">Long Run</h3>
+                    <p class="series-desc">1 Product</p>
+                </a>
+                <a href="/en/products/side-emitting/" class="series-card">
+                    <h3 class="series-name">Side-emitting</h3>
+                    <p class="series-desc">2 Products</p>
+                </a>
+                <a href="/en/products/everywhere-cut/" class="series-card">
+                    <h3 class="series-name">Everywhere Cut</h3>
+                    <p class="series-desc">1 Product</p>
+                </a>
+                <a href="/en/products/short-cut/" class="series-card">
+                    <h3 class="series-name">Short Cut</h3>
+                    <p class="series-desc">2 Products</p>
+                </a>
+                <a href="/en/products/waterproof/" class="series-card">
+                    <h3 class="series-name">Waterproof</h3>
+                    <p class="series-desc">1 Product</p>
                 </a>
             </div>
         </div>

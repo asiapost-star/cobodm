@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Single Color Series | FCOB LED Tape | SUNSEMI</title>
+    <title>Single Color | FCOB LED Tape | SUNSEMI</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -117,24 +117,11 @@
             font-weight: 500;
             text-decoration: none;
             transition: all 0.3s;
-        }
-
-        .lang-switch a:first-child {
             background: transparent;
             color: var(--text);
         }
 
-        .lang-switch a:last-child {
-            background: transparent;
-            color: var(--text);
-        }
-
-        .lang-switch a:hover {
-            background: var(--secondary);
-            color: var(--primary);
-        }
-
-        .lang-switch a.active {
+        .lang-switch a:hover, .lang-switch a.active {
             background: var(--secondary);
             color: var(--primary);
         }
@@ -277,6 +264,15 @@
             color: var(--secondary);
         }
 
+        /* Section Title */
+        .section-title {
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 40px;
+        }
+
+        .section-title span { color: var(--secondary); }
+
         /* Responsive */
         @media (max-width: 768px) {
             .header-inner { padding: 0 20px; height: 70px; }
@@ -383,8 +379,8 @@
                 <a href="/en/" class="">Home</a><a href="/en/products/" class="active">Products</a><a href="/en/technical/" class="">Technical</a><a href="/en/company/" class="">Company</a><a href="/en/contact/" class="">Contact</a>
             </nav>
             <div class="lang-switch">
-                <a href="/ja/products/" class="">JA</a>
-                <a href="/en/products/" class="active">EN</a>
+                <a href="/ja/" class="">JA</a>
+                <a href="/en/" class="active">EN</a>
             </div>
         </div>
     </header>
@@ -393,78 +389,70 @@
     <section class="hero">
         <div class="hero-inner">
             <div class="breadcrumb">
-                <a href="/en/">Home</a><span>/</span><a href="/en/products/">Products</a><span>/</span>
-                <span style="color: var(--secondary);">Single Color Series</span>
+                <a href="/en/">Home</a>
+                <span>/</span>
+                <a href="/en/products/">Products</a>
+                <span>/</span>
+                <span style="color: var(--secondary);">Single Color</span>
             </div>
-            <h1 class="hero-title">Single Color Series</h1>
-            <p class="hero-subtitle">高演色LEDテープ</p>
-            <p class="hero-description">High CRI Ra95+ single color LED tape lights. Ultra-thin design from 5mm to 10mm width, ideal for indirect lighting and display lighting.</p>
+            <h1 class="hero-title">Single Color</h1>
+            <p class="hero-description">High CRI Ra90+ single color LED tape lights. Uniform illumination, dotless design.</p>
         </div>
     </section>
 
     <section class="products-section">
         <div class="products-inner">
-            <h2 class="section-title" style="margin-bottom: 40px;"><span>Series Products</span></h2>
+            <h2 class="section-title"><span>Series Products</span></h2>
             <div class="products-grid">
                 
                 <div class="product-card">
                     <div class="product-image">
-                        <span class="product-model">320D-12V-5MM</span>
+                        <span class="product-model">320D-12/24V-5MM</span>
                     </div>
                     <div class="product-info">
-                        <h3 class="product-name">320D-12V-5MM</h3>
-                        <p class="product-spec">320/m | DC 12V | 5mm | Ra >90</p>
-                        <a href="/en/products/single-color/320d-12v-5mm/" class="btn-view">View Details →</a>
+                        <h3 class="product-name">320D-12/24V-5MM</h3>
+                        <p class="product-spec">320/m | DC 12/24V | 5mm | Ra>90</p>
+                        <a href="/en/products/single-color/320d-12-24v-5mm/" class="btn-view">View Details →</a>
                     </div>
                 </div>
                 <div class="product-card">
                     <div class="product-image">
-                        <span class="product-model">320D-24V-5MM</span>
+                        <span class="product-model">320D-12/24V-8MM</span>
                     </div>
                     <div class="product-info">
-                        <h3 class="product-name">320D-24V-5MM</h3>
-                        <p class="product-spec">320/m | DC 24V | 5mm | Ra >90</p>
-                        <a href="/en/products/single-color/320d-24v-5mm/" class="btn-view">View Details →</a>
+                        <h3 class="product-name">320D-12/24V-8MM</h3>
+                        <p class="product-spec">320/m | DC 12/24V | 8mm | Ra>90</p>
+                        <a href="/en/products/single-color/320d-12-24v-8mm/" class="btn-view">View Details →</a>
                     </div>
                 </div>
                 <div class="product-card">
                     <div class="product-image">
-                        <span class="product-model">320D-12V-8MM</span>
+                        <span class="product-model">320D-12/24V-8MM-COLOR</span>
                     </div>
                     <div class="product-info">
-                        <h3 class="product-name">320D-12V-8MM</h3>
-                        <p class="product-spec">320/m | DC 12V | 8mm | Ra >90</p>
-                        <a href="/en/products/single-color/320d-12v-8mm/" class="btn-view">View Details →</a>
+                        <h3 class="product-name">320D-12/24V-8MM-COLOR</h3>
+                        <p class="product-spec">320/m | DC 12/24V | 8mm | Ra>90</p>
+                        <a href="/en/products/single-color/320d-12-24v-8mm-color/" class="btn-view">View Details →</a>
                     </div>
                 </div>
                 <div class="product-card">
                     <div class="product-image">
-                        <span class="product-model">320D-24V-8MM</span>
+                        <span class="product-model">480D-12/24V-5MM</span>
                     </div>
                     <div class="product-info">
-                        <h3 class="product-name">320D-24V-8MM</h3>
-                        <p class="product-spec">320/m | DC 24V | 8mm | Ra >90</p>
-                        <a href="/en/products/single-color/320d-24v-8mm/" class="btn-view">View Details →</a>
+                        <h3 class="product-name">480D-12/24V-5MM</h3>
+                        <p class="product-spec">480/m | DC 12/24V | 5mm | Ra>90</p>
+                        <a href="/en/products/single-color/480d-12-24v-5mm/" class="btn-view">View Details →</a>
                     </div>
                 </div>
                 <div class="product-card">
                     <div class="product-image">
-                        <span class="product-model">480D-24V-8MM</span>
+                        <span class="product-model">480D-12/24V-8MM</span>
                     </div>
                     <div class="product-info">
-                        <h3 class="product-name">480D-24V-8MM</h3>
-                        <p class="product-spec">480/m | DC 24V | 8mm | Ra >90</p>
-                        <a href="/en/products/single-color/480d-24v-8mm/" class="btn-view">View Details →</a>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image">
-                        <span class="product-model">608D-24V-10MM</span>
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-name">608D-24V-10MM</h3>
-                        <p class="product-spec">608/m | DC 24V | 10mm | Ra >90</p>
-                        <a href="/en/products/single-color/608d-24v-10mm/" class="btn-view">View Details →</a>
+                        <h3 class="product-name">480D-12/24V-8MM</h3>
+                        <p class="product-spec">480/m | DC 12/24V | 8mm | Ra>90</p>
+                        <a href="/en/products/single-color/480d-12-24v-8mm/" class="btn-view">View Details →</a>
                     </div>
                 </div>
             </div>

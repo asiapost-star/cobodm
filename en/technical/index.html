@@ -117,24 +117,11 @@
             font-weight: 500;
             text-decoration: none;
             transition: all 0.3s;
-        }
-
-        .lang-switch a:first-child {
             background: transparent;
             color: var(--text);
         }
 
-        .lang-switch a:last-child {
-            background: transparent;
-            color: var(--text);
-        }
-
-        .lang-switch a:hover {
-            background: var(--secondary);
-            color: var(--primary);
-        }
-
-        .lang-switch a.active {
+        .lang-switch a:hover, .lang-switch a.active {
             background: var(--secondary);
             color: var(--primary);
         }
@@ -277,6 +264,15 @@
             color: var(--secondary);
         }
 
+        /* Section Title */
+        .section-title {
+            font-size: 32px;
+            font-weight: 600;
+            margin-bottom: 40px;
+        }
+
+        .section-title span { color: var(--secondary); }
+
         /* Responsive */
         @media (max-width: 768px) {
             .header-inner { padding: 0 20px; height: 70px; }
@@ -373,8 +369,8 @@
                 <a href="/en/" class="">Home</a><a href="/en/products/" class="">Products</a><a href="/en/technical/" class="active">Technical</a><a href="/en/company/" class="">Company</a><a href="/en/contact/" class="">Contact</a>
             </nav>
             <div class="lang-switch">
-                <a href="/ja/technical/" class="">JA</a>
-                <a href="/en/technical/" class="active">EN</a>
+                <a href="/ja/" class="">JA</a>
+                <a href="/en/" class="active">EN</a>
             </div>
         </div>
     </header>
@@ -425,7 +421,7 @@
                 </div>
                 <div class="doc-card">
                     <div class="doc-icon">📋</div>
-                    <h3 class="doc-title">Tunable White Series Spec</h3>
+                    <h3 class="doc-title">Pixel SPI Series Spec</h3>
                     <p class="doc-desc">Coming Soon</p>
                     <a href="#" class="btn-download">Download ↓</a>
                 </div>
