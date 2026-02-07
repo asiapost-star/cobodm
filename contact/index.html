@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせ | SUNSEMI HITECH CO., LTD.</title>
+    <meta name="description" content="SUNSEMIへのお問い合わせはこちら。見積依頼・技術相談・サンプル請求・カスタム開発について、日本語で対応いたします。">
+    <style>
+        :root { --color-text: #333; --color-bg: #FFF; --color-bg-sub: #F5F5F5; --color-border: #E0E0E0; 
+                --color-accent: #2c5aa0; --color-gray: #666; --color-light-gray: #999;
+                --font-main: "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: var(--font-main); font-size: 14px; line-height: 1.6; color: var(--color-text); }
+        header { background: var(--color-bg); border-bottom: 1px solid var(--color-border); position: sticky; top: 0; z-index: 100; }
+        .header-inner { max-width: 1200px; margin: 0 auto; padding: 0 40px; height: 60px; display: flex; align-items: center; justify-content: space-between; }
+        .logo { font-size: 20px; font-weight: 600; letter-spacing: 0.05em; color: var(--color-text); text-decoration: none; }
+        .logo span { color: var(--color-accent); }
+        nav ul { display: flex; list-style: none; gap: 40px; }
+        nav a { text-decoration: none; color: var(--color-text); font-size: 13px; font-weight: 500; }
+
+        .breadcrumb { background: var(--color-bg-sub); padding: 12px 0; font-size: 12px; color: var(--color-gray); }
+        .breadcrumb-inner { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
+        .breadcrumb a { color: var(--color-gray); text-decoration: none; }
+
+        main { max-width: 1200px; margin: 0 auto; padding: 60px 40px; }
+        h1 { font-size: 32px; font-weight: 600; margin-bottom: 12px; }
+        .subtitle { color: var(--color-gray); margin-bottom: 50px; }
+
+        .contact-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 60px; }
+
+        .form-section { background: var(--color-bg-sub); padding: 40px; border: 1px solid var(--color-border); }
+        .form-group { margin-bottom: 24px; }
+        .form-group label { display: block; font-weight: 600; margin-bottom: 8px; font-size: 13px; }
+        .form-group label .required { color: #d9534f; margin-left: 4px; }
+        .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 12px; border: 1px solid var(--color-border); font-family: inherit; font-size: 14px; }
+        .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--color-text); }
+        .form-group textarea { min-height: 120px; resize: vertical; }
+
+        .submit-btn { background: var(--color-text); color: white; padding: 16px 48px; border: none; font-size: 14px; font-weight: 600; cursor: pointer; letter-spacing: 0.1em; transition: opacity 0.3s; }
+        .submit-btn:hover { opacity: 0.8; }
+
+        .contact-info { background: var(--color-bg-sub); padding: 40px; border: 1px solid var(--color-border); height: fit-content; }
+        .contact-info h3 { font-size: 16px; margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid var(--color-text); }
+        .info-item { margin-bottom: 24px; }
+        .info-item strong { display: block; font-size: 12px; color: var(--color-gray); margin-bottom: 6px; text-transform: uppercase; }
+        .info-item p { font-size: 14px; line-height: 1.6; }
+        .info-item a { color: var(--color-accent); text-decoration: none; }
+        .info-item a:hover { text-decoration: underline; }
+
+        .notice-box { background: #fff3cd; border-left: 4px solid #ffc107; padding: 16px 20px; margin-bottom: 30px; font-size: 13px; color: #856404; }
+
+        footer { background: var(--color-bg-sub); border-top: 1px solid var(--color-border); padding: 40px 0; margin-top: 100px; }
+        .footer-inner { max-width: 1200px; margin: 0 auto; padding: 0 40px; text-align: center; font-size: 12px; color: var(--color-gray); }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="../index.html" class="logo">SUN<span>SEMI</span></a>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">ホーム</a></li>
+                    <li><a href="../products/index.html">製品情報</a></li>
+                    <li><a href="../company/index.html">会社案内</a></li>
+                    <li><a href="./index.html">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <div class="breadcrumb-inner">
+            <a href="../index.html">ホーム</a> &gt; お問い合わせ
+        </div>
+    </div>
+
+    <main>
+        <h1>お問い合わせ</h1>
+        <p class="subtitle">見積依頼・技術相談・サンプル請求など、お気軽にお問い合わせください。</p>
+
+        <div class="contact-grid">
+            <div class="form-section">
+                <div class="notice-box">
+                    <strong>📧 直接メールでのお問い合わせも歓迎です</strong><br>
+                    フォーム送信後、24時間以内に担当者よりご連絡いたします。緊急の場合は直接メールにてお願いいたします。
+                </div>
+
+                <form action="mailto:jp@cobodm.com" method="post" enctype="text/plain">
+                    <div class="form-group">
+                        <label>お問い合わせ種別 <span class="required">*</span></label>
+                        <select name="inquiry_type" required>
+                            <option value="">選択してください</option>
+                            <option value="quotation">見積依頼</option>
+                            <option value="technical">技術相談</option>
+                            <option value="sample">サンプル請求</option>
+                            <option value="custom">カスタム開発</option>
+                            <option value="other">その他</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>貴社名 <span class="required">*</span></label>
+                        <input type="text" name="company" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>ご担当者名 <span class="required">*</span></label>
+                        <input type="text" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>メールアドレス <span class="required">*</span></label>
+                        <input type="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>電話番号</label>
+                        <input type="tel" name="phone">
+                    </div>
+
+                    <div class="form-group">
+                        <label>関心モデル・仕様</label>
+                        <input type="text" name="model" placeholder="例：384D-8MM-LR、高密度タイプなど">
+                    </div>
+
+                    <div class="form-group">
+                        <label>見積希望数量</label>
+                        <input type="text" name="quantity" placeholder="例：100m、500m/ロットなど">
+                    </div>
+
+                    <div class="form-group">
+                        <label>お問い合わせ内容 <span class="required">*</span></label>
+                        <textarea name="message" required placeholder="ご質問・ご要望を詳しくご記入ください。技術的なご相談も承ります。"></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">送信する</button>
+                </form>
+            </div>
+
+            <div class="contact-info">
+                <h3>連絡先情報</h3>
+
+                <div class="info-item">
+                    <strong>Email</strong>
+                    <p><a href="mailto:jp@cobodm.com">jp@cobodm.com</a></p>
+                </div>
+
+                <div class="info-item">
+                    <strong>TEL</strong>
+                    <p>0755-28536800<br><span style="font-size:12px;color:#999;">（中国深セン本社）</span></p>
+                </div>
+
+                <div class="info-item">
+                    <strong>営業時間</strong>
+                    <p>平日 9:00-18:00 (JST/UTC+9)<br>休業日：土日・祝日・中国正月</p>
+                </div>
+
+                <div class="info-item">
+                    <strong>製造拠点</strong>
+                    <p>中国広東省深セン市<br>龍崗区平湖開発ビル13A10-12</p>
+                </div>
+
+                <div class="info-item">
+                    <strong>香港事務所</strong>
+                    <p>香港九龍灣企業広場18楼</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <p>&copy; 2025 SUNSEMI HITECH CO., LTD.</p>
+        </div>
+    </footer>
+</body>
+</html>
