@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>480D-12/24V-8mm | 高密度COB LEDテープライト | SUNSEMI</title>
+    <meta name="description" content="480チップ/m高密度COB LEDテープライト。8mm幅基板、12V/24V対応。連続長5m/10m、広角配光120°。高演色Ra90+仕様。LED仕入・OEM用">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    
+    <!-- 日本語フォント最適化 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body { 
+            font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+        
+        /* 技術青色（岩崎電気準拠） */
+        .tech-blue { color: #00838F; }
+        .bg-tech-blue { background-color: #00838F; }
+        .border-tech-blue { border-color: #00838F; }
+        
+        /* 日系工業デザイン - 極細線 */
+        .jis-line { stroke: #374151; stroke-width: 0.75; fill: none; }
+        .jis-grid { stroke: #e5e7eb; stroke-width: 0.5; }
+        .jis-axis { stroke: #1f2937; stroke-width: 1; }
+        .jis-data { stroke: #00838F; stroke-width: 1.5; fill: none; }
+        .jis-aux { stroke: #9ca3af; stroke-width: 0.75; stroke-dasharray: 4,2; }
+        
+        /* ナビゲーション */
+        .dual-nav-container { 
+            position: sticky; 
+            top: 64px; 
+            z-index: 40; 
+            background: rgba(255,255,255,0.95); 
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #e5e7eb; 
+        }
+        .nav-link.active { 
+            color: #00838F; 
+            border-bottom: 2px solid #00838F; 
+            font-weight: 600; 
+        }
+        
+        /* PDF制御 */
+        .pdf-page { page-break-before: always; break-before: page; }
+        .pdf-avoid-break { page-break-inside: avoid; break-inside: avoid; }
+        
+        @media print {
+            .no-print { display: none !important; }
+            .dual-nav-container, nav.fixed { display: none !important; }
+            body { padding-top: 0 !important; }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- ヘッダー（シンプル・日系） -->
+    <nav class="fixed top-0 w-full bg-white shadow-sm z-50 h-16 no-print">
+        <div class="max-w-7xl mx-auto px-4 h-full flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="text-2xl font-bold tracking-tight text-gray-900">
+                    SUNSEMI<span class="text-xs text-gray-500 font-normal ml-2">株式会社</span>
+                </div>
+            </div>
+            
+            <div class="hidden md:flex items-center space-x-8 h-full text-sm">
+                <a href="#" class="text-gray-600 hover:text-gray-900 transition">ホーム</a>
+                <div class="relative h-full flex items-center">
+                    <button class="text-gray-900 font-semibold flex items-center gap-1 py-5 border-b-2 border-tech-blue">
+                        製品情報
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                </div>
+                <a href="#" class="text-gray-600 hover:text-gray-900 transition">技術サポート</a>
+                <a href="#" class="text-gray-600 hover:text-gray-900 transition">会社案内</a>
+                <a href="#" class="bg-tech-blue text-white px-4 py-2 rounded text-sm font-medium hover:bg-cyan-800 transition">
+                    お問い合わせ
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 双重ナビ（固定） -->
+    <div class="dual-nav-container mt-16 no-print">
+        <div class="max-w-7xl mx-auto px-4 py-3">
+            <!-- パンくず -->
+            <nav class="flex items-center text-xs text-gray-500 mb-3 tracking-wide">
+                <a href="#" class="hover:text-gray-700">ホーム</a>
+                <span class="mx-2 text-gray-300">/</span>
+                <a href="#" class="hover:text-gray-700">製品一覧</a>
+                <span class="mx-2 text-gray-300">/</span>
+                <a href="#" class="hover:text-gray-700">単色COBシリーズ</a>
+                <span class="mx-2 text-gray-300">/</span>
+                <span class="text-gray-900 font-medium">480D-12/24V-8mm</span>
+            </nav>
+
+            <!-- アンカーナビ -->
+            <div class="flex items-center gap-1 overflow-x-auto pb-1 scrollbar-hide">
+                <span class="text-xs font-bold text-gray-400 uppercase tracking-wider mr-3">仕様セクション</span>
+                <a href="#specs" class="nav-link px-3 py-1.5 text-sm text-gray-600 hover:text-tech-blue rounded transition whitespace-nowrap">基本仕様</a>
+                <a href="#dimensions" class="nav-link px-3 py-1.5 text-sm text-gray-600 hover:text-tech-blue rounded transition whitespace-nowrap">外形寸法</a>
+                <a href="#optical" class="nav-link px-3 py-1.5 text-sm text-gray-600 hover:text-tech-blue rounded transition whitespace-nowrap">光学特性</a>
+                <a href="#thermal" class="nav-link px-3 py-1.5 text-sm text-gray-600 hover:text-tech-blue rounded transition whitespace-nowrap">温度特性</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- PDFコンテンツ -->
+    <div id="pdf-content">
+        
+        <!-- 第1ページ：製品概要 -->
+        <section class="bg-white pt-12 pb-16 pdf-avoid-break">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="grid md:grid-cols-2 gap-12 items-start">
+                    <!-- 左：製品イメージ -->
+                    <div class="bg-gray-50 rounded-lg p-8 relative border border-gray-200 pdf-avoid-break">
+                        <div class="absolute top-4 left-4 bg-tech-blue text-white text-xs font-bold px-3 py-1 rounded">高密度 480chips/m</div>
+                        <div class="absolute top-4 right-4 bg-gray-700 text-white text-xs font-bold px-3 py-1 rounded">8mm幅基板</div>
+                        
+                        <div class="h-64 flex items-center justify-center">
+                            <div class="w-full max-w-md relative">
+                                <div class="w-full h-8 bg-gradient-to-r from-yellow-50 via-white to-yellow-50 border border-gray-300 shadow-sm relative">
+                                    <div class="absolute inset-0 flex items-center justify-center">
+                                        <div class="w-full h-1 bg-yellow-400 opacity-50"></div>
+                                    </div>
+                                </div>
+                                <div class="mt-4 text-center text-xs text-gray-500">
+                                    発光面：COB高密度実装（無ドット）
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 右：製品情報（CSV厳密） -->
+                    <div class="pdf-avoid-break">
+                        <div class="text-xs text-gray-400 mb-2 tracking-widest">COB LED TAPE LIGHT / 単色タイプ</div>
+                        <h1 class="text-3xl font-bold text-gray-900 mb-2">480D-12/24V-8mm</h1>
+                        <p class="text-gray-600 mb-6">超高密度COB LEDテープライト<span class="text-tech-blue font-semibold">（8mm標準幅・高演色Ra90+仕様）</span></p>
+                        
+                        <!-- 主要仕様（CSV準拠） -->
+                        <div class="grid grid-cols-2 gap-4 mb-8 text-sm">
+                            <div class="border-b border-gray-200 pb-2">
+                                <div class="text-gray-500 text-xs mb-1">入力電圧</div>
+                                <div class="font-semibold text-gray-900">DC 12V / 24V <span class="text-xs font-normal text-gray-500">（兼用型）</span></div>
+                            </div>
+                            <div class="border-b border-gray-200 pb-2">
+                                <div class="text-gray-500 text-xs mb-1">消費電力</div>
+                                <div class="font-semibold text-gray-900">8.0W/m <span class="text-xs font-normal text-gray-500">（公称）</span></div>
+                            </div>
+                            <div class="border-b border-gray-200 pb-2">
+                                <div class="text-gray-500 text-xs mb-1">基板幅</div>
+                                <div class="font-semibold text-tech-blue">8.0mm ±0.2mm</div>
+                            </div>
+                            <div class="border-b border-gray-200 pb-2">
+                                <div class="text-gray-500 text-xs mb-1">カット間隔（12V時）</div>
+                                <div class="font-semibold text-gray-900">25.0mm <span class="text-xs font-normal text-gray-500">（12LED単位）</span></div>
+                            </div>
+                            <div class="border-b border-gray-200 pb-2">
+                                <div class="text-gray-500 text-xs mb-1">光束（3000K）</div>
+                                <div class="font-semibold text-gray-900">1,050lm/m <span class="text-xs font-normal text-gray-500">（Ra90+）</span></div>
+                            </div>
+                            <div class="border-b border-gray-200 pb-2">
+                                <div class="text-gray-500 text-xs mb-1">5m合計電流（12V時）</div>
+                                <div class="font-semibold text-red-700">1.67A / 40W</div>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-3 no-print">
+                            <button onclick="generatePDF()" class="flex-1 bg-tech-blue text-white px-6 py-3 rounded font-semibold hover:bg-cyan-800 transition shadow-md flex items-center justify-center gap-2">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                                仕様書PDF出力
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 第2ページ：詳細仕様表 -->
+        <section id="specs" class="py-16 bg-gray-50 border-t pdf-page pdf-avoid-break">
+            <div class="max-w-7xl mx-auto px-4">
+                <h2 class="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2 border-l-4 border-tech-blue pl-3">
+                    詳細仕様表
+                    <span class="text-xs font-normal text-gray-500 ml-2">（データソース：SUNSEMI_ProductMaster_v3.csv）</span>
+                </h2>
+                
+                <div class="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm pdf-avoid-break">
+                    <table class="w-full text-sm">
+                        <thead class="bg-gray-50 text-gray-700 border-b border-gray-300">
+                            <tr>
+                                <th class="px-4 py-3 text-left font-semibold w-1/4">項目</th>
+                                <th class="px-4 py-3 text-left font-semibold w-1/4">記号</th>
+                                <th class="px-4 py-3 text-left font-semibold">仕様値</th>
+                                <th class="px-4 py-3 text-left font-semibold">単位</th>
+                                <th class="px-4 py-3 text-left font-semibold">条件・備考</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-100">
+                            <tr class="bg-cyan-50">
+                                <td class="px-4 py-3 font-semibold">型番</td>
+                                <td class="px-4 py-3">-</td>
+                                <td class="px-4 py-3 font-bold text-tech-blue">480D-12/24V-8mm</td>
+                                <td class="px-4 py-3">-</td>
+                                <td class="px-4 py-3 text-gray-500">12V/24V兼用型</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3">LED密度</td>
+                                <td class="px-4 py-3">ρ</td>
+                                <td class="px-4 py-3 font-semibold">480</td>
+                                <td class="px-4 py-3">chips/m</td>
+                                <td class="px-4 py-3 text-gray-500">超高密度COB実装</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3">入力電圧（12V時）</td>
+                                <td class="px-4 py-3">V<sub>F</sub></td>
+                                <td class="px-4 py-3">DC 12</td>
+                                <td class="px-4 py-3">V</td>
+                                <td class="px-4 py-3 text-gray-500">定格電流：1.67A（5m）</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3">入力電圧（24V時）</td>
+                                <td class="px-4 py-3">V<sub>F</sub></td>
+                                <td class="px-4 py-3">DC 24</td>
+                                <td class="px-4 py-3">V</td>
+                                <td class="px-4 py-3 text-gray-500">定格電流：0.83A（5m）</td>
+                            </tr>
+                            <tr class="bg-yellow-50">
+                                <td class="px-4 py-3 font-semibold">カット間隔（12V時）</td>
+                                <td class="px-4 py-3">P<sub>itch</sub></td>
+                                <td class="px-4 py-3 font-bold">25.0</td>
+                                <td class="px-4 py-3">mm</td>
+                                <td class="px-4 py-3 text-gray-500">12LED単位（CSV：cut_length_12v）</td>
+                            </tr>
+                            <tr class="bg-yellow-50">
+                                <td class="px-4 py-3 font-semibold">カット間隔（24V時）</td>
+                                <td class="px-4 py-3">P<sub>itch</sub></td>
+                                <td class="px-4 py-3 font-bold">50.0</td>
+                                <td class="px-4 py-3">mm</td>
+                                <td class="px-4 py-3 text-gray-500">24LED単位（CSV：cut_length_24v）</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3">消費電力</td>
+                                <td class="px-4 py-3">P</td>
+                                <td class="px-4 py-3">8.0</td>
+                                <td class="px-4 py-3">W/m</td>
+                                <td class="px-4 py-3 text-gray-500">Ta=25℃環境下</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3">光束（3000K）</td>
+                                <td class="px-4 py-3">Φ<sub>v</sub></td>
+                                <td class="px-4 py-3">1,050</td>
+                                <td class="px-4 py-3">lm/m</td>
+                                <td class="px-4 py-3 text-gray-500">高演色Ra90+仕様</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3">発光効率</td>
+                                <td class="px-4 py-3">η</td>
+                                <td class="px-4 py-3">131</td>
+                                <td class="px-4 py-3">lm/W</td>
+                                <td class="px-4 py-3 text-gray-500">理論値（3000K時）</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3">配光角</td>
+                                <td class="px-4 py-3">2θ<sub>1/2</sub></td>
+                                <td class="px-4 py-3 font-bold text-tech-blue">120</td>
+                                <td class="px-4 py-3">°</td>
+                                <td class="px-4 py-3 text-gray-500">COBランバート配光</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3">基板幅</td>
+                                <td class="px-4 py-3">W</td>
+                                <td class="px-4 py-3 font-semibold">8.0±0.2</td>
+                                <td class="px-4 py-3">mm</td>
+                                <td class="px-4 py-3 text-gray-500">2oz 圧延銅箔FPC</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3">基板厚さ</td>
+                                <td class="px-4 py-3">T</td>
+                                <td class="px-4 py-3">1.4</td>
+                                <td class="px-4 py-3">mm</td>
+                                <td class="px-4 py-3 text-gray-500">ポリイミド(PI)基板含む</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3">連続長</td>
+                                <td class="px-4 py-3">L</td>
+                                <td class="px-4 py-3">5 / 10</td>
+                                <td class="px-4 py-3">m</td>
+                                <td class="px-4 py-3 text-gray-500">カスタム長さ対応可</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3">保護等級</td>
+                                <td class="px-4 py-3">IP</td>
+                                <td class="px-4 py-3">20</td>
+                                <td class="px-4 py-3">-</td>
+                                <td class="px-4 py-3 text-gray-500">非防水（IP65/67別途対応）</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- 第3ページ：外形寸法図（JIS準拠） -->
+        <section id="dimensions" class="py-16 bg-white border-t pdf-page pdf-avoid-break">
+            <div class="max-w-7xl mx-auto px-4">
+                <h2 class="text-xl font-bold text-gray-900 mb-6 border-l-4 border-tech-blue pl-3">外形寸法図</h2>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- 上面図 -->
+                    <div class="border border-gray-200 rounded-lg p-6 bg-white pdf-avoid-break">
+                        <div class="text-xs text-gray-500 mb-4 text-center">図1. 上面図（平面）</div>
+                        <div class="h-48 flex items-center justify-center">
+                            <svg viewBox="0 0 400 150" class="w-full">
+                                <!-- 基板 -->
+                                <rect x="50" y="60" width="300" height="20" fill="white" stroke="#374151" stroke-width="0.75"/>
+                                
+                                <!-- カットライン（25mmピッチ - CSV準拠） -->
+                                <line x1="87.5" y1="55" x2="87.5" y2="85" stroke="#6b7280" stroke-width="0.5" stroke-dasharray="3,3"/>
+                                <line x1="125" y1="55" x2="125" y2="85" stroke="#6b7280" stroke-width="0.5" stroke-dasharray="3,3"/>
+                                <line x1="162.5" y1="55" x2="162.5" y2="85" stroke="#6b7280" stroke-width="0.5" stroke-dasharray="3,3"/>
+                                <line x1="200" y1="55" x2="200" y2="85" stroke="#6b7280" stroke-width="0.5" stroke-dasharray="3,3"/>
+                                
+                                <!-- 寸法線 -->
+                                <line x1="87.5" y1="95" x2="125" y2="95" stroke="#374151" stroke-width="0.75"/>
+                                <line x1="87.5" y1="92" x2="87.5" y2="98" stroke="#374151" stroke-width="0.75"/>
+                                <line x1="125" y1="92" x2="125" y2="98" stroke="#374151" stroke-width="0.75"/>
+                                <text x="106.25" y="108" text-anchor="middle" class="text-xs" style="font-size:10px;fill:#374151;">25.0</text>
+                                
+                                <!-- 全長 -->
+                                <line x1="50" y1="35" x2="350" y2="35" stroke="#374151" stroke-width="0.75"/>
+                                <text x="200" y="30" text-anchor="middle" class="text-xs" style="font-size:10px;fill:#374151;">全長：5,000mm（5m巻）</text>
+                                
+                                <!-- 幅寸法 -->
+                                <line x1="360" y1="60" x2="360" y2="80" stroke="#374151" stroke-width="0.75"/>
+                                <text x="370" y="73" class="text-xs" style="font-size:10px;fill:#374151;writing-mode:vertical-rl;">8.0±0.2</text>
+                            </svg>
+                        </div>
+                        <div class="text-xs text-gray-600 mt-2 text-center">
+                            注：12V使用時は25mm毎（12LED）、24V使用時は50mm毎（24LED）にカット可能
+                        </div>
+                    </div>
+
+                    <!-- 断面図 -->
+                    <div class="border border-gray-200 rounded-lg p-6 bg-white pdf-avoid-break">
+                        <div class="text-xs text-gray-500 mb-4 text-center">図2. 断面図（A-A'）</div>
+                        <div class="h-48 flex items-center justify-center">
+                            <svg viewBox="0 0 300 200" class="w-full">
+                                <!-- 基板断面 -->
+                                <rect x="100" y="80" width="100" height="28" fill="white" stroke="#374151" stroke-width="0.75"/>
+                                
+                                <!-- 層構成 -->
+                                <rect x="100" y="101" width="100" height="7" fill="#fecaca" stroke="#374151" stroke-width="0.5"/> <!-- 銅箔 -->
+                                <rect x="100" y="91" width="100" height="10" fill="#f3f4f6" stroke="#374151" stroke-width="0.5"/> <!-- PI基板 -->
+                                <rect x="100" y="80" width="100" height="11" fill="#fef9c3" stroke="#374151" stroke-width="0.5" fill-opacity="0.8"/> <!-- COB層 -->
+                                
+                                <!-- 中心線 -->
+                                <line x1="150" y1="70" x2="150" y2="118" stroke="#9ca3af" stroke-width="0.5" stroke-dasharray="3,3"/>
+                                
+                                <!-- 寸法 -->
+                                <line x1="90" y1="80" x2="90" y2="108" stroke="#374151" stroke-width="0.75"/>
+                                <text x="85" y="96" text-anchor="middle" class="text-xs" style="font-size:10px;fill:#374151;writing-mode:vertical-rl;">1.4</text>
+                                
+                                <line x1="100" y1="120" x2="200" y2="120" stroke="#374151" stroke-width="0.75"/>
+                                <text x="150" y="135" text-anchor="middle" class="text-xs" style="font-size:10px;fill:#374151;">8.0±0.2mm</text>
+                                
+                                <!-- 材質注記 -->
+                                <text x="210" y="107" class="text-xs" style="font-size:9px;fill:#6b7280;">2oz 圧延銅箔</text>
+                                <text x="210" y="98" class="text-xs" style="font-size:9px;fill:#6b7280;">ポリイミド基板</text>
+                                <text x="210" y="88" class="text-xs" style="font-size:9px;fill:#6b7280;">COB発光層</text>
+                            </svg>
+                        </div>
+                        <div class="text-xs text-gray-600 mt-2 text-center">
+                            材質：2oz圧延銅箔 + ポリイミド(PI)基板（耐熱性・高放熱）
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 第4ページ：光学特性（日系工業デザイン） -->
+        <section id="optical" class="py-16 bg-gray-50 border-t pdf-page pdf-avoid-break">
+            <div class="max-w-7xl mx-auto px-4">
+                <h2 class="text-xl font-bold text-gray-900 mb-6 border-l-4 border-tech-blue pl-3">光学特性</h2>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- 配光特性 -->
+                    <div class="border border-gray-200 rounded-lg p-6 bg-white pdf-avoid-break">
+                        <div class="text-xs text-gray-500 mb-4 text-center">図3. 配光特性（相対強度分布）</div>
+                        <div class="h-64 flex items-center justify-center">
+                            <svg viewBox="0 0 300 300" class="w-full max-w-xs">
+                                <!-- 極座標グリッド（簡潔） -->
+                                <circle cx="150" cy="150" r="40" fill="none" stroke="#e5e7eb" stroke-width="0.5"/>
+                                <circle cx="150" cy="150" r="80" fill="none" stroke="#e5e7eb" stroke-width="0.5"/>
+                                
+                                <!-- 角度線 -->
+                                <line x1="150" y1="150" x2="150" y2="30" stroke="#9ca3af" stroke-width="0.5"/>
+                                <line x1="150" y1="150" x2="230" y2="70" stroke="#9ca3af" stroke-width="0.5"/>
+                                <line x1="150" y1="150" x2="270" y2="150" stroke="#9ca3af" stroke-width="0.5"/>
+                                
+                                <!-- 120°配光曲線（技術青） -->
+                                <path d="M 150 30 Q 230 70 246 113 Q 270 150 246 187 Q 230 230 150 270 Q 70 230 54 187 Q 30 150 54 113 Q 70 70 150 30 Z" 
+                                      fill="none" stroke="#00838F" stroke-width="2"/>
+                                
+                                <!-- 中心 -->
+                                <circle cx="150" cy="150" r="3" fill="#00838F"/>
+                                
+                                <!-- 注記 -->
+                                <text x="150" y="25" text-anchor="middle" class="text-xs" style="font-size:10px;fill:#374151;">0°</text>
+                                <text x="245" y="65" text-anchor="start" class="text-xs" style="font-size:10px;fill:#6b7280;">60°</text>
+                                <text x="280" y="155" text-anchor="start" class="text-xs" style="font-size:10px;fill:#6b7280;">90°</text>
+                                <text x="150" y="290" text-anchor="middle" class="text-xs font-bold" style="font-size:11px;fill:#00838F;">半値角：120°</text>
+                            </svg>
+                        </div>
+                        <div class="text-xs text-gray-600 mt-2 text-center border-t border-gray-200 pt-2">
+                            配光角：120°（ランバート配光）・COBレンズ一体型
+                        </div>
+                    </div>
+
+                    <!-- 分光分布（物理正確・日系表記） -->
+                    <div class="border border-gray-200 rounded-lg p-6 bg-white pdf-avoid-break">
+                        <div class="text-xs text-gray-500 mb-4 text-center">図4. 分光分布（3000K・高演色Ra90+）</div>
+                        <div class="h-64 flex items-center justify-center">
+                            <svg viewBox="0 0 400 250" class="w-full">
+                                <!-- 軸 -->
+                                <line x1="50" y1="200" x2="380" y2="200" stroke="#374151" stroke-width="0.75"/>
+                                <line x1="50" y1="200" x2="50" y2="30" stroke="#374151" stroke-width="0.75"/>
+                                
+                                <!-- X軸目盛（波長） -->
+                                <text x="50" y="220" text-anchor="middle" class="text-xs" style="font-size:10px;fill:#6b7280;">400</text>
+                                <text x="130" y="220" text-anchor="middle" class="text-xs" style="font-size:10px;fill:#6b7280;">450</text>
+                                <text x="215" y="220" text-anchor="middle" class="text-xs" style="font-size:10px;fill:#6b7280;">550</text>
+                                <text x="300" y="220" text-anchor="middle" class="text-xs" style="font-size:10px;fill:#6b7280;">650</text>
+                                <text x="380" y="220" text-anchor="middle" class="text-xs" style="font-size:10px;fill:#6b7280;">700</text>
+                                <text x="215" y="240" text-anchor="middle" class="text-xs" style="font-size:10px;fill:#374151;">波長（nm）</text>
+                                
+                                <!-- Y軸目盛（相対強度） -->
+                                <text x="35" y="205" text-anchor="end" class="text-xs" style="font-size:10px;fill:#6b7280;">0</text>
+                                <text x="35" y="118" text-anchor="end" class="text-xs" style="font-size:10px;fill:#6b7280;">0.5</text>
+                                <text x="35" y="35" text-anchor="end" class="text-xs" style="font-size:10px;fill:#6b7280;">1.0</text>
+                                <text x="15" y="120" text-anchor="middle" class="text-xs" style="font-size:10px;fill:#374151;writing-mode:vertical-rl;">相対強度（a.u.）</text>
+                                
+                                <!-- 分光曲線（技術青・物理正確） -->
+                                <!-- 450nm青励起ピーク（狭峰） -->
+                                <path d="M 50 180 Q 90 170 130 100 Q 140 70 150 100 Q 160 160 180 170" 
+                                      fill="none" stroke="#00838F" stroke-width="1.5"/>
+                                <circle cx="130" cy="100" r="3" fill="#00838F"/>
+                                <text x="130" y="85" text-anchor="middle" class="text-xs" style="font-size:9px;fill:#00838F;">ピーク波長 450nm</text>
+                                <text x="130" y="75" text-anchor="middle" class="text-xs" style="font-size:8px;fill:#6b7280;">（青励起）</text>
+                                
+                                <!-- 580nm黄粉広峰（主発光・Ra90+） -->
+                                <path d="M 160 170 Q 180 160 215 60 Q 250 40 285 80 Q 320 130 380 170" 
+                                      fill="none" stroke="#00838F" stroke-width="1.5" stroke-dasharray="2,1"/>
+                                <circle cx="215" cy="60" r="3" fill="#00838F"/>
+                                <text x="250" y="50" text-anchor="middle" class="text-xs" style="font-size:9px;fill:#00838F;font-weight:bold;">主ピーク 580nm（黄色蛍光体）</text>
+                            </svg>
+                        </div>
+                        <div class="text-xs text-gray-600 mt-2 text-center border-t border-gray-200 pt-2">
+                            高演色Ra90+仕様：青励起（450nm）＋黄粉広帯（550-600nm）の組み合わせ
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 第5ページ：温度特性 -->
+        <section id="thermal" class="py-16 bg-white border-t pdf-page pdf-avoid-break">
+            <div class="max-w-7xl mx-auto px-4">
+                <h2 class="text-xl font-bold text-gray-900 mb-6 border-l-4 border-tech-blue pl-3">温度特性</h2>
+                
+                <div class="border border-gray-200 rounded-lg p-6 bg-white max-w-3xl pdf-avoid-break">
+                    <div class="text-xs text-gray-500 mb-4 text-center">図5. 温度上昇特性（Ta=25℃・8W/m時）</div>
+                    <div class="h-64">
+                        <svg viewBox="0 0 500 300" class="w-full h-full">
+                            <!-- 軸 -->
+                            <line x1="60" y1="250" x2="480" y2="250" stroke="#374151" stroke-width="0.75"/>
+                            <line x1="60" y1="250" x2="60" y2="40" stroke="#374151" stroke-width="0.75"/>
+                            
+                            <!-- 目盛 -->
+                            <text x="60" y="270" text-anchor="middle" class="text-xs" style="font-size:10px;fill:#6b7280;">0</text>
+                            <text x="180" y="270" text-anchor="middle" class="text-xs" style="font-size:10px;fill:#6b7280;">30</text>
+                            <text x="300" y="270" text-anchor="middle" class="text-xs" style="font-size:10px;fill:#6b7280;">60</text>
+                            <text x="420" y="270" text-anchor="middle" class="text-xs" style="font-size:10px;fill:#6b7280;">120</text>
+                            <text x="270" y="290" text-anchor="middle" class="text-xs" style="font-size:10px;fill:#374151;">通電時間（分）</text>
+                            
+                            <text x="45" y="255" text-anchor="end" class="text-xs" style="font-size:10px;fill:#6b7280;">25</text>
+                            <text x="45" y="175" text-anchor="end" class="text-xs" style="font-size:10px;fill:#6b7280;">45</text>
+                            <text x="45" y="95" text-anchor="end" class="text-xs" style="font-size:10px;fill:#6b7280;">65</text>
+                            <text x="25" y="150" text-anchor="middle" class="text-xs" style="font-size:10px;fill:#374151;writing-mode:vertical-rl;">基板温度（℃）</text>
+                            
+                            <!-- 曲線（技術青） -->
+                            <path d="M 60 250 Q 120 200 180 160 T 300 80 T 420 65" 
+                                  fill="none" stroke="#00838F" stroke-width="2"/>
+                            
+                            <!-- データ点 -->
+                            <circle cx="60" cy="250" r="3" fill="#00838F"/>
+                            <circle cx="180" cy="160" r="3" fill="#00838F"/>
+                            <circle cx="300" cy="80" r="3" fill="#00838F"/>
+                            <circle cx="420" cy="65" r="3" fill="#00838F"/>
+                            
+                            <!-- 飽和線 -->
+                            <line x1="360" y1="65" x2="480" y2="65" stroke="#dc2626" stroke-width="1" stroke-dasharray="3,3"/>
+                            <text x="470" y="60" text-anchor="end" class="text-xs" style="font-size:10px;fill:#dc2626;">飽和温度：約60℃</text>
+                        </svg>
+                    </div>
+                    <div class="mt-4 text-xs text-gray-700 bg-yellow-50 p-3 rounded border border-yellow-200">
+                        <span class="font-bold text-yellow-800">注意：</span>定格寿命（50,000時間）を確保するため、基板表面温度は<span class="font-bold underline">70℃以下</span>にご注意ください。8W/m使用時はアルミ放熱板の取付を強く推奨いたします。
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- フッター（日系・シンプル） -->
+    <footer class="bg-gray-900 text-white py-12 mt-20 no-print">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <div class="text-2xl font-bold tracking-tight mb-4">SUNSEMI<span class="text-xs font-normal ml-2">株式会社</span></div>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        プロフェッショナル向けCOB LEDテープライトのOEMメーカー。<br>
+                        独自の高密度実装技術により、高品質とコストパフォーマンスを実現。
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-gray-300">製品カテゴリ</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white transition">5mm超窄幅シリーズ</a></li>
+                        <li><a href="#" class="hover:text-white transition text-tech-blue">8mm標準幅シリーズ（480D）</a></li>
+                        <li><a href="#" class="hover:text-white transition">調光対応シリーズ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-gray-300">お問い合わせ</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li>jp@cobodm.com</li>
+                        <li>深圳市宝安区（本社）</li>
+                    </ul>
+                    <div class="mt-4 text-xs text-gray-600 border-t border-gray-700 pt-4">
+                        ※本製品はDC入力のため電気用品安全法対象外（自主確認品）
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+                <div>&copy; 2024 SUNSEMI 株式会社. All Rights Reserved.</div>
+                <div class="font-mono">PN:480D-12/24V-8mm | CSV_v3.0 | 2026-02-07</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- PDF生成ボタン -->
+    <div class="fixed bottom-8 right-8 no-print">
+        <button onclick="generatePDF()" id="pdfBtn" class="bg-tech-blue text-white px-6 py-3 rounded-lg shadow-lg hover:bg-cyan-800 transition font-semibold flex items-center gap-2">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            仕様書PDF出力
+        </button>
+    </div>
+
+    <script>
+        function generatePDF() {
+            const element = document.getElementById('pdf-content');
+            const btn = document.getElementById('pdfBtn');
+            btn.innerHTML = '生成中...';
+            btn.disabled = true;
+
+            const opt = {
+                margin: [10, 10, 10, 10],
+                filename: 'SUNSEMI_480D-12_24V-8mm_仕様書.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2, useCORS: true, letterRendering: true },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+                pagebreak: { mode: ['avoid-all', 'css'], before: '.pdf-page', avoid: '.pdf-avoid-break' }
+            };
+
+            html2pdf().set(opt).from(element).save().then(() => {
+                btn.innerHTML = '<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> 完了';
+                setTimeout(() => {
+                    btn.innerHTML = '<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg> 仕様書PDF出力';
+                    btn.disabled = false;
+                }, 2000);
+            });
+        }
+
+        // ナビ制御
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                if (pageYOffset >= (section.offsetTop - 200)) current = section.getAttribute('id');
+            });
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) link.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
