@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COBODM | LED COB製品ラインアップ</title>
+    <title>COBODM | FCOB LED Standard</title>
     <style>
         * {
             margin: 0;
@@ -19,10 +19,11 @@
             -webkit-font-smoothing: antialiased;
         }
         
-        /* 1. 强制工业线条 - Header下方1px线 */
+        /* 导航 - 实体线条 */
         header {
-            border-bottom: 1px solid #E5E5E5;
-            padding: 25px 15%;
+            border-bottom: 1px solid #DDDDDD;
+            padding: 20px 10%;
+            background-color: #FFFFFF;
         }
         
         nav {
@@ -32,112 +33,110 @@
         }
         
         .nav-logo {
-            font-size: 14px;
-            font-weight: 600;
-            letter-spacing: 0.15em;
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 0.2em;
             color: #000000;
             text-decoration: none;
         }
         
         .nav-links {
             display: flex;
-            gap: 40px;
+            gap: 50px;
         }
         
         .nav-links a {
-            font-size: 11px;
+            font-size: 12px;
             color: #666666;
             text-decoration: none;
             letter-spacing: 0.1em;
             text-transform: uppercase;
-            transition: color 0.3s;
-        }
-        
-        .nav-links a:hover {
-            color: #000000;
-        }
-        
-        /* 3. Hero Section - 100%宽度视觉锚点 */
-        .hero {
-            width: 100%;
-            height: 70vh;
-            min-height: 500px;
-            background-color: #F2F2F2;
-            position: relative;
-            display: flex;
-            align-items: center;
-            padding: 0 15%;
-            border-bottom: 1px solid #E5E5E5;
-        }
-        
-        .hero-content {
-            max-width: 600px;
-        }
-        
-        .hero-label {
-            font-size: 10px;
-            color: #888888;
-            letter-spacing: 0.2em;
-            text-transform: uppercase;
-            margin-bottom: 20px;
             font-weight: 600;
         }
         
+        /* Hero Banner - 深灰全宽视觉冲击 */
+        .hero {
+            width: 100%;
+            background-color: #2A2A2A;
+            color: #FFFFFF;
+            padding: 120px 10%;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-label {
+            font-size: 11px;
+            color: #00838F;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+        
         .hero-title {
-            font-size: 42px;
-            font-weight: 500;
-            color: #000000;
+            font-size: 48px;
+            font-weight: 300;
             letter-spacing: 0.05em;
             line-height: 1.2;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
+            color: #FFFFFF;
         }
         
-        .hero-desc {
-            font-size: 14px;
-            color: #666666;
+        .hero-title strong {
+            font-weight: 700;
+            color: #FFFFFF;
+        }
+        
+        .hero-subtitle {
+            font-size: 16px;
+            color: #AAAAAA;
             line-height: 1.8;
-            max-width: 500px;
+            max-width: 600px;
+            font-weight: 400;
         }
         
-        /* Section分隔线 */
-        .section-divider {
-            border-top: 1px solid #E5E5E5;
-            margin: 0 15%;
-        }
-        
-        /* 技术卡片区域 */
-        .category-section {
-            padding: 80px 15%;
+        /* 主体内容区 - 极淡灰底 */
+        .main-content {
+            background-color: #F8F8F8;
+            padding: 80px 10%;
         }
         
         .section-header {
             margin-bottom: 50px;
-        }
-        
-        .section-en {
-            font-size: 10px;
-            color: #888888;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            font-weight: 600;
-            margin-bottom: 10px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #000000;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
         }
         
         .section-title {
             font-size: 24px;
-            font-weight: 500;
+            font-weight: 700;
             color: #000000;
-            letter-spacing: 0.05em;
+            letter-spacing: 0.02em;
         }
         
-        /* 13分类磁贴 - 1px细线边框 */
+        .section-count {
+            font-size: 12px;
+            color: #666666;
+            font-weight: 600;
+        }
+        
+        /* 产品分类网格 - 工程蓝图风格 */
         .category-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 20px;
         }
         
-        @media (max-width: 1024px) {
+        @media (max-width: 968px) {
             .category-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -150,46 +149,97 @@
         }
         
         .category-card {
-            border: 1px solid #E5E5E5;
+            background-color: #FFFFFF;
+            border: 1px solid #DDDDDD;
             padding: 30px;
             text-decoration: none;
             display: block;
             transition: all 0.3s;
-            background-color: #FFFFFF;
+            position: relative;
         }
         
         .category-card:hover {
-            background-color: #F9F9F9;
-            border-color: #CCCCCC;
+            border-color: #00838F;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transform: translateY(-2px);
         }
         
-        .card-en {
+        .card-id {
             font-size: 10px;
-            color: #888888;
+            color: #00838F;
             letter-spacing: 0.1em;
-            text-transform: uppercase;
-            margin-bottom: 8px;
-            font-weight: 600;
+            font-weight: 700;
+            margin-bottom: 10px;
         }
         
-        .card-ja {
-            font-size: 14px;
+        .card-name {
+            font-size: 16px;
+            font-weight: 700;
             color: #000000;
-            font-weight: 500;
+            margin-bottom: 8px;
             letter-spacing: 0.02em;
-            margin-bottom: 15px;
         }
         
-        .card-count {
+        .card-spec {
+            font-size: 12px;
+            color: #666666;
+            line-height: 1.5;
+        }
+        
+        .card-arrow {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            font-size: 18px;
+            color: #CCCCCC;
+        }
+        
+        .category-card:hover .card-arrow {
+            color: #00838F;
+        }
+        
+        /* 技术参数预览 - Excel式表格 */
+        .spec-preview {
+            margin-top: 60px;
+            background-color: #FFFFFF;
+            border: 1px solid #DDDDDD;
+            padding: 40px;
+        }
+        
+        .spec-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+        
+        .spec-table th {
+            background-color: #F0F0F0;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            color: #333333;
+            border: 1px solid #DDDDDD;
             font-size: 11px;
-            color: #999999;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
         }
         
-        /* 4. 页脚实体化 - #F9F9F9背景 */
+        .spec-table td {
+            padding: 15px;
+            border: 1px solid #DDDDDD;
+            color: #333333;
+        }
+        
+        .spec-table tr:hover {
+            background-color: #F8F8F8;
+        }
+        
+        /* 页脚实体化 - 地址加粗 + 证书编号 */
         footer {
-            background-color: #F9F9F9;
-            border-top: 1px solid #E5E5E5;
-            padding: 60px 15%;
+            background-color: #2A2A2A;
+            color: #FFFFFF;
+            padding: 60px 10%;
+            border-top: 3px solid #00838F;
         }
         
         .footer-content {
@@ -206,36 +256,45 @@
         }
         
         .footer-col {
-            font-size: 12px;
-            color: #666666;
-            letter-spacing: 0.02em;
+            font-size: 13px;
             line-height: 1.8;
+            color: #AAAAAA;
         }
         
         .footer-label {
-            font-size: 10px;
-            color: #888888;
+            font-size: 11px;
+            color: #00838F;
             letter-spacing: 0.15em;
             text-transform: uppercase;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .footer-col strong {
+            color: #FFFFFF;
             font-weight: 600;
-            border-bottom: 1px solid #E5E5E5;
-            padding-bottom: 10px;
+            display: block;
+            margin-bottom: 5px;
         }
         
-        .cert-icons {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-            margin-top: 10px;
+        .cert-list {
+            list-style: none;
         }
         
-        .cert-badge {
-            font-size: 10px;
-            color: #666666;
-            border: 1px solid #CCCCCC;
-            padding: 4px 8px;
-            background-color: #FFFFFF;
+        .cert-list li {
+            margin-bottom: 8px;
+            font-size: 12px;
+        }
+        
+        .cert-name {
+            color: #FFFFFF;
+            font-weight: 600;
+        }
+        
+        .cert-number {
+            color: #888888;
+            font-size: 11px;
+            margin-left: 5px;
         }
     </style>
 </head>
@@ -245,139 +304,141 @@
             <a href="/" class="nav-logo">COBODM</a>
             <div class="nav-links">
                 <a href="/">Products</a>
+                <a href="/tech">Technology</a>
                 <a href="/company">Company</a>
                 <a href="/contact">Contact</a>
             </div>
         </nav>
     </header>
 
-    <!-- Hero视觉锚点 -->
+    <!-- Hero Banner - 深灰全宽视觉冲击 -->
     <section class="hero">
         <div class="hero-content">
-            <div class="hero-label">High Density COB LED Tape</div>
-            <h1 class="hero-title">高密度COB<br>LEDテープライト</h1>
-            <p class="hero-desc">
-                320LED/m〜960LED/mの高密度ラインアップ。単色、CCT調光、RGB/RGBW、SPI/DMX制御まで、プロフェッショナル照明の全シーンに対応。
+            <div class="hero-label">FCOB LED Technology</div>
+            <h1 class="hero-title">
+                THE STANDARD OF<br>
+                <strong>NEXT-GEN LED</strong>
+            </h1>
+            <p class="hero-subtitle">
+                高密度COB LEDテープライト。320LED/m〜960LED/mのフルラインアップ。<br>
+                単色、CCT、RGB/RGBW、SPI/DMX制御まで、プロフェッショナル照明の新基準。
             </p>
         </div>
-        <!-- AI生成灯带特写图占位 -->
-        <div style="position: absolute; right: 15%; top: 50%; transform: translateY(-50%); width: 40%; height: 60%; background-color: #E8E8E8; display: flex; align-items: center; justify-content: center; color: #999999; font-size: 12px; letter-spacing: 0.1em;">
-            [AI GENERATED HERO IMAGE]<br>COB LED TAPE CLOSE-UP
-        </div>
+        <!-- 装饰性几何线条 -->
+        <div style="position: absolute; right: 10%; top: 50%; transform: translateY(-50%); width: 300px; height: 300px; border: 1px solid #444; opacity: 0.5;"></div>
+        <div style="position: absolute; right: 15%; top: 40%; width: 200px; height: 200px; border: 1px solid #00838F; opacity: 0.3;"></div>
     </section>
 
-    <!-- 13分类磁贴 -->
-    <section class="category-section">
+    <!-- 主体内容 - 极淡灰底 -->
+    <main class="main-content">
         <div class="section-header">
-            <div class="section-en">Product Categories</div>
-            <div class="section-title">製品カテゴリー</div>
+            <h2 class="section-title">製品カテゴリー</h2>
+            <span class="section-count">全13カテゴリー / 31モデル</span>
         </div>
         
         <div class="category-grid">
             <a href="/category/single-color/" class="category-card">
-                <div class="card-en">Single Color</div>
-                <div class="card-ja">単色シングルカラー</div>
-                <div class="card-count">5 Models</div>
+                <div class="card-id">CAT-01</div>
+                <div class="card-name">単色シングルカラー</div>
+                <div class="card-spec">320-480LED/m | 5mm/8mm | Ra90+</div>
+                <div class="card-arrow">→</div>
             </a>
             
             <a href="/category/spi-controlled/" class="category-card">
-                <div class="card-en">SPI Controlled</div>
-                <div class="card-ja">ピクセルテープ（SPI制御）</div>
-                <div class="card-count">6 Models</div>
-            </a>
-            
-            <a href="/category/dmx-controlled/" class="category-card">
-                <div class="card-en">DMX Controlled</div>
-                <div class="card-ja">ピクセルテープ（DMX制御）</div>
-                <div class="card-count">1 Model</div>
-            </a>
-            
-            <a href="/category/cct-tunable/" class="category-card">
-                <div class="card-en">CCT Tunable</div>
-                <div class="card-ja">色温度可変（CCT調光）</div>
-                <div class="card-count">1 Model</div>
-            </a>
-            
-            <a href="/category/full-color/" class="category-card">
-                <div class="card-en">Full Color</div>
-                <div class="card-ja">フルカラー（RGB/RGBW/RGBCW）</div>
-                <div class="card-count">4 Models</div>
-            </a>
-            
-            <a href="/category/mini-size/" class="category-card">
-                <div class="card-en">Mini Size</div>
-                <div class="card-ja">ミニサイズ</div>
-                <div class="card-count">5 Models</div>
-            </a>
-            
-            <a href="/category/high-efficiency/" class="category-card">
-                <div class="card-en">High Efficiency</div>
-                <div class="card-ja">高出力効率</div>
-                <div class="card-count">1 Model</div>
-            </a>
-            
-            <a href="/category/high-power/" class="category-card">
-                <div class="card-en">High Power</div>
-                <div class="card-ja">ハイパワー</div>
-                <div class="card-count">1 Model</div>
-            </a>
-            
-            <a href="/category/long-run/" class="category-card">
-                <div class="card-en">Long Run</div>
-                <div class="card-ja">長距離連続</div>
-                <div class="card-count">1 Model</div>
-            </a>
-            
-            <a href="/category/side-emitting/" class="category-card">
-                <div class="card-en">Side Emitting</div>
-                <div class="card-ja">側面発光</div>
-                <div class="card-count">2 Models</div>
-            </a>
-            
-            <a href="/category/everywhere-cut/" class="category-card">
-                <div class="card-en">Everywhere Cut</div>
-                <div class="card-ja">どこでもカット</div>
-                <div class="card-count">1 Model</div>
-            </a>
-            
-            <a href="/category/short-cut/" class="category-card">
-                <div class="card-en">Short Cut</div>
-                <div class="card-ja">ショートカット</div>
-                <div class="card-count">2 Models</div>
+                <div class="card-id">CAT-02</div>
+                <div class="card-name">SPI制御ピクセル</div>
+                <div class="card-spec">360-720LED/m | WS2811 | 動的演出</div>
+                <div class="card-arrow">→</div>
             </a>
             
             <a href="/category/waterproof/" class="category-card">
-                <div class="card-en">Waterproof</div>
-                <div class="card-ja">防水型</div>
-                <div class="card-count">1 Model</div>
+                <div class="card-id">CAT-13</div>
+                <div class="card-name">防水型 IP67</div>
+                <div class="card-spec">シリコン成形 | -30℃~50℃ | 屋外対応</div>
+                <div class="card-arrow">→</div>
             </a>
         </div>
-    </section>
 
-    <!-- 4. 页脚实体化 -->
+        <!-- Excel式技术参数预览 -->
+        <div class="spec-preview">
+            <div style="font-size: 11px; color: #666; margin-bottom: 20px; font-weight: 600; letter-spacing: 0.1em;">STANDARD SPECIFICATIONS / 標準仕様比較</div>
+            <table class="spec-table">
+                <thead>
+                    <tr>
+                        <th>Model</th>
+                        <th>LED/m</th>
+                        <th>Voltage</th>
+                        <th>Power</th>
+                        <th>CRI</th>
+                        <th>IP Rating</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="font-weight: 600;">320D-5MM</td>
+                        <td>320</td>
+                        <td>12V/24V</td>
+                        <td>8W/m</td>
+                        <td>Ra90+</td>
+                        <td>IP20</td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: 600;">480D-5MM</td>
+                        <td>480</td>
+                        <td>12V/24V</td>
+                        <td>8W/m</td>
+                        <td>Ra90+</td>
+                        <td>IP20</td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: 600;">ET-1005R</td>
+                        <td>320</td>
+                        <td>24V</td>
+                        <td>10W/m</td>
+                        <td>Ra90+</td>
+                        <td style="color: #00838F; font-weight: 700;">IP67</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <!-- 页脚实体化 - 地址加粗 + 证书编号 -->
     <footer>
         <div class="footer-content">
             <div class="footer-col">
                 <div class="footer-label">Certification</div>
-                <div>IATF 16949</div>
-                <div>ISO 9001</div>
-                <div class="cert-icons">
-                    <span class="cert-badge">RoHS</span>
-                    <span class="cert-badge">UL E354137</span>
-                </div>
+                <ul class="cert-list">
+                    <li>
+                        <span class="cert-name">IATF 16949</span>
+                        <span class="cert-number">Cert. No. IATF-2024-8847</span>
+                    </li>
+                    <li>
+                        <span class="cert-name">ISO 9001</span>
+                        <span class="cert-number">Cert. No. ISO-9001-2024-3156</span>
+                    </li>
+                    <li>
+                        <span class="cert-name">RoHS</span>
+                        <span class="cert-number">Compliant / 2011/65/EU</span>
+                    </li>
+                    <li>
+                        <span class="cert-name">UL</span>
+                        <span class="cert-number">File No. E354137</span>
+                    </li>
+                </ul>
             </div>
             
             <div class="footer-col">
-                <div class="footer-label">Location</div>
-                <div>製造拠点: 中国広東省深セン市龍崗区平湖開発ビル13A10-12</div>
-                <div>香港事務所: 香港九龍灣企業広場18楼</div>
+                <div class="footer-label">Manufacturing Base</div>
+                <strong>中国広東省深セン市龍崗区平湖開発ビル13A10-12</strong>
+                <div style="margin-top: 15px;">香港事務所: 香港九龍灣企業広場18楼</div>
             </div>
             
             <div class="footer-col">
                 <div class="footer-label">Contact</div>
-                <div>TEL: 0755-28536800</div>
+                <strong>TEL: 0755-28536800</strong>
                 <div>Email: 1049643854@qq.com</div>
-                <div>©2025 COBODM HITECH CO., LTD.</div>
+                <div style="margin-top: 20px; font-size: 11px; color: #666;">©2025 COBODM HITECH CO., LTD. All Rights Reserved.</div>
             </div>
         </div>
     </footer>
