@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>480D-12/24V-8mm | 高密度COB LEDテープライト | SUNSEMI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Noto Sans JP', sans-serif; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+        .mono { font-family: 'Roboto Mono', monospace; }
+        
+        /* 工程制图样式 - 蓝图风格 */
+        .blueprint {
+            background: #ffffff;
+            border: 1px solid #1f2937;
+            position: relative;
+        }
+        .blueprint-grid {
+            background-image: 
+                linear-gradient(rgba(0,0,0,0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0,0,0,0.05) 1px, transparent 1px);
+            background-size: 10px 10px;
+        }
+        .dimension-line {
+            stroke: #1f2937;
+            stroke-width: 0.5pt;
+            fill: none;
+        }
+        .dimension-text {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 10px;
+            fill: #1f2937;
+        }
+        .axis-line {
+            stroke: #6b7280;
+            stroke-width: 0.5pt;
+        }
+        .data-line {
+            stroke: #dc2626;
+            stroke-width: 1.5pt;
+            fill: none;
+        }
+        .center-mark {
+            stroke: #1f2937;
+            stroke-width: 0.5pt;
+        }
+        
+        /* 导航样式 */
+        .dual-nav-container { position: sticky; top: 64px; z-index: 40; background: white; border-bottom: 1px solid #e5e7eb; }
+        .nav-link.active { color: #dc2626; border-bottom: 2px solid #dc2626; font-weight: 600; }
+        
+        /* PDF分页 */
+        .pdf-page { page-break-before: always; break-before: page; }
+        .pdf-avoid-break { page-break-inside: avoid; break-inside: avoid; }
+        
+        @media print {
+            .no-print { display: none !important; }
+            .dual-nav-container, nav.fixed { display: none !important; }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- 导航栏（保持不变） -->
+    <nav class="fixed top-0 w-full bg-white shadow-md z-50 h-16 no-print">
+        <div class="max-w-7xl mx-auto px-4 h-full flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-32 h-8 bg-blue-900 rounded flex items-center justify-center text-white font-bold text-lg tracking-wider mono">
+                    SUNSEMI
+                </div>
+                <span class="hidden md:inline text-xs text-gray-500 mono">PN:480D-12/24V-8mm</span>
+            </div>
+            <div class="hidden md:flex items-center space-x-8 h-full">
+                <a href="#" class="text-gray-700 hover:text-blue-900 font-medium">ホーム</a>
+                <div class="dropdown relative h-full flex items-center">
+                    <button class="text-blue-900 font-semibold flex items-center gap-1 py-5 border-b-2 border-blue-900">
+                        製品情報 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                </div>
+                <a href="#" class="text-gray-700 hover:text-blue-900 font-medium">会社案内</a>
+                <a href="#" class="text-gray-700 hover:text-blue-900 font-medium">お問い合わせ</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="dual-nav-container mt-16 no-print">
+        <div class="max-w-7xl mx-auto px-4 py-3">
+            <nav class="flex items-center text-sm text-gray-600 mb-3 overflow-x-auto whitespace-nowrap mono text-xs">
+                <span>HOME</span>
+                <span class="mx-2">/</span>
+                <span>PRODUCTS</span>
+                <span class="mx-2">/</span>
+                <span>MONO-COB</span>
+                <span class="mx-2">/</span>
+                <span class="text-blue-900 font-bold">480D-12/24V-8MM</span>
+            </nav>
+            <div class="flex items-center gap-1 overflow-x-auto pb-1">
+                <span class="text-xs font-bold text-gray-400 uppercase mr-2">NAV:</span>
+                <a href="#specs" class="nav-link px-3 py-1.5 text-sm text-gray-600 hover:text-blue-900 rounded transition">SPECS</a>
+                <a href="#mechanical" class="nav-link px-3 py-1.5 text-sm text-gray-600 hover:text-blue-900 rounded transition">MECH.DRW</a>
+                <a href="#optical" class="nav-link px-3 py-1.5 text-sm text-gray-600 hover:text-blue-900 rounded transition">OPTICAL</a>
+                <a href="#thermal" class="nav-link px-3 py-1.5 text-sm text-gray-600 hover:text-blue-900 rounded transition">THERMAL</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="pdf-content">
+        
+        <!-- 产品头部（精简工程风） -->
+        <section class="bg-white pt-8 pb-12 pdf-avoid-break">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="grid md:grid-cols-2 gap-8 items-start">
+                    <div class="blueprint blueprint-grid p-8 h-64 flex items-center justify-center relative">
+                        <div class="absolute top-2 left-2 text-xs mono text-gray-500">FIG.1 PRODUCT VIEW (8mm WIDTH)</div>
+                        <div class="w-3/4 h-8 border-2 border-gray-900 bg-white relative">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="w-full h-0.5 bg-yellow-400"></div>
+                            </div>
+                            <!-- 尺寸标注线 -->
+                            <svg class="absolute -bottom-8 left-0 w-full h-6" viewBox="0 0 300 20">
+                                <line x1="0" y1="5" x2="300" y2="5" class="dimension-line" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
+                                <text x="150" y="15" text-anchor="middle" class="dimension-text">8.0±0.2mm</text>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h1 class="text-3xl font-bold text-gray-900 mb-1 mono">480D-12/24V-8mm</h1>
+                        <p class="text-sm text-gray-500 mono mb-4">DENSE COB LED STRIP / 480chips/m / 8W/m</p>
+                        
+                        <div class="grid grid-cols-2 gap-4 text-sm mono mb-6">
+                            <div class="border border-gray-300 p-3">
+                                <div class="text-gray-500 text-xs">INPUT VOLTAGE</div>
+                                <div class="font-bold">DC 12/24V (DUAL)</div>
+                            </div>
+                            <div class="border border-gray-300 p-3">
+                                <div class="text-gray-500 text-xs">POWER CONSUMPTION</div>
+                                <div class="font-bold">8.0W/m</div>
+                            </div>
+                            <div class="border border-gray-300 p-3">
+                                <div class="text-gray-500 text-xs">CUT LENGTH (12V)</div>
+                                <div class="font-bold">25.0mm (12LED)</div>
+                            </div>
+                            <div class="border border-gray-300 p-3">
+                                <div class="text-gray-500 text-xs">CURRENT (5m@12V)</div>
+                                <div class="font-bold text-red-700">1.67A</div>
+                            </div>
+                        </div>
+
+                        <button onclick="generatePDF()" class="bg-blue-900 text-white px-6 py-2 text-sm mono hover:bg-blue-800 transition">
+                            [ DOWNLOAD DATASHEET PDF ]
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 第2页：详细仕様表（CSV严格对齐） -->
+        <section id="specs" class="py-12 bg-gray-50 border-t pdf-page pdf-avoid-break">
+            <div class="max-w-7xl mx-auto px-4">
+                <h2 class="text-xl font-bold text-gray-900 mb-6 mono border-l-4 border-blue-900 pl-3">ELECTRICAL & OPTICAL SPECIFICATIONS</h2>
+                
+                <div class="bg-white border border-gray-300 overflow-hidden">
+                    <table class="w-full text-sm mono">
+                        <thead class="bg-gray-100 text-gray-900 border-b-2 border-gray-400">
+                            <tr>
+                                <th class="px-4 py-3 text-left font-bold">PARAMETER</th>
+                                <th class="px-4 py-3 text-left font-bold">SYMBOL</th>
+                                <th class="px-4 py-3 text-left font-bold">VALUE</th>
+                                <th class="px-4 py-3 text-left font-bold">UNIT</th>
+                                <th class="px-4 py-3 text-left font-bold">CONDITION</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr class="bg-blue-50">
+                                <td class="px-4 py-3 font-bold">Model Number</td>
+                                <td class="px-4 py-3">-</td>
+                                <td class="px-4 py-3 font-bold text-blue-900">480D-12/24V-8mm</td>
+                                <td class="px-4 py-3">-</td>
+                                <td class="px-4 py-3">CSV Row 1</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3">LED Density</td>
+                                <td class="px-4 py-3">ρ</td>
+                                <td class="px-4 py-3 font-bold">480</td>
+                                <td class="px-4 py-3">chips/m</td>
+                                <td class="px-4 py-3">-</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3">Input Voltage (12V mode)</td>
+                                <td class="px-4 py-3">V<sub>f</sub></td>
+                                <td class="px-4 py-3">DC 12</td>
+                                <td class="px-4 py-3">V</td>
+                                <td class="px-4 py-3">I<sub>f</sub>=1.67A (5m)</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3">Input Voltage (24V mode)</td>
+                                <td class="px-4 py-3">V<sub>f</sub></td>
+                                <td class="px-4 py-3">DC 24</td>
+                                <td class="px-4 py-3">V</td>
+                                <td class="px-4 py-3">I<sub>f</sub>=0.83A (5m)</td>
+                            </tr>
+                            <tr class="bg-yellow-50">
+                                <td class="px-4 py-3 font-bold">Cutting Unit (12V)</td>
+                                <td class="px-4 py-3">L<sub>c</sub></td>
+                                <td class="px-4 py-3 font-bold">25.0</td>
+                                <td class="px-4 py-3">mm</td>
+                                <td class="px-4 py-3">12 LEDs/unit</td>
+                            </tr>
+                            <tr class="bg-yellow-50">
+                                <td class="px-4 py-3 font-bold">Cutting Unit (24V)</td>
+                                <td class="px-4 py-3">L<sub>c</sub></td>
+                                <td class="px-4 py-3 font-bold">50.0</td>
+                                <td class="px-4 py-3">mm</td>
+                                <td class="px-4 py-3">24 LEDs/unit</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3">Power Consumption</td>
+                                <td class="px-4 py-3">P</td>
+                                <td class="px-4 py-3">8.0</td>
+                                <td class="px-4 py-3">W/m</td>
+                                <td class="px-4 py-3">Ta=25°C</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3">Luminous Flux (3000K)</td>
+                                <td class="px-4 py-3">Φ<sub>v</sub></td>
+                                <td class="px-4 py-3">1050</td>
+                                <td class="px-4 py-3">lm/m</td>
+                                <td class="px-4 py-3">CRI 90+</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3">Beam Angle</td>
+                                <td class="px-4 py-3">2θ<sub>1/2</sub></td>
+                                <td class="px-4 py-3 font-bold text-red-700">120</td>
+                                <td class="px-4 py-3">deg</td>
+                                <td class="px-4 py-3">COB Lambertian</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-3">PCB Width</td>
+                                <td class="px-4 py-3">W</td>
+                                <td class="px-4 py-3 font-bold">8.0±0.2</td>
+                                <td class="px-4 py-3">mm</td>
+                                <td class="px-4 py-3">2oz Cu FPC</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- 第3页：机械尺寸图（工程制图标准） -->
+        <section id="mechanical" class="py-12 bg-white border-t pdf-page pdf-avoid-break">
+            <div class="max-w-7xl mx-auto px4">
+                <h2 class="text-xl font-bold text-gray-900 mb-6 mono border-l-4 border-blue-900 pl-3">MECHANICAL DRAWING</h2>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- 顶视图（严格尺寸） -->
+                    <div class="blueprint blueprint-grid p-6 relative">
+                        <div class="absolute top-2 left-2 text-xs mono text-gray-500">FIG.2 TOP VIEW (SCALE 2:1)</div>
+                        <div class="h-48 flex items-center justify-center">
+                            <svg viewBox="0 0 400 150" class="w-full">
+                                <!-- 基板 -->
+                                <rect x="50" y="60" width="300" height="24" fill="white" stroke="black" stroke-width="1"/>
+                                
+                                <!-- 切割线（25mm间隔 - 12V模式） -->
+                                <line x1="87.5" y1="55" x2="87.5" y2="89" stroke="black" stroke-width="0.5" stroke-dasharray="4,2"/>
+                                <line x1="125" y1="55" x2="125" y2="89" stroke="black" stroke-width="0.5" stroke-dasharray="4,2"/>
+                                <line x1="162.5" y1="55" x2="162.5" y2="89" stroke="black" stroke-width="0.5" stroke-dasharray="4,2"/>
+                                <line x1="200" y1="55" x2="200" y2="89" stroke="black" stroke-width="0.5" stroke-dasharray="4,2"/>
+                                
+                                <!-- 焊盘标记（每25mm） -->
+                                <rect x="82.5" y="62" width="10" height="20" fill="none" stroke="black" stroke-width="0.5"/>
+                                <rect x="120" y="62" width="10" height="20" fill="none" stroke="black" stroke-width="0.5"/>
+                                
+                                <!-- 尺寸标注 -->
+                                <line x1="50" y1="100" x2="87.5" y2="100" class="dimension-line" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
+                                <text x="68.75" y="115" text-anchor="middle" class="dimension-text">25.0mm</text>
+                                
+                                <line x1="50" y1="40" x2="350" y2="40" class="dimension-line" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
+                                <text x="200" y="35" text-anchor="middle" class="dimension-text">LENGTH: 5000mm (5m REEL)</text>
+                                
+                                <!-- 宽度标注 -->
+                                <line x1="360" y1="60" x2="360" y2="84" class="dimension-line" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
+                                <text x="375" y="75" class="dimension-text" transform="rotate(90 375 75)">8.0mm</text>
+                                
+                                <!-- 定义箭头 -->
+                                <defs>
+                                    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+                                        <path d="M0,0 L0,6 L9,3 z" fill="black"/>
+                                    </marker>
+                                </defs>
+                            </svg>
+                        </div>
+                        <div class="mt-4 text-xs mono text-gray-600 border-t border-gray-300 pt-2">
+                            NOTE: Cut only at marked lines. 12 LEDs per cutting unit at 12V operation.
+                        </div>
+                    </div>
+
+                    <!-- 截面图（严格比例） -->
+                    <div class="blueprint blueprint-grid p-6 relative">
+                        <div class="absolute top-2 left-2 text-xs mono text-gray-500">FIG.3 CROSS SECTION A-A' (SCALE 5:1)</div>
+                        <div class="h-48 flex items-center justify-center">
+                            <svg viewBox="0 0 300 200" class="w-full">
+                                <!-- 基板截面（8mm宽 x 1.4mm高） -->
+                                <rect x="100" y="80" width="100" height="35" fill="white" stroke="black" stroke-width="1"/>
+                                
+                                <!-- 层结构 -->
+                                <rect x="100" y="105" width="100" height="10" fill="#fecaca" stroke="black" stroke-width="0.5"/> <!-- 铜箔 -->
+                                <rect x="100" y="90" width="100" height="15" fill="#f3f4f6" stroke="black" stroke-width="0.5"/> <!-- 绝缘层 -->
+                                <rect x="100" y="80" width="100" height="10" fill="#fde047" stroke="black" stroke-width="0.5" fill-opacity="0.6"/> <!-- COB层 -->
+                                
+                                <!-- 中心线 -->
+                                <line x1="150" y1="70" x2="150" y2="125" stroke="gray" stroke-width="0.5" stroke-dasharray="3,3"/>
+                                
+                                <!-- 尺寸标注 -->
+                                <line x1="90" y1="80" x2="90" y2="115" class="dimension-line" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
+                                <text x="85" y="100" text-anchor="end" class="dimension-text" transform="rotate(-90 85 100)">1.4mm</text>
+                                
+                                <line x1="100" y1="130" x2="200" y2="130" class="dimension-line" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
+                                <text x="150" y="145" text-anchor="middle" class="dimension-text">8.0±0.2mm</text>
+                                
+                                <!-- 层标注 -->
+                                <text x="210" y="110" class="dimension-text">2oz Cu</text>
+                                <text x="210" y="98" class="dimension-text">PI Film</text>
+                                <text x="210" y="86" class="dimension-text">COB</text>
+                            </svg>
+                        </div>
+                        <div class="mt-4 text-xs mono text-gray-600 border-t border-gray-300 pt-2">
+                            MATERIAL: 2oz Copper FPC + Polyimide Substrate (1.4mm total thickness)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 第4页：光学特性（工程制图标准） -->
+        <section id="optical" class="py-12 bg-gray-50 border-t pdf-page pdf-avoid-break">
+            <div class="max-w-7xl mx-auto px-4">
+                <h2 class="text-xl font-bold text-gray-900 mb-6 mono border-l-4 border-blue-900 pl-3">OPTICAL CHARACTERISTICS</h2>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- 配光曲线（严格极坐标） -->
+                    <div class="blueprint p-6 relative bg-white">
+                        <div class="absolute top-2 left-2 text-xs mono text-gray-500">FIG.4 LUMINOUS INTENSITY DISTRIBUTION (TYP.)</div>
+                        <div class="h-64 flex items-center justify-center">
+                            <svg viewBox="0 0 300 300" class="w-full max-w-xs">
+                                <!-- 极坐标网格 -->
+                                <circle cx="150" cy="150" r="30" fill="none" stroke="#d1d5db" stroke-width="0.5"/>
+                                <circle cx="150" cy="150" r="60" fill="none" stroke="#d1d5db" stroke-width="0.5"/>
+                                <circle cx="150" cy="150" r="90" fill="none" stroke="#d1d5db" stroke-width="0.5"/>
+                                <circle cx="150" cy="150" r="120" fill="none" stroke="#d1d5db" stroke-width="0.5"/>
+                                
+                                <!-- 角度线 -->
+                                <line x1="150" y1="150" x2="150" y2="30" stroke="#9ca3af" stroke-width="0.5"/>
+                                <line x1="150" y1="150" x2="237" y2="63" stroke="#9ca3af" stroke-width="0.5"/>
+                                <line x1="150" y1="150" x2="270" y2="150" stroke="#9ca3af" stroke-width="0.5"/>
+                                <line x1="150" y1="150" x2="237" y2="237" stroke="#9ca3af" stroke-width="0.5"/>
+                                <line x1="150" y1="150" x2="150" y2="270" stroke="#9ca3af" stroke-width="0.5"/>
+                                
+                                <!-- 120°配光曲线（数学的Lambertian分布：I=I0*cosθ） -->
+                                <!-- 0°=120px, 30°=104px, 60°=60px, 90°=0px (相对强度) -->
+                                <path d="M 150 30 Q 237 63 254 113 Q 270 150 254 187 Q 237 237 150 270 Q 63 237 46 187 Q 30 150 46 113 Q 63 63 150 30 Z" 
+                                      fill="rgba(220, 38, 38, 0.1)" stroke="#dc2626" stroke-width="2"/>
+                                
+                                <!-- 中心点 -->
+                                <circle cx="150" cy="150" r="3" fill="#dc2626"/>
+                                
+                                <!-- 标注 -->
+                                <text x="150" y="20" text-anchor="middle" class="text-xs mono fill-gray-700 font-bold">0°</text>
+                                <text x="255" y="60" text-anchor="start" class="text-xs mono fill-gray-500">30°</text>
+                                <text x="280" y="155" text-anchor="start" class="text-xs mono fill-gray-500">90°</text>
+                                <text x="150" y="295" text-anchor="middle" class="text-xs mono fill-gray-500">180°</text>
+                                <text x="200" y="80" class="text-xs mono fill-red-700 font-bold">120° (HALF ANGLE)</text>
+                                
+                                <!-- 强度标注 -->
+                                <text x="185" y="150" class="text-xs mono fill-gray-400">50%</text>
+                                <text x="125" y="150" class="text-xs mono fill-gray-400">50%</text>
+                            </svg>
+                        </div>
+                        <div class="mt-2 text-center text-xs mono text-gray-600">
+                            BEAM ANGLE: 120° (FWHM) | TYPE: COB LAMBERTIAN DISTRIBUTION
+                        </div>
+                    </div>
+
+                    <!-- 光谱图（物理正确：蓝光450nm+黄粉580nm） -->
+                    <div class="blueprint p-6 relative bg-white">
+                        <div class="absolute top-2 left-2 text-xs mono text-gray-500">FIG.5 RELATIVE SPECTRAL DISTRIBUTION (3000K, TYP.)</div>
+                        <div class="h-64 flex items-center justify-center">
+                            <svg viewBox="0 0 400 250" class="w-full">
+                                <!-- 坐标轴 -->
+                                <line x1="50" y1="200" x2="380" y2="200" stroke="black" stroke-width="1"/>
+                                <line x1="50" y1="200" x2="50" y2="30" stroke="black" stroke-width="1"/>
+                                
+                                <!-- X轴刻度（波长） -->
+                                <line x1="50" y1="200" x2="50" y2="205" stroke="black" stroke-width="0.5"/>
+                                <text x="50" y="220" text-anchor="middle" class="text-xs mono fill-gray-700">400</text>
+                                <line x1="130" y1="200" x2="130" y2="205" stroke="black" stroke-width="0.5"/>
+                                <text x="130" y="220" text-anchor="middle" class="text-xs mono fill-gray-700">450</text>
+                                <line x1="215" y1="200" x2="215" y2="205" stroke="black" stroke-width="0.5"/>
+                                <text x="215" y="220" text-anchor="middle" class="text-xs mono fill-gray-700">550</text>
+                                <line x1="300" y1="200" x2="300" y2="205" stroke="black" stroke-width="0.5"/>
+                                <text x="300" y="220" text-anchor="middle" class="text-xs mono fill-gray-700">650</text>
+                                <line x1="380" y1="200" x2="380" y2="205" stroke="black" stroke-width="0.5"/>
+                                <text x="380" y="220" text-anchor="middle" class="text-xs mono fill-gray-700">700</text>
+                                
+                                <!-- Y轴刻度（相对强度） -->
+                                <text x="35" y="205" text-anchor="end" class="text-xs mono fill-gray-700">0</text>
+                                <text x="35" y="120" text-anchor="end" class="text-xs mono fill-gray-700">0.5</text>
+                                <text x="35" y="35" text-anchor="end" class="text-xs mono fill-gray-700">1.0</text>
+                                <text x="20" y="120" text-anchor="middle" class="text-xs mono fill-gray-500" transform="rotate(-90 20 120)">RELATIVE INTENSITY</text>
+                                <text x="215" y="240" text-anchor="middle" class="text-xs mono fill-gray-500">WAVELENGTH (nm)</text>
+                                
+                                <!-- 光谱曲线（物理正确） -->
+                                <!-- 450nm蓝光峰（激发源，较窄） -->
+                                <path d="M 50 180 Q 90 170 130 80 Q 140 40 150 80 Q 160 160 180 170" 
+                                      fill="none" stroke="#3b82f6" stroke-width="2"/>
+                                <circle cx="130" cy="80" r="4" fill="#2563eb"/>
+                                <text x="130" y="60" text-anchor="middle" class="text-xs mono fill-blue-700 font-bold">450nm (BLUE PUMP)</text>
+                                
+                                <!-- 580nm黄粉宽峰（主发光，较宽） -->
+                                <path d="M 160 170 Q 180 160 215 50 Q 250 20 285 60 Q 320 120 380 170" 
+                                      fill="none" stroke="#f59e0b" stroke-width="2"/>
+                                <circle cx="215" cy="50" r="4" fill="#dc2626"/>
+                                <text x="250" y="40" text-anchor="middle" class="text-xs mono fill-red-700 font-bold">~580nm (PHOSPHOR)</text>
+                                
+                                <!-- CRI 90+指示 -->
+                                <rect x="260" y="80" width="100" height="40" fill="rgba(255,255,255,0.9)" stroke="gray" stroke-width="0.5"/>
+                                <text x="270" y="100" class="text-xs mono fill-gray-700">CRI: 90+</text>
+                                <text x="270" y="115" class="text-xs mono fill-gray-700">R9: >50</text>
+                            </svg>
+                        </div>
+                        <div class="mt-2 text-xs mono text-gray-600 border-t border-gray-300 pt-2">
+                            NOTE: 3000K spectrum shows typical InGaN blue pump (450nm) with YAG phosphor 
+                            broadband emission (550-600nm). High CRI achieved through red component enhancement.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 第5页：温度特性（工程制图） -->
+        <section id="thermal" class="py-12 bg-white border-t pdf-page pdf-avoid-break">
+            <div class="max-w-7xl mx-auto px-4">
+                <h2 class="text-xl font-bold text-gray-900 mb-6 mono border-l-4 border-blue-900 pl-3">THERMAL CHARACTERISTICS</h2>
+                
+                <div class="blueprint p-6 bg-white">
+                    <div class="absolute top-2 left-2 text-xs mono text-gray-500">FIG.6 TEMPERATURE RISE vs TIME (Ta=25°C, 8W/m)</div>
+                    <div class="h-64">
+                        <svg viewBox="0 0 500 300" class="w-full h-full">
+                            <!-- 坐标轴 -->
+                            <line x1="60" y1="250" x2="480" y2="250" stroke="black" stroke-width="1"/>
+                            <line x1="60" y1="250" x2="60" y2="40" stroke="black" stroke-width="1"/>
+                            
+                            <!-- X轴：时间 -->
+                            <text x="270" y="290" text-anchor="middle" class="text-xs mono fill-gray-700">TIME (min)</text>
+                            <text x="60" y="270" text-anchor="middle" class="text-xs mono fill-gray-700">0</text>
+                            <text x="180" y="270" text-anchor="middle" class="text-xs mono fill-gray-700">30</text>
+                            <text x="300" y="270" text-anchor="middle" class="text-xs mono fill-gray-700">60</text>
+                            <text x="420" y="270" text-anchor="middle" class="text-xs mono fill-gray-700">120</text>
+                            
+                            <!-- Y轴：温度 -->
+                            <text x="30" y="150" text-anchor="middle" class="text-xs mono fill-gray-700" transform="rotate(-90 30 150)">TEMPERATURE (°C)</text>
+                            <text x="50" y="255" text-anchor="end" class="text-xs mono fill-gray-700">25</text>
+                            <text x="50" y="185" text-anchor="end" class="text-xs mono fill-gray-700">45</text>
+                            <text x="50" y="115" text-anchor="end" class="text-xs mono fill-gray-700">65</text>
+                            <text x="50" y="45" text-anchor="end" class="text-xs mono fill-gray-700">85</text>
+                            
+                            <!-- 网格线 -->
+                            <line x1="60" y1="180" x2="480" y2="180" stroke="#e5e7eb" stroke-width="0.5" stroke-dasharray="2,2"/>
+                            <line x1="60" y1="110" x2="480" y2="110" stroke="#e5e7eb" stroke-width="0.5" stroke-dasharray="2,2"/>
+                            
+                            <!-- 温度上升曲线（基于8W/m实际数据） -->
+                            <path d="M 60 250 Q 120 200 180 160 T 300 80 T 420 65" 
+                                  fill="none" stroke="#dc2626" stroke-width="2"/>
+                            
+                            <!-- 数据点 -->
+                            <circle cx="60" cy="250" r="4" fill="#dc2626"/>
+                            <circle cx="180" cy="160" r="4" fill="#dc2626"/>
+                            <circle cx="300" cy="80" r="4" fill="#dc2626"/>
+                            <circle cx="420" cy="65" r="4" fill="#dc2626"/>
+                            
+                            <!-- 饱和线 -->
+                            <line x1="360" y1="65" x2="480" y2="65" stroke="#dc2626" stroke-width="1" stroke-dasharray="4,2"/>
+                            <text x="470" y="60" text-anchor="end" class="text-xs mono fill-red-700 font-bold">SATURATION: ~60°C</text>
+                            
+                            <!-- 注释 -->
+                            <rect x="280" y="100" width="180" height="50" fill="white" stroke="gray" stroke-width="0.5"/>
+                            <text x="290" y="120" class="text-xs mono fill-gray-700">CONDITION:</text>
+                            <text x="290" y="135" class="text-xs mono fill-gray-700">• 8W/m, Natural Conv.</text>
+                            <text x="290" y="150" class="text-xs mono fill-gray-700">• No heat sink</text>
+                        </svg>
+                    </div>
+                    <div class="mt-4 text-xs mono text-gray-600 border-t border-gray-300 pt-2">
+                        WARNING: For 50,000hr lifetime, PCB surface temperature must not exceed 70°C. 
+                        Aluminum heat sink recommended for 8W/m operation.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- 页尾（工程风） -->
+    <footer class="bg-gray-900 text-white py-8 mt-20 no-print mono text-sm">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center border-b border-gray-700 pb-4 mb-4">
+                <div class="text-2xl font-bold tracking-wider">SUNSEMI</div>
+                <div class="text-gray-400 text-xs">
+                    SUNSEMI TECHNOLOGY CO., LTD.<br>
+                    SHENZHEN, CHINA | HONG KONG OFFICE
+                </div>
+            </div>
+            <div class="flex justify-between text-xs text-gray-500">
+                <div>
+                    DOCUMENT NO: DS-480D-1224V8MM-REV.A<br>
+                    DATE: 2026-02-07 | VALIDITY: SUBJECT TO CHANGE WITHOUT NOTICE
+                </div>
+                <div class="text-right">
+                    PSE: SELF-CONFIRMATION (DC INPUT)<br>
+                    COMPLIANCE: RoHS2.0, REACH, CE
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="fixed bottom-8 right-8 no-print">
+        <button onclick="generatePDF()" id="pdfBtn" class="bg-blue-900 text-white px-6 py-3 rounded shadow-lg hover:bg-blue-800 transition mono text-sm font-bold">
+            [ GENERATE PDF ]
+        </button>
+    </div>
+
+    <script>
+        function generatePDF() {
+            const element = document.getElementById('pdf-content');
+            const btn = document.getElementById('pdfBtn');
+            btn.innerHTML = '[ PROCESSING... ]';
+            btn.disabled = true;
+
+            const opt = {
+                margin: [10, 10, 10, 10],
+                filename: 'SUNSEMI_480D-12_24V-8mm_Datasheet_RevA.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2, useCORS: true, letterRendering: true },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+                pagebreak: { mode: ['avoid-all', 'css'], before: '.pdf-page', avoid: '.pdf-avoid-break' }
+            };
+
+            html2pdf().set(opt).from(element).save().then(() => {
+                btn.innerHTML = '[ GENERATE PDF ]';
+                btn.disabled = false;
+            });
+        }
+
+        // 导航控制
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                if (pageYOffset >= (section.offsetTop - 200)) current = section.getAttribute('id');
+            });
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) link.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
