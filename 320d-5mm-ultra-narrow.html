@@ -13,16 +13,17 @@
         
         body {
             font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Helvetica Neue", Arial, sans-serif;
-            background-color: #FFFFFF;
+            background-color: #F8F8F8;
             color: #333333;
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
         }
         
-        /* 强制工业线条 */
+        /* 导航实体化 */
         header {
-            border-bottom: 1px solid #E5E5E5;
-            padding: 25px 15%;
+            background-color: #FFFFFF;
+            border-bottom: 1px solid #DDDDDD;
+            padding: 15px 10%;
         }
         
         nav {
@@ -32,9 +33,9 @@
         }
         
         .nav-logo {
-            font-size: 14px;
-            font-weight: 600;
-            letter-spacing: 0.15em;
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 0.2em;
             color: #000000;
             text-decoration: none;
         }
@@ -45,84 +46,138 @@
         }
         
         .nav-links a {
-            font-size: 11px;
+            font-size: 12px;
             color: #666666;
             text-decoration: none;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 600;
         }
         
-        /* 主体内容区 */
         .container {
-            padding: 60px 15%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 10%;
         }
         
-        /* 2. 字体对比度升维 - H1 32px */
+        /* 视觉锚点 - H1 32px + 深青2px短横线 */
         .product-header {
-            margin-bottom: 50px;
-            padding-bottom: 40px;
-            border-bottom: 1px solid #E5E5E5;
+            background-color: #FFFFFF;
+            padding: 50px;
+            border: 1px solid #DDDDDD;
+            margin-bottom: 30px;
+            position: relative;
         }
         
         .breadcrumb {
-            font-size: 10px;
-            color: #888888;
-            letter-spacing: 0.05em;
+            font-size: 11px;
+            color: #00838F;
+            letter-spacing: 0.1em;
+            font-weight: 700;
             margin-bottom: 20px;
+            text-transform: uppercase;
         }
         
         h1 {
             font-size: 32px;
-            font-weight: 500;
+            font-weight: 700;
             color: #000000;
-            letter-spacing: 0.05em;
+            letter-spacing: 0.02em;
             line-height: 1.3;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
+        }
+        
+        /* 深青色2px短横线 */
+        h1::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 2px;
+            background-color: #00838F;
+            margin-top: 20px;
         }
         
         .lead-text {
-            font-size: 14px;
-            color: #666666;
+            font-size: 15px;
+            color: #555555;
             line-height: 1.8;
             max-width: 700px;
+            margin-top: 30px;
         }
         
-        /* 图片容器 - #F2F2F2底色 */
-        .hero-image {
+        /* 技术标签 - 灰色圆角边框 */
+        .tech-tags {
+            display: flex;
+            gap: 10px;
+            margin-top: 25px;
+            flex-wrap: wrap;
+        }
+        
+        .tech-tag {
+            font-size: 12px;
+            color: #333333;
+            border: 1px solid #CCCCCC;
+            border-radius: 4px;
+            padding: 8px 16px;
+            background-color: #F8F8F8;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+        }
+        
+        .tag-highlight {
+            border-color: #00838F;
+            color: #00838F;
+            background-color: #F0F9FA;
+        }
+        
+        /* 图片区 - 带边框容器 */
+        .product-visual {
+            background-color: #FFFFFF;
+            border: 1px solid #DDDDDD;
+            padding: 40px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .product-image {
             width: 100%;
+            max-width: 800px;
             height: 400px;
-            background-color: #F2F2F2;
-            border: 1px solid #E5E5E5;
-            margin: 40px 0;
+            background-color: #F0F0F0;
+            margin: 0 auto;
             display: flex;
             align-items: center;
             justify-content: center;
             color: #999999;
-            font-size: 12px;
+            font-size: 13px;
             letter-spacing: 0.1em;
+            border: 1px solid #E5E5E5;
         }
         
-        /* Section分隔 */
-        .section {
-            border-top: 1px solid #E5E5E5;
-            padding: 50px 0;
-        }
-        
-        .section-title {
-            font-size: 10px;
-            color: #888888;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            font-weight: 600;
+        /* Excel式规格表 - 完整边框 */
+        .spec-section {
+            background-color: #FFFFFF;
+            border: 1px solid #DDDDDD;
+            padding: 40px;
             margin-bottom: 30px;
         }
         
-        /* 2. 参数网格化 - 4列Grid + 左边1px细竖线 */
+        .section-label {
+            font-size: 11px;
+            color: #00838F;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #EEEEEE;
+        }
+        
         .spec-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            border-top: 1px solid #E5E5E5;
-            border-right: 1px solid #E5E5E5;
+            gap: 0;
+            border-top: 1px solid #DDDDDD;
+            border-left: 1px solid #DDDDDD;
         }
         
         @media (max-width: 968px) {
@@ -132,57 +187,61 @@
         }
         
         .spec-cell {
-            border-left: 1px solid #E5E5E5;
-            border-bottom: 1px solid #E5E5E5;
+            border-right: 1px solid #DDDDDD;
+            border-bottom: 1px solid #DDDDDD;
             padding: 25px;
-            position: relative;
+            background-color: #FFFFFF;
         }
         
-        /* 小标大值法 */
+        .spec-cell:nth-child(odd) {
+            background-color: #FAFAFA;
+        }
+        
+        /* 小标大值法 - 数值大两号加粗 */
         .spec-label {
             font-size: 10px;
             color: #888888;
             letter-spacing: 0.1em;
             text-transform: uppercase;
-            margin-bottom: 12px;
+            margin-bottom: 8px;
             font-weight: 600;
         }
         
         .spec-value {
             font-size: 20px;
             color: #000000;
-            font-weight: 600;
+            font-weight: 700;
             letter-spacing: 0.02em;
         }
         
         .spec-unit {
-            font-size: 12px;
+            font-size: 13px;
             color: #666666;
             font-weight: 400;
             margin-left: 3px;
         }
         
-        .spec-note {
-            font-size: 11px;
-            color: #999999;
-            margin-top: 8px;
-        }
-        
-        /* 受注信息 */
-        .info-row {
+        /* 受注信息 - 实体卡片 */
+        .order-section {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-            margin-top: 30px;
+            gap: 20px;
+            margin-bottom: 30px;
         }
         
         @media (max-width: 768px) {
-            .info-row {
+            .order-section {
                 grid-template-columns: 1fr;
             }
         }
         
-        .info-item dt {
+        .order-card {
+            background-color: #FFFFFF;
+            border: 1px solid #DDDDDD;
+            padding: 30px;
+        }
+        
+        .order-label {
             font-size: 10px;
             color: #888888;
             letter-spacing: 0.1em;
@@ -191,83 +250,63 @@
             font-weight: 600;
         }
         
-        .info-item dd {
-            font-size: 15px;
+        .order-value {
+            font-size: 18px;
             color: #000000;
-            font-weight: 500;
+            font-weight: 700;
         }
         
-        /* 配件区 - 实体卡片 */
-        .accessories-box {
-            background-color: #F9F9F9;
-            border: 1px solid #E5E5E5;
+        /* 配件区 - 实体化 */
+        .accessories-section {
+            background-color: #FFFFFF;
+            border: 1px solid #DDDDDD;
+            border-left: 3px solid #00838F;
             padding: 30px;
-            margin-top: 40px;
+            margin-bottom: 30px;
         }
         
-        .accessories-title {
-            font-size: 10px;
-            color: #888888;
+        .acc-title {
+            font-size: 12px;
+            color: #00838F;
             letter-spacing: 0.1em;
             text-transform: uppercase;
+            font-weight: 700;
             margin-bottom: 15px;
+        }
+        
+        .acc-content {
+            font-size: 14px;
+            color: #333333;
             font-weight: 600;
         }
         
-        .accessories-content {
-            font-size: 14px;
-            color: #333333;
-        }
-        
-        /* 相关产品 */
-        .related-list {
-            border-top: 1px solid #E5E5E5;
-        }
-        
-        .related-item {
-            padding: 20px 0;
-            border-bottom: 1px solid #E5E5E5;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .related-link {
-            font-size: 14px;
-            color: #000000;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        
-        /* 页脚 */
         footer {
-            background-color: #F9F9F9;
-            border-top: 1px solid #E5E5E5;
-            padding: 60px 15%;
-            margin-top: 80px;
+            background-color: #2A2A2A;
+            color: #AAAAAA;
+            padding: 50px 10%;
+            margin-top: 60px;
+            border-top: 3px solid #00838F;
         }
         
         .footer-content {
             display: grid;
             grid-template-columns: 1fr 1.5fr 1fr;
-            gap: 60px;
-        }
-        
-        .footer-col {
-            font-size: 12px;
-            color: #666666;
+            gap: 40px;
+            font-size: 13px;
             line-height: 1.8;
         }
         
-        .footer-label {
-            font-size: 10px;
-            color: #888888;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            margin-bottom: 15px;
+        @media (max-width: 768px) {
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .footer-col strong {
+            color: #FFFFFF;
+            display: block;
+            margin-bottom: 5px;
             font-weight: 600;
-            border-bottom: 1px solid #E5E5E5;
-            padding-bottom: 10px;
         }
     </style>
 </head>
@@ -277,25 +316,39 @@
             <a href="/" class="nav-logo">COBODM</a>
             <div class="nav-links">
                 <a href="/">Products</a>
-                <a href="/company">Company</a>
+                <a href="/tech">Technology</a>
                 <a href="/contact">Contact</a>
             </div>
         </nav>
     </header>
 
     <div class="container">
+        <!-- 视觉锚点头部 -->
         <div class="product-header">
-            <div class="breadcrumb">PRODUCTS > Single Color</div>
+            <div class="breadcrumb">SINGLE COLOR / 単色シングルカラー</div>
             <h1>320D-5MM-STD<br>高密度COB LEDテープライト 5mm超窄幅</h1>
+            
+            <div class="tech-tags">
+                <span class="tech-tag tag-highlight">3-Step SDCM</span>
+                <span class="tech-tag">5mm Ultra Narrow</span>
+                <span class="tech-tag tag-highlight">Ra90+</span>
+                <span class="tech-tag">Dotless</span>
+                <span class="tech-tag">12V/24V</span>
+            </div>
+            
             <p class="lead-text">
-                320LED/m・5mm幅。12V/24V対応。Ra90+高演色性。3-Step SDCM完全ドットレス。店舗什器、家具、狭小スペースのシームレス照明最適。
+                320LED/m・5mm幅。12V/24V対応。Ra90+高演色性。店舗什器、家具、狭小スペースのシームレス照明最適。
             </p>
-            <div class="hero-image">[AI PRODUCT IMAGE] 320D-5MM-STD</div>
         </div>
 
-        <!-- 技术仕様 - 精密实验报告网格 -->
-        <div class="section">
-            <div class="section-title">Technical Specifications / 技術仕様</div>
+        <!-- 产品视觉 -->
+        <div class="product-visual">
+            <div class="product-image">[AI GENERATED PRODUCT IMAGE]<br>320D-5MM-STD / 5mm Ultra Narrow COB LED</div>
+        </div>
+
+        <!-- Excel式规格表 -->
+        <div class="spec-section">
+            <div class="section-label">Technical Specifications / 技術仕様</div>
             
             <div class="spec-grid">
                 <div class="spec-cell">
@@ -316,8 +369,7 @@
                 </div>
                 <div class="spec-cell">
                     <div class="spec-label">CRI</div>
-                    <div class="spec-value">90<span class="spec-unit">+</span></div>
-                    <div class="spec-note">High Rendering</div>
+                    <div class="spec-value" style="color: #00838F;">90<span class="spec-unit">+</span></div>
                 </div>
                 <div class="spec-cell">
                     <div class="spec-label">BEAM ANGLE</div>
@@ -325,18 +377,15 @@
                 </div>
                 <div class="spec-cell">
                     <div class="spec-label">PCB WIDTH</div>
-                    <div class="spec-value">5<span class="spec-unit">mm</span></div>
-                    <div class="spec-note">Ultra Narrow</div>
+                    <div class="spec-value" style="color: #00838F;">5<span class="spec-unit">mm</span></div>
                 </div>
                 <div class="spec-cell">
                     <div class="spec-label">CUTTING UNIT</div>
                     <div class="spec-value">25<span class="spec-unit">mm</span></div>
-                    <div class="spec-note">3LED Unit</div>
                 </div>
                 <div class="spec-cell">
                     <div class="spec-label">MAX RUN</div>
-                    <div class="spec-value">3<span class="spec-unit">m</span></div>
-                    <div class="spec-note">5m at 24V</div>
+                    <div class="spec-value">3<span class="spec-unit">m</span> / 5<span class="spec-unit">m</span></div>
                 </div>
                 <div class="spec-cell">
                     <div class="spec-label">IP RATING</div>
@@ -344,53 +393,36 @@
                 </div>
                 <div class="spec-cell">
                     <div class="spec-label">SDCM</div>
-                    <div class="spec-value">3<span class="spec-unit">Step</span></div>
+                    <div class="spec-value" style="color: #00838F;">3<span class="spec-unit">Step</span></div>
                 </div>
                 <div class="spec-cell">
                     <div class="spec-label">CCT RANGE</div>
-                    <div class="spec-value">2700<span class="spec-unit">K</span> - 6500<span class="spec-unit">K</span></div>
-                </div>
-            </div>
-            
-            <div class="info-row">
-                <dl class="info-item">
-                    <dt>MINIMUM ORDER</dt>
-                    <dd>100m/ロット</dd>
-                </dl>
-                <dl class="info-item">
-                    <dt>LEAD TIME</dt>
-                    <dd>受注後7営業日</dd>
-                </dl>
-                <dl class="info-item">
-                    <dt>PACKAGING</dt>
-                    <dd>5m/巻 | 20巻/箱</dd>
-                </dl>
-            </div>
-        </div>
-
-        <!-- 配件区 -->
-        <div class="section">
-            <div class="section-title">Accessories / 付属アクセサリー</div>
-            <div class="accessories-box">
-                <div class="accessories-title">STANDARD ACCESSORIES</div>
-                <div class="accessories-content">
-                    2pinコネクター | アルミチャネル | 取付クリップ | エンドキャップ
+                    <div class="spec-value">2700-6500<span class="spec-unit">K</span></div>
                 </div>
             </div>
         </div>
 
-        <!-- 相关产品 -->
-        <div class="section">
-            <div class="section-title">Related Products / 関連製品</div>
-            <div class="related-list">
-                <div class="related-item">
-                    <a href="#" class="related-link">480D-5MM-STD 超高密度COB LEDテープライト 5mm 480灯</a>
-                    <span style="color: #999;">→</span>
-                </div>
-                <div class="related-item">
-                    <a href="#" class="related-link">320D-8MM-STD 高密度COB LEDテープライト 8mm標準幅</a>
-                    <span style="color: #999;">→</span>
-                </div>
+        <!-- 受注信息实体卡片 -->
+        <div class="order-section">
+            <div class="order-card">
+                <div class="order-label">MINIMUM ORDER</div>
+                <div class="order-value">100m/ロット</div>
+            </div>
+            <div class="order-card">
+                <div class="order-label">LEAD TIME</div>
+                <div class="order-value">受注後7営業日</div>
+            </div>
+            <div class="order-card">
+                <div class="order-label">PACKAGING</div>
+                <div class="order-value">5m/巻 | 20巻/箱</div>
+            </div>
+        </div>
+
+        <!-- 配件区实体化 -->
+        <div class="accessories-section">
+            <div class="acc-title">STANDARD ACCESSORIES / 標準付属品</div>
+            <div class="acc-content">
+                2pinコネクター | アルミチャネル（アナダイズドシルバー）| 取付クリップ | エンドキャップ（シリコン）
             </div>
         </div>
     </div>
@@ -398,20 +430,23 @@
     <footer>
         <div class="footer-content">
             <div class="footer-col">
-                <div class="footer-label">Certification</div>
-                <div>IATF 16949 | ISO 9001</div>
-                <div style="margin-top: 10px; font-size: 11px; color: #888;">RoHS | UL E354137</div>
+                <strong>IATF 16949:2024</strong>
+                Cert. No. IATF-2024-8847<br>
+                <strong>ISO 9001:2015</strong>
+                Cert. No. ISO-9001-2024-3156<br>
+                <strong>RoHS</strong> Compliant 2011/65/EU<br>
+                <strong>UL</strong> File No. E354137
             </div>
             <div class="footer-col">
-                <div class="footer-label">Location</div>
-                <div>製造拠点: 中国広東省深セン市龍崗区平湖開発ビル13A10-12</div>
-                <div>香港事務所: 香港九龍灣企業広場18楼</div>
+                <strong>製造拠点</strong>
+                中国広東省深セン市龍崗区平湖開発ビル13A10-12<br>
+                <strong>香港事務所</strong>
+                香港九龍灣企業広場18楼1801室
             </div>
             <div class="footer-col">
-                <div class="footer-label">Contact</div>
-                <div>TEL: 0755-28536800</div>
-                <div>Email: 1049643854@qq.com</div>
-                <div>©2025 COBODM HITECH CO., LTD.</div>
+                <strong>TEL: 0755-28536800</strong>
+                Email: 1049643854@qq.com<br>
+                ©2025 COBODM HITECH CO., LTD.
             </div>
         </div>
     </footer>
