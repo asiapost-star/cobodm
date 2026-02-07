@@ -1,58 +1,380 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; url=/ja/">
-    <title>SUNSEMI | FCOB LED Tape Light Manufacturer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>製品一覧 | LED COB製品ラインアップ</title>
     <style>
-        body {
-            background: #0a0a0f;
-            color: #f5f5f5;
-            font-family: 'Inter', sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        .logo {
-            font-size: 48px;
-            font-weight: 700;
+        
+        body {
+            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Meiryo", sans-serif;
+            background-color: #FFFFFF;
+            color: #333333;
+            line-height: 1.6;
+            letter-spacing: 0.02em;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 10vw;
+        }
+        
+        @media (max-width: 1024px) {
+            .container {
+                padding: 0 5vw;
+            }
+        }
+        
+        /* 导航 - 极简线条 */
+        header {
+            padding: 40px 0;
+            border-bottom: 1px solid #EEEEEE;
+            margin-bottom: 100px;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-logo {
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            color: #000000;
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 60px;
+        }
+        
+        .nav-links a {
+            font-size: 12px;
+            color: #666666;
+            text-decoration: none;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #00838F;
+        }
+        
+        /* 页面标题 - 极端层级 */
+        .page-header {
+            margin-bottom: 100px;
+        }
+        
+        .page-title {
+            font-size: 42px;
+            font-weight: 500;
+            color: #000000;
+            letter-spacing: 0.02em;
             margin-bottom: 30px;
+            line-height: 1.2;
         }
-        .logo span {
-            color: #c9a227;
+        
+        .page-subtitle {
+            font-size: 14px;
+            color: #666666;
+            max-width: 600px;
+            line-height: 2;
+            font-weight: 400;
         }
-        .lang-select {
+        
+        /* 分类标题 - 小写英文+日文 */
+        .category-header {
+            margin-bottom: 60px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #EEEEEE;
+        }
+        
+        .category-en {
+            font-size: 11px;
+            color: #999999;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .category-ja {
+            font-size: 14px;
+            color: #333333;
+            letter-spacing: 0.05em;
+            font-weight: 500;
+        }
+        
+        /* 产品网格 - 16:9容器 */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+            gap: 80px 40px;
+            margin-bottom: 120px;
+        }
+        
+        .product-card {
+            text-decoration: none;
+            display: block;
+            transition: opacity 0.4s;
+        }
+        
+        .product-card:hover {
+            opacity: 0.6;
+        }
+        
+        .product-card:hover .product-image {
+            transform: scale(1.02);
+        }
+        
+        .image-wrapper {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16/9;
+            background-color: #F5F5F5;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        
+        .image-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 15px;
+            background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+            font-size: 11px;
+            color: #FFFFFF;
+            letter-spacing: 0.05em;
+        }
+        
+        .product-meta {
+            padding-top: 10px;
+        }
+        
+        .product-name {
+            font-size: 16px;
+            font-weight: 500;
+            color: #000000;
+            letter-spacing: 0.02em;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+        
+        .product-specs {
+            font-size: 12px;
+            color: #999999;
+            letter-spacing: 0.02em;
+            line-height: 1.8;
+        }
+        
+        .highlight-cyan {
+            color: #00838F;
+            font-weight: 500;
+        }
+        
+        /* 页脚 - 精致灰度 */
+        footer {
+            border-top: 1px solid #EEEEEE;
+            padding: 100px 0;
+            margin-top: 200px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: 1.5fr 2fr 1.5fr;
+            gap: 60px;
+        }
+        
+        @media (max-width: 768px) {
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+        
+        .footer-col {
+            font-size: 12px;
+            color: #666666;
+            letter-spacing: 0.02em;
+            line-height: 2.0;
+        }
+        
+        .footer-label {
+            font-size: 10px;
+            color: #999999;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .cert-icons {
             display: flex;
             gap: 20px;
+            margin-top: 10px;
+            filter: grayscale(100%);
+            opacity: 0.6;
         }
-        .lang-select a {
-            padding: 16px 40px;
-            background: linear-gradient(135deg, #c9a227 0%, #e5c158 50%, #c9a227 100%);
-            border-radius: 8px;
-            color: #0a0a0f;
-            font-size: 16px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: transform 0.3s;
-        }
-        .lang-select a:hover {
-            transform: translateY(-2px);
-        }
-        p {
-            color: #a0a0a0;
-            margin-top: 30px;
+        
+        .cert-item {
+            font-size: 11px;
+            color: #999999;
+            border: 1px solid #DDDDDD;
+            padding: 4px 8px;
         }
     </style>
 </head>
 <body>
-    <div class="logo">SUN<span>SEMI</span></div>
-    <div class="lang-select">
-        <a href="/ja/">日本語</a>
-        <a href="/en/">English</a>
-    </div>
-    <p>Redirecting...</p>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="/" class="nav-logo">COBODM</a>
+                <div class="nav-links">
+                    <a href="/">Products</a>
+                    <a href="/company">Company</a>
+                    <a href="/contact">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="page-header">
+            <h1 class="page-title">製品一覧</h1>
+            <p class="page-subtitle">
+                高密度COB LEDテープライト全ラインアップ。単色からSPI/DMX制御、防水型まで、商業照明・演出照明の各シーンに対応。
+            </p>
+        </section>
+
+        <!-- 単色シングルカラー -->
+        <section>
+            <div class="category-header">
+                <div class="category-en">Single Color</div>
+                <div class="category-ja">単色シングルカラー</div>
+            </div>
+            
+            <div class="product-grid">
+                <a href="/products/320d-5mm-ultra-narrow/" class="product-card">
+                    <div class="image-wrapper">
+                        <div class="product-image" style="background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%); display: flex; align-items: center; justify-content: center; color: #999; font-size: 12px; letter-spacing: 0.1em;">
+                            320D-5MM-STD
+                        </div>
+                        <div class="image-caption">5mm Ultra Narrow / 3-Step SDCM</div>
+                    </div>
+                    <div class="product-meta">
+                        <div class="product-name">高密度COB LEDテープライト 5mm超窄幅</div>
+                        <div class="product-specs">
+                            <span class="highlight-cyan">320LED/m</span> | 12V/24V | 5mm幅 | <span class="highlight-cyan">Ra90+</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="/products/320d-8mm-standard/" class="product-card">
+                    <div class="image-wrapper">
+                        <div class="product-image" style="background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%); display: flex; align-items: center; justify-content: center; color: #999; font-size: 12px; letter-spacing: 0.1em;">
+                            320D-8MM-STD
+                        </div>
+                        <div class="image-caption">8mm Standard / Multi CCT</div>
+                    </div>
+                    <div class="product-meta">
+                        <div class="product-name">高密度COB LEDテープライト 8mm標準幅</div>
+                        <div class="product-specs">
+                            <span class="highlight-cyan">320LED/m</span> | 12V/24V | 8mm幅 | 2700K-6500K
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="/products/480d-5mm-ultra-hd/" class="product-card">
+                    <div class="image-wrapper">
+                        <div class="product-image" style="background: linear-gradient(135deg, #f0f0f0 0%, #d5d5d5 100%); display: flex; align-items: center; justify-content: center; color: #888; font-size: 12px; letter-spacing: 0.1em;">
+                            480D-5MM-STD
+                        </div>
+                        <div class="image-caption">5mm Ultra HD / Dotless</div>
+                    </div>
+                    <div class="product-meta">
+                        <div class="product-name">超高密度COB LEDテープライト 5mm 480灯</div>
+                        <div class="product-specs">
+                            <span class="highlight-cyan">480LED/m</span> | 12V/24V | 5mm幅 | 完全ドットレス
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- 防水型 -->
+        <section>
+            <div class="category-header">
+                <div class="category-en">Waterproof Series</div>
+                <div class="category-ja">防水型</div>
+            </div>
+            
+            <div class="product-grid">
+                <a href="/products/et-1005r-ip67/" class="product-card">
+                    <div class="image-wrapper">
+                        <div class="product-image" style="background: linear-gradient(135deg, #e8f4f8 0%, #d0e8f0 100%); display: flex; align-items: center; justify-content: center; color: #00838F; font-size: 12px; letter-spacing: 0.1em;">
+                            ET-1005R-WP
+                        </div>
+                        <div class="image-caption" style="background: rgba(0,131,143,0.8);">IP67 Waterproof / Outdoor</div>
+                    </div>
+                    <div class="product-meta">
+                        <div class="product-name">防水シリコンLEDテープ ET-1005R IP67</div>
+                        <div class="product-specs">
+                            <span class="highlight-cyan">320LED/m</span> | 24V | <span class="highlight-cyan">IP67</span> | シリコン一体成形
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="footer-label">Certification</div>
+                    <div class="cert-icons">
+                        <span class="cert-item">IATF 16949</span>
+                        <span class="cert-item">ISO 9001</span>
+                    </div>
+                    <div class="cert-icons" style="margin-top: 10px;">
+                        <span class="cert-item">RoHS</span>
+                        <span class="cert-item">UL E354137</span>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <div class="footer-label">Location</div>
+                    製造拠点: 中国広東省深セン市龍崗区平湖開発ビル13A10-12<br>
+                    香港事務所: 香港九龍灣企業広場18楼
+                </div>
+                
+                <div class="footer-col">
+                    <div class="footer-label">Contact</div>
+                    TEL: 0755-28536800<br>
+                    Email: 1049643854@qq.com<br>
+                    <span style="color: #999; margin-top: 10px; display: block;">©2025 COBODM HITECH CO., LTD.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
