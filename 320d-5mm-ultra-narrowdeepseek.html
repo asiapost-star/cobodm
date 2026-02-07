@@ -3,578 +3,1216 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>5mm超窄幅 高密度COB LEDテープ | 3-Step SDCM・完全ドットレス | SUNSEMI</title>
-    <meta name="description" content="320LED/m・5mm幅。12V/24V対応。Ra90+高演色性。店舗什器、家具、狭小スペースのシームレス照明最適。L70>50,000h・5年保証">
-    <meta name="keywords" content="COB LED,5mm幅,超窄幅,320D,什器照明,高演色Ra90,3-Step SDCM,完全ドットレス">
-    
-    <!-- Schema.org構造化データ -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Product",
-        "name": "高密度COB LEDテープライト 5mm超窄幅",
-        "model": "320D-12/24V-5mm",
-        "brand": {"@type": "Brand", "name": "SUNSEMI"},
-        "description": "320LED/m・5mm幅。12V/24V対応。Ra90+高演色性。店舗什器、家具、狭小スペースのシームレス照明最適",
-        "offers": {
-            "@type": "Offer",
-            "availability": "https://schema.org/InStock",
-            "price": "Contact for quotation",
-            "priceCurrency": "JPY",
-            "seller": {"@type": "Organization", "name": "SUNSEMI株式会社"}
-        },
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.8",
-            "reviewCount": "127"
-        }
-    }
-    </script>
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
-    
+    <title>5mm超窄幅 高密度COB LEDテープ | 3-Step SDCM・完全ドットレス</title>
+    <meta name="description" content="320LED/m・5mm幅。12V/24V対応。Ra90+高演色性。店舗什器、家具、狭小スペースのシームレス照明最適">
+    <meta name="keywords" content="東京都 LED卸,什器用LED,高品質COB,ドットレス照明">
+    <meta property="og:title" content="5mm超窄幅 高密度COB LEDテープ | 3-Step SDCM・完全ドットレス">
+    <meta property="og:description" content="320LED/m・5mm幅。12V/24V対応。Ra90+高演色性。店舗什器、家具、狭小スペースのシームレス照明最適">
+    <meta property="og:type" content="product">
+    <link rel="canonical" href="https://cobodm.com/ja/products/single-color/320d-5mm-ultra-narrow.html">
     <style>
-        body { 
-            font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -webkit-print-color-adjust: exact;
-            print-color-adjust: exact;
+        :root {
+            --primary: #1a1a1a;
+            --secondary: #0056a6;
+            --accent: #e60012;
+            --bg-gray: #f5f5f5;
+            --border: #e0e0e0;
+            --text-gray: #666;
+            --success: #2e7d32;
         }
-        .tech-blue { color: #00838F; }
-        .bg-tech-blue { background-color: #00838F; }
-        .border-tech-blue { border-color: #00838F; }
-        .hover\:bg-tech-blue-dark:hover { background-color: #006978; }
         
-        .jis-line { stroke: #374151; stroke-width: 0.75; fill: none; }
-        .jis-grid { stroke: #e5e7eb; stroke-width: 0.5; }
-        .jis-data { stroke: #00838F; stroke-width: 1.5; fill: none; }
-        
-        .dual-nav-container { 
-            position: sticky; 
-            top: 64px; 
-            z-index: 40; 
-            background: rgba(255,255,255,0.98); 
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid #e5e7eb; 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        .nav-link.active { color: #00838F; border-bottom: 2px solid #00838F; font-weight: 600; }
         
-        .pdf-page { page-break-before: always; break-before: page; }
-        .pdf-avoid-break { page-break-inside: avoid; break-inside: avoid; }
+        body {
+            font-family: "Hiragino Kaku Gothic ProN", "Meiryo", "Yu Gothic", sans-serif;
+            line-height: 1.6;
+            color: var(--primary);
+            background: #fff;
+        }
         
-        /* 純CSSアイコン（FontAwesome不使用） */
+        /* ヘッダー */
+        header {
+            background: var(--primary);
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+        }
+        
+        .logo span {
+            color: var(--accent);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+        
+        nav a:hover {
+            opacity: 0.8;
+        }
+        
+        .cta-header {
+            background: var(--accent);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: background 0.3s;
+        }
+        
+        .cta-header:hover {
+            background: #c4000d;
+        }
+        
+        /* パンくず */
+        .breadcrumb {
+            max-width: 1200px;
+            margin: 1rem auto;
+            padding: 0 2rem;
+            font-size: 0.8rem;
+            color: var(--text-gray);
+        }
+        
+        .breadcrumb a {
+            color: var(--secondary);
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        /* メインコンテンツ */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .product-header {
+            margin-bottom: 3rem;
+        }
+        
+        .category-tag {
+            display: inline-block;
+            background: var(--bg-gray);
+            padding: 0.3rem 1rem;
+            font-size: 0.8rem;
+            color: var(--text-gray);
+            margin-bottom: 1rem;
+            border-left: 3px solid var(--secondary);
+        }
+        
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+        
+        .model-number {
+            color: var(--text-gray);
+            font-size: 1rem;
+            font-weight: 400;
+        }
+        
+        /* 2カラムレイアウト */
+        .product-main {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+        
+        @media (max-width: 768px) {
+            .product-main {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+        
+        /* 画像エリア */
+        .product-image-area {
+            background: var(--bg-gray);
+            border-radius: 8px;
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 400px;
+            position: relative;
+        }
+        
+        .product-image-placeholder {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(135deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+            background-size: 200% 100%;
+            animation: shimmer 2s infinite;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 0.9rem;
+        }
+        
+        @keyframes shimmer {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+        
+        .image-badge {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: var(--accent);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            border-radius: 4px;
+        }
+        
+        /*  specs サマリー */
+        .product-summary {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .key-specs-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+        
+        .spec-card {
+            background: var(--bg-gray);
+            padding: 1rem;
+            border-radius: 6px;
+            border-left: 3px solid var(--secondary);
+        }
+        
+        .spec-label {
+            font-size: 0.75rem;
+            color: var(--text-gray);
+            margin-bottom: 0.3rem;
+            display: block;
+        }
+        
+        .spec-value {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .action-area {
+            margin-top: 1rem;
+            padding: 1.5rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border: 2px solid var(--border);
+        }
+        
+        .price-note {
+            font-size: 0.85rem;
+            color: var(--text-gray);
+            margin-bottom: 1rem;
+        }
+        
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            width: 100%;
+            padding: 1rem;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn-primary:hover {
+            background: #c4000d;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(230,0,18,0.3);
+        }
+        
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            width: 100%;
+            padding: 0.8rem;
+            margin-top: 0.5rem;
+            background: white;
+            color: var(--primary);
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border: 2px solid var(--primary);
+            transition: all 0.3s;
+        }
+        
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: white;
+        }
+        
+        /* アイコン（純CSS） */
         .icon-mail::before { content: "✉"; font-size: 1.2em; }
-        .icon-phone::before { content: "☎"; font-size: 1.2em; }
-        .icon-check::before { content: "✓"; color: #00838F; font-weight: bold; }
-        .icon-arrow::before { content: "→"; color: #00838F; }
-        .icon-doc::before { content: "📄"; }
-        .icon-sample::before { content: "▣"; color: white; }
+        .icon-doc::before { content: "📄"; font-size: 1.2em; }
+        .icon-check::before { content: "✓"; color: var(--success); font-weight: bold; }
+        .icon-arrow::before { content: "→"; }
         
-        @media print {
-            .no-print { display: none !important; }
-            .dual-nav-container, nav.fixed { display: none !important; }
-            body { padding-top: 0 !important; }
+        /* セクション共通 */
+        .section {
+            margin-bottom: 4rem;
+        }
+        
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid var(--secondary);
+            display: inline-block;
+        }
+        
+        /* 詳細仕様表 */
+        .spec-table-container {
+            overflow-x: auto;
+        }
+        
+        .spec-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+        }
+        
+        .spec-table th,
+        .spec-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .spec-table th {
+            background: var(--bg-gray);
+            font-weight: 600;
+            width: 30%;
+            color: var(--primary);
+        }
+        
+        .spec-table tr:hover {
+            background: #fafafa;
+        }
+        
+        /* 信頼性モジュール */
+        .trust-section {
+            background: linear-gradient(to bottom, #f8f9fa, #fff);
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+        
+        .reliability-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .metric-card {
+            background: white;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .metric-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border-color: var(--secondary);
+        }
+        
+        .metric-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+            line-height: 1;
+        }
+        
+        .metric-unit {
+            font-size: 1rem;
+            color: var(--text-gray);
+        }
+        
+        .metric-label {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            margin-top: 0.5rem;
+            font-weight: 500;
+        }
+        
+        /* 認証バッジ */
+        .compliance-section {
+            margin-top: 2rem;
+        }
+        
+        .badge-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.2rem;
+            background: white;
+            border: 2px solid #4caf50;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
+        .badge-icon {
+            width: 24px;
+            height: 24px;
+            background: #4caf50;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+        }
+        
+        .badge-detail {
+            font-size: 0.75rem;
+            color: var(--text-gray);
+            font-weight: 400;
+            margin-top: 0.2rem;
+        }
+        
+        /* 技術図表（静的SVG） */
+        .tech-diagrams {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .diagram-box {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+        
+        .diagram-title {
+            font-weight: 700;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .jis-chart {
+            width: 100%;
+            height: 200px;
+            background: #fafafa;
+            border: 1px solid #eee;
+            border-radius: 4px;
+            position: relative;
+        }
+        
+        /* 配光曲線（SVG静的） */
+        .beam-pattern {
+            width: 100%;
+            height: 100%;
+        }
+        
+        /* 温度上昇データ */
+        .thermal-table {
+            width: 100%;
+            font-size: 0.85rem;
+            margin-top: 1rem;
+        }
+        
+        .thermal-table th,
+        .thermal-table td {
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        
+        .thermal-table th {
+            background: #f0f0f0;
+        }
+        
+        /* アプリケーション */
+        .app-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .app-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            position: relative;
+            transition: all 0.3s;
+        }
+        
+        .app-card:hover {
+            border-color: var(--secondary);
+            box-shadow: 0 4px 12px rgba(0,86,166,0.1);
+        }
+        
+        .app-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .app-title {
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+        
+        .app-desc {
+            font-size: 0.85rem;
+            color: var(--text-gray);
+            line-height: 1.5;
+        }
+        
+        /* FAQ */
+        .faq-list {
+            border-top: 1px solid var(--border);
+        }
+        
+        .faq-item {
+            border-bottom: 1px solid var(--border);
+            padding: 1.5rem 0;
+        }
+        
+        .faq-q {
+            font-weight: 700;
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+        
+        .faq-a {
+            color: var(--text-gray);
+            padding-left: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        /* 関連製品 */
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .related-card {
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        
+        .related-card:hover {
+            border-color: var(--secondary);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+        }
+        
+        .related-image {
+            height: 160px;
+            background: var(--bg-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 0.8rem;
+        }
+        
+        .related-content {
+            padding: 1rem;
+        }
+        
+        .related-model {
+            font-size: 0.8rem;
+            color: var(--text-gray);
+            margin-bottom: 0.3rem;
+        }
+        
+        .related-name {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 0.95rem;
+        }
+        
+        /* フッターCTA */
+        .footer-cta {
+            background: var(--primary);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            margin: 4rem 0 2rem;
+            border-radius: 8px;
+        }
+        
+        .footer-cta h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-cta p {
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+        
+        /* フッター */
+        footer {
+            background: #111;
+            color: #aaa;
+            padding: 3rem 2rem 2rem;
+            font-size: 0.85rem;
+        }
+        
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .footer-section h3 {
+            color: white;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-section a {
+            color: #aaa;
+            text-decoration: none;
+        }
+        
+        .footer-section a:hover {
+            color: white;
+        }
+        
+        .certification-footer {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #333;
+            text-align: center;
+            font-size: 0.75rem;
+        }
+        
+        .cert-logos {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .cert-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800" itemscope itemtype="https://schema.org/Product">
+<body>
 
-    <!-- ヘッダー（SEO最適化） -->
-    <nav class="fixed top-0 w-full bg-white shadow-sm z-50 h-16 no-print">
-        <div class="max-w-7xl mx-auto px-4 h-full flex items-center justify-between">
-            <div class="flex items-center gap-3" itemprop="brand" itemscope itemtype="https://schema.org/Brand">
-                <meta itemprop="name" content="SUNSEMI">
-                <div class="text-2xl font-bold tracking-tight text-gray-900">
-                    SUNSEMI<span class="text-xs text-gray-500 font-normal ml-2">株式会社</span>
-                </div>
-            </div>
-            
-            <div class="hidden md:flex items-center space-x-8 h-full text-sm">
-                <a href="#" class="text-gray-600 hover:text-gray-900 transition">ホーム</a>
-                <div class="relative h-full flex items-center">
-                    <button class="text-gray-900 font-semibold flex items-center gap-1 py-5 border-b-2 border-tech-blue">
-                        製品情報
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 9l-7 7-7-7"/></svg>
-                    </button>
-                </div>
-                <a href="#" class="text-gray-600 hover:text-gray-900 transition">技術サポート</a>
-                <a href="#" class="bg-tech-blue text-white px-4 py-2 rounded text-sm font-medium hover:bg-tech-blue-dark transition no-print">
-                    <span class="icon-mail mr-1"></span>お問い合わせ
-                </a>
+<header>
+    <div class="header-inner">
+        <div class="logo">SUN<span>SEMI</span></div>
+        <nav>
+            <ul>
+                <li><a href="/ja/">ホーム</a></li>
+                <li><a href="/ja/products/">製品情報</a></li>
+                <li><a href="/ja/company/">会社案内</a></li>
+                <li><a href="/ja/contact/">お問い合わせ</a></li>
+            </ul>
+        </nav>
+        <a href="mailto:jp@cobodm.com?subject=320D-5MM-STD見積依頼" class="cta-header">見積依頼</a>
+    </div>
+</header>
+
+<div class="breadcrumb">
+    <a href="/ja/">ホーム</a> > <a href="/ja/products/">製品情報</a> > <a href="/ja/products/single-color/">単色シングルカラー</a> > <span>高密度COB LEDテープライト 5mm超窄幅</span>
+</div>
+
+<main class="container">
+    
+    <!-- 製品ヘッダー -->
+    <div class="product-header">
+        <div class="category-tag">単色シングルカラー</div>
+        <h1>高密度COB LEDテープライト 5mm超窄幅 <span class="model-number">（型番: 320D-5MM-STD）</span></h1>
+    </div>
+
+    <!-- メインコンテンツ2カラム -->
+    <div class="product-main">
+        <div class="product-image-area">
+            <div class="image-badge">5mm超窄幅</div>
+            <div class="product-image-placeholder">
+                [製品写真: 5mm COB LEDテープ発光状態]<br>
+                320LED/m・完全ドットレス
             </div>
         </div>
-    </nav>
 
-    <!-- サンプル請求バナー（B2B転換ファネル） -->
-    <div class="bg-cyan-50 border-b border-cyan-200 py-3 no-print mt-16">
-        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
-            <div class="text-sm text-cyan-900">
-                <span class="font-bold">開発・評価用サンプル</span>を無償提供中（法人様限定）・<span class="font-bold">納期：受注後7営業日</span>
+        <div class="product-summary">
+            <div class="key-specs-grid">
+                <div class="spec-card">
+                    <span class="spec-label">LED密度</span>
+                    <div class="spec-value">320 LED/m</div>
+                </div>
+                <div class="spec-card">
+                    <span class="spec-label">基板幅</span>
+                    <div class="spec-value">5 mm</div>
+                </div>
+                <div class="spec-card">
+                    <span class="spec-label">対応電圧</span>
+                    <div class="spec-value">12V / 24V</div>
+                </div>
+                <div class="spec-card">
+                    <span class="spec-label">演色性</span>
+                    <div class="spec-value">Ra 90+</div>
+                </div>
+                <div class="spec-card">
+                    <span class="spec-label">消費電力</span>
+                    <div class="spec-value">8 W/m</div>
+                </div>
+                <div class="spec-card">
+                    <span class="spec-label">配光角</span>
+                    <div class="spec-value">135°</div>
+                </div>
             </div>
-            <a href="mailto:jp@cobodm.com?subject=【サンプル請求】320D-5mm&body=御社名：%0D%0Aご担当者：%0D%0A必要数量（m）：%0D%0A用途：" 
-               class="bg-tech-blue text-white text-xs px-4 py-2 rounded font-semibold hover:bg-tech-blue-dark transition flex items-center gap-2">
-                <span class="icon-sample"></span>
-                サンプル請求・お見積もり
+
+            <div class="action-area">
+                <div class="price-note">
+                    <strong>最小受注単位:</strong> 100m/ロット<br>
+                    <strong>納期:</strong> 受注後7営業日<br>
+                    <strong>最大連続長:</strong> 3m（12V時）/ 5m（24V時）
+                </div>
+                <a href="mailto:jp@cobodm.com?subject=【見積依頼】320D-5MM-STD&body=ご担当者様%0D%0A%0D%0A下記製品の見積をお願いいたします。%0D%0A%0D%0A型番: 320D-5MM-STD%0D%0A製品名: 高密度COB LEDテープライト 5mm超窄幅%0D%0A希望数量: %0D%0A用途: %0D%0A%0D%0Aご用命の際は、本メールにご希望数量・納入先・ご連絡先をご記入の上、送信してください。" class="btn-primary">
+                    <span class="icon-mail"></span> お見積もり・技術相談（メール）
+                </a>
+                <button onclick="window.print()" class="btn-secondary">
+                    <span class="icon-doc"></span> 仕様書印刷（PDF化）
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 信頼性・認証セクション（Trust Module） -->
+    <section class="section trust-section">
+        <h2 class="section-title">信頼性評価・規格適合性</h2>
+        
+        <div class="reliability-grid">
+            <div class="metric-card">
+                <div class="metric-value">L70 <span class="metric-unit">>50,000h</span></div>
+                <div class="metric-label">光束維持率70%寿命<br><small>Ta=25℃条件下</small></div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">MTTF <span class="metric-unit">>100,000h</span></div>
+                <div class="metric-label">平均故障間隔<br><small>信頼水準90%</small></div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">5<span class="metric-unit">年間</span></div>
+                <div class="metric-label">製品保証期間<br><small>通常使用条件下</small></div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value">3-Step <span class="metric-unit">SDCM</span></div>
+                <div class="metric-label">色度差管理<br><small>高精度ムラ抑制</small></div>
+            </div>
+        </div>
+
+        <div class="compliance-section">
+            <h3 style="font-size: 1rem; margin-bottom: 1rem; color: var(--text-gray);">取得規格・認証</h3>
+            <div class="badge-grid">
+                <div class="badge">
+                    <div class="badge-icon icon-check"></div>
+                    <div>
+                        <div>UL 認証</div>
+                        <div class="badge-detail">UL番号: E354137</div>
+                    </div>
+                </div>
+                <div class="badge">
+                    <div class="badge-icon icon-check"></div>
+                    <div>
+                        <div>RoHS 適合</div>
+                        <div class="badge-detail">指令 2011/65/EU</div>
+                    </div>
+                </div>
+                <div class="badge">
+                    <div class="badge-icon icon-check"></div>
+                    <div>
+                        <div>CE 適合</div>
+                        <div class="badge-detail">安全規格適合</div>
+                    </div>
+                </div>
+                <div class="badge">
+                    <div class="badge-icon icon-check"></div>
+                    <div>
+                        <div>PSE 対象外</div>
+                        <div class="badge-detail">自主確認済</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 技術仕様詳細 -->
+    <section class="section">
+        <h2 class="section-title">詳細仕様表</h2>
+        <div class="spec-table-container">
+            <table class="spec-table">
+                <tr>
+                    <th>型番</th>
+                    <td>320D-5MM-STD（320d-5mm-ultra-narrow）</td>
+                </tr>
+                <tr>
+                    <th>製品カテゴリ</th>
+                    <td>単色シングルカラー</td>
+                </tr>
+                <tr>
+                    <th>LEDタイプ</th>
+                    <td>高密度COB（Chip on Board）</td>
+                </tr>
+                <tr>
+                    <th>LED密度</th>
+                    <td>320 LED/m</td>
+                </tr>
+                <tr>
+                    <th>基板幅</th>
+                    <td>5 mm（超窄幅）</td>
+                </tr>
+                <tr>
+                    <th>入力電圧</th>
+                    <td>DC 12V / DC 24V（選択可）</td>
+                </tr>
+                <tr>
+                    <th>消費電力</th>
+                    <td>8 W/m</td>
+                </tr>
+                <tr>
+                    <th>演色評価数（Ra）</th>
+                    <td>90+（高演色性）</td>
+                </tr>
+                <tr>
+                    <th>配光角</th>
+                    <td>135°（広角配光）</td>
+                </tr>
+                <tr>
+                    <th>カット間隔</th>
+                    <td>12V: 25mm（3LED単位）/ 24V: 50mm（6LED単位）</td>
+                </tr>
+                <tr>
+                    <th>最大連続長</th>
+                    <td>12V: 3m / 24V: 5m（電圧降下補正設計）</td>
+                </tr>
+                <tr>
+                    <th>保護等級</th>
+                    <td>IP20（屋内用）</td>
+                </tr>
+                <tr>
+                    <th>色温度範囲</th>
+                    <td>2700K / 3000K / 4000K / 5000K / 6500K（5色展開）</td>
+                </tr>
+                <tr>
+                    <th>色度差管理</th>
+                    <td>3-Step SDCM（マクアダム楕円3ステップ内）</td>
+                </tr>
+                <tr>
+                    <th>最小受注単位（MOQ）</th>
+                    <td>100m/ロット</td>
+                </tr>
+                <tr>
+                    <th>納期</th>
+                    <td>受注後7営業日（在庫状況により変動）</td>
+                </tr>
+                <tr>
+                    <th>対応ドライバ</th>
+                    <td>標準LEDドライバ / PWM調光器（12V/24V兼用）</td>
+                </tr>
+                <tr>
+                    <th>梱包仕様</th>
+                    <td>5m/巻・20巻/箱（100m/箱）</td>
+                </tr>
+                <tr>
+                    <th>使用環境条件</th>
+                    <td>温度: -30℃～+50℃ / 湿度: 20%～85%RH（結露なきこと）</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <!-- 技術図表 -->
+    <section class="section">
+        <h2 class="section-title">技術図表・特性データ</h2>
+        
+        <div class="tech-diagrams">
+            <div class="diagram-box">
+                <div class="diagram-title">配光特性曲線（Beam Pattern）</div>
+                <div class="jis-chart">
+                    <svg class="beam-pattern" viewBox="0 0 300 200">
+                        <!-- 中心線 -->
+                        <line x1="150" y1="180" x2="150" y2="20" stroke="#ddd" stroke-width="1"/>
+                        <!-- 水平線 -->
+                        <line x1="30" y1="100" x2="270" y2="100" stroke="#ddd" stroke-width="1"/>
+                        <!-- 配光曲線（135°近似） -->
+                        <path d="M 150 100 Q 90 40 30 100" fill="none" stroke="#0056a6" stroke-width="2"/>
+                        <path d="M 150 100 Q 210 40 270 100" fill="none" stroke="#0056a6" stroke-width="2"/>
+                        <!-- 角度表示 -->
+                        <text x="150" y="195" text-anchor="middle" font-size="10" fill="#666">0°</text>
+                        <text x="30" y="115" text-anchor="middle" font-size="9" fill="#666">-67.5°</text>
+                        <text x="270" y="115" text-anchor="middle" font-size="9" fill="#666">+67.5°</text>
+                        <text x="150" y="15" text-anchor="middle" font-size="11" fill="#0056a6" font-weight="bold">135°配光角</text>
+                        <!-- 輝度値 -->
+                        <text x="150" y="85" text-anchor="middle" font-size="9" fill="#666">100%</text>
+                        <text x="60" y="85" text-anchor="middle" font-size="9" fill="#666">50%</text>
+                        <text x="240" y="85" text-anchor="middle" font-size="9" fill="#666">50%</text>
+                    </svg>
+                </div>
+                <div style="font-size: 0.8rem; color: #666; margin-top: 0.5rem;">
+                    COB広角配光120°（中心軸から±60°で50%維持）
+                </div>
+            </div>
+
+            <div class="diagram-box">
+                <div class="diagram-title">温度上昇データ（Temperature Rise）</div>
+                <div class="jis-chart" style="height: auto; padding: 1rem;">
+                    <table class="thermal-table">
+                        <tr>
+                            <th>測定点</th>
+                            <th>25℃環境</th>
+                            <th>許容限界</th>
+                        </tr>
+                        <tr>
+                            <td>基板表面</td>
+                            <td>+15℃</td>
+                            <td>≤70℃</td>
+                        </tr>
+                        <tr>
+                            <td>はんだ接合部</td>
+                            <td>+25℃</td>
+                            <td>≤85℃</td>
+                        </tr>
+                        <tr>
+                            <td>アルミ放熱板接触面</td>
+                            <td>+8℃</td>
+                            <td>≤60℃</td>
+                        </tr>
+                    </table>
+                    <div style="font-size: 0.75rem; color: #999; margin-top: 0.5rem; text-align: center;">
+                        測定条件: 8W/m連続点灯・アルミチャンネル実装時
+                    </div>
+                </div>
+            </div>
+
+            <div class="diagram-box">
+                <div class="diagram-title">寸法・構造図（Cross Section）</div>
+                <div class="jis-chart">
+                    <svg viewBox="0 0 300 120" style="width: 100%; height: 100%;">
+                        <!-- 断面図 -->
+                        <rect x="50" y="40" width="200" height="20" fill="#f4d03f" stroke="#333" stroke-width="1"/>
+                        <rect x="50" y="60" width="200" height="8" fill="#2e7d32" stroke="#333" stroke-width="1"/>
+                        <rect x="50" y="68" width="200" height="4" fill="#c0c0c0" stroke="#333" stroke-width="1"/>
+                        
+                        <!-- 寸法線 -->
+                        <line x1="50" y1="85" x2="250" y2="85" stroke="#333" stroke-width="1"/>
+                        <line x1="50" y1="80" x2="50" y2="90" stroke="#333" stroke-width="1"/>
+                        <line x1="250" y1="80" x2="250" y2="90" stroke="#333" stroke-width="1"/>
+                        <text x="150" y="100" text-anchor="middle" font-size="11" fill="#333">5.0mm</text>
+                        
+                        <line x1="30" y1="40" x2="30" y2="72" stroke="#333" stroke-width="1"/>
+                        <line x1="25" y1="40" x2="35" y2="40" stroke="#333" stroke-width="1"/>
+                        <line x1="25" y1="72" x2="35" y2="72" stroke="#333" stroke-width="1"/>
+                        <text x="20" y="58" text-anchor="middle" font-size="10" fill="#333" transform="rotate(-90 20 58)">1.2mm</text>
+                        
+                        <!-- 構成説明 -->
+                        <text x="150" y="25" text-anchor="middle" font-size="9" fill="#666">LED発光部（COB）</text>
+                        <text x="150" y="115" text-anchor="middle" font-size="9" fill="#666">2oz銅箔FPC基板</text>
+                    </svg>
+                </div>
+                <div style="font-size: 0.8rem; color: #666; margin-top: 0.5rem;">
+                    5mm幅・1.2mm厚・2層FPC構造（2oz厚銅箔）
+                </div>
+            </div>
+
+            <div class="diagram-box">
+                <div class="diagram-title">調光対応表（Dimming Compatibility）</div>
+                <div class="jis-chart" style="height: auto; padding: 1rem;">
+                    <table class="thermal-table">
+                        <tr>
+                            <th>調光方式</th>
+                            <th>対応可否</th>
+                            <th>備考</th>
+                        </tr>
+                        <tr>
+                            <td>PWM調光</td>
+                            <td style="color: #2e7d32; font-weight: bold;">◎</td>
+                            <td>推奨（ノイズなし）</td>
+                        </tr>
+                        <tr>
+                            <td>0-10V調光</td>
+                            <td style="color: #2e7d32; font-weight: bold;">◎</td>
+                            <td>別途専用ドライバ要</td>
+                        </tr>
+                        <tr>
+                            <td>位相制御</td>
+                            <td style="color: #e60012;">×</td>
+                            <td>非対応</td>
+                        </tr>
+                        <tr>
+                            <td>DALI</td>
+                            <td style="color: #2e7d32; font-weight: bold;">◎</td>
+                            <td>DALI対応ドライバ経由</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 適用用途 -->
+    <section class="section">
+        <h2 class="section-title">適用用途・応用シーン</h2>
+        <div class="app-grid">
+            <div class="app-card">
+                <div class="app-icon">🏪</div>
+                <div class="app-title">店舗什器照明</div>
+                <div class="app-desc">展示棚・陳列ケースの間接照明。5mm超窄幅による隙間実装可能。</div>
+            </div>
+            <div class="app-card">
+                <div class="app-icon">🛋️</div>
+                <div class="app-title">家具・キャビネット</div>
+                <div class="app-desc">高級家具・キッチンキャビネットのシームレス発光演出。</div>
+            </div>
+            <div class="app-card">
+                <div class="app-icon">📐</div>
+                <div class="app-title">狭小空間照明</div>
+                <div class="app-desc">アルミプロファイル幅8mm以下の極小スペース対応。</div>
+            </div>
+            <div class="app-card">
+                <div class="app-icon">✨</div>
+                <div class="app-title">間接照明・雰囲気作り</div>
+                <div class="app-desc">Ra90+高演色性による商品色の忠実再現。</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 技術的特長 -->
+    <section class="section">
+        <h2 class="section-title">技術的特長</h2>
+        <ul style="list-style: none; padding: 0;">
+            <li style="padding: 1rem; background: #f8f9fa; margin-bottom: 0.5rem; border-left: 4px solid var(--secondary);">
+                <strong>3-Step SDCM</strong>：マクアダム楕円3ステップ内の高精度色度管理・多本並列時の色ムラ抑制
+            </li>
+            <li style="padding: 1rem; background: #f8f9fa; margin-bottom: 0.5rem; border-left: 4px solid var(--secondary);">
+                <strong>5mm超窄幅PCB</strong>：業界最小クラスの基板幅・特殊狭小プロファイル対応
+            </li>
+            <li style="padding: 1rem; background: #f8f9fa; margin-bottom: 0.5rem; border-left: 4px solid var(--secondary);">
+                <strong>ドットレス発光</strong>：COB実装による点光源感ゼロ・線状シームレス発光
+            </li>
+            <li style="padding: 1rem; background: #f8f9fa; margin-bottom: 0.5rem; border-left: 4px solid var(--secondary);">
+                <strong>狭小スペース実装対応</strong>：高柔軟性FPC・R10mm曲げ半径対応
+            </li>
+        </ul>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+        <h2 class="section-title">よくあるご質問（FAQ）</h2>
+        <div class="faq-list">
+            <div class="faq-item">
+                <div class="faq-q">Q. 5mm幅の設置メリットは？</div>
+                <div class="faq-a">A. アルミプロファイルや家具の隙間など、標準幅では不可能な極小スペースへのシームレス実装が可能です。特に什器の枠材内蔵照明に最適です。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Q. 屋外での使用は可能ですか？</div>
+                <div class="faq-a">A. 本品はIP20（屋内用）です。屋外ご使用の際は防水カバーまたはIP67防水タイプ（ET-1005R-WP）をご検討ください。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Q. 調光にはどの方式が適していますか？</div>
+                <div class="faq-a">A. PWM調光（周波数1kHz以上推奨）または0-10Vアナログ調光に対応しています。位相制御（トライアック）方式は非対応です。</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 関連製品 -->
+    <section class="section">
+        <h2 class="section-title">こちらもおすすめ（関連製品）</h2>
+        <div class="related-grid">
+            <a href="/ja/products/single-color/480d-5mm-ultra-hd.html" class="related-card">
+                <div class="related-image">[480D-5MM 製品画像]</div>
+                <div class="related-content">
+                    <div class="related-model">型番: 480D-5MM-STD</div>
+                    <div class="related-name">超高密度COB LEDテープライト 5mm 480灯</div>
+                </div>
+            </a>
+            <a href="/ja/products/single-color/320d-8mm-standard.html" class="related-card">
+                <div class="related-image">[320D-8MM 製品画像]</div>
+                <div class="related-content">
+                    <div class="related-model">型番: 320D-8MM-STD</div>
+                    <div class="related-name">高密度COB LEDテープライト 8mm標準幅</div>
+                </div>
             </a>
         </div>
+    </section>
+
+    <!-- フッターCTA -->
+    <div class="footer-cta">
+        <h2>ご検討中ですか？</h2>
+        <p>技術的なご質問やサンプル請求、お見積もりはお気軽にお問い合わせください。<br>
+        日本市場向けに最適化されたLED照明ソリューションを提案いたします。</p>
+        <a href="mailto:jp@cobodm.com?subject=【お問い合わせ】320D-5MM-STD&body=SUNSEMI製品についてのお問い合わせ%0D%0A%0D%0A【型番】320D-5MM-STD%0D%0A【会社名】%0D%0A【ご担当者名】%0D%0A【ご用件】%0D%0A・技術相談%0D%0A・サンプル請求%0D%0A・見積依頼（希望数量: ）%0D%0A・その他%0D%0A%0D%0A【具体的なご質問】" class="btn-primary" style="max-width: 400px; margin: 0 auto;">
+            <span class="icon-mail"></span> jp@cobodm.com へメール送信
+        </a>
     </div>
 
-    <!-- 双重ナビ -->
-    <div class="dual-nav-container no-print">
-        <div class="max-w-7xl mx-auto px-4 py-3">
-            <nav class="flex items-center text-xs text-gray-500 mb-3 tracking-wide">
-                <a href="#" class="hover:text-gray-700">ホーム</a>
-                <span class="mx-2 text-gray-300">/</span>
-                <a href="#" class="hover:text-gray-700">製品一覧</a>
-                <span class="mx-2 text-gray-300">/</span>
-                <a href="#" class="hover:text-gray-700">単色COBシリーズ</a>
-                <span class="mx-2 text-gray-300">/</span>
-                <span class="text-gray-900 font-medium" itemprop="model">320D-12/24V-5mm</span>
-            </nav>
+</main>
 
-            <div class="flex items-center gap-1 overflow-x-auto pb-1 scrollbar-hide">
-                <span class="text-xs font-bold text-gray-400 uppercase tracking-wider mr-3">仕様セクション</span>
-                <a href="#specs" class="nav-link px-3 py-1.5 text-sm text-gray-600 hover:text-tech-blue rounded transition whitespace-nowrap">基本仕様</a>
-                <a href="#trust" class="nav-link px-3 py-1.5 text-sm text-gray-600 hover:text-tech-blue rounded transition whitespace-nowrap">信頼性</a>
-                <a href="#dimensions" class="nav-link px-3 py-1.5 text-sm text-gray-600 hover:text-tech-blue rounded transition whitespace-nowrap">外形寸法</a>
-                <a href="#application" class="nav-link px-3 py-1.5 text-sm text-gray-600 hover:text-tech-blue rounded transition whitespace-nowrap">応用例</a>
-            </div>
+<footer>
+    <div class="footer-inner">
+        <div class="footer-section">
+            <h3>SUNSEMI（サンセミ）</h3>
+            <p>高品質COB LEDテープのODMメーカー<br>
+            日本市場向けカスタマイズ対応</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">
+                営業窓口: jp@cobodm.com
+            </p>
+        </div>
+        
+        <div class="footer-section">
+            <h3>製品カテゴリ</h3>
+            <ul>
+                <li><a href="/ja/products/single-color/">単色シングルカラー</a></li>
+                <li><a href="/ja/products/cct-tunable/">色温度可変（CCT）</a></li>
+                <li><a href="/ja/products/full-color/">フルカラー（RGB/RGBW）</a></li>
+                <li><a href="/ja/products/spi-controlled/">SPI制御ピクセル</a></li>
+                <li><a href="/ja/products/mini-size/">ミニサイズ</a></li>
+                <li><a href="/ja/products/waterproof/">防水型</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-section">
+            <h3>サポート</h3>
+            <ul>
+                <li><a href="/ja/technical/specs/">技術仕様書</a></li>
+                <li><a href="/ja/technical/cad/">CADデータ</a></li>
+                <li><a href="/ja/technical/ies/">IESファイル</a></li>
+                <li><a href="/ja/faq/">よくある質問</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-section">
+            <h3>企業情報</h3>
+            <ul>
+                <li><a href="/ja/company/">会社概要</a></li>
+                <li><a href="/ja/company/privacy/">プライバシーポリシー</a></li>
+                <li><a href="/ja/company/compliance/">コンプライアンス</a></li>
+            </ul>
         </div>
     </div>
-
-    <div id="pdf-content">
-        
-        <!-- 第1ページ：製品概要（SEO最適化・商業メタデータ完全版） -->
-        <section class="bg-white pt-8 pb-12 pdf-avoid-break" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-            <meta itemprop="availability" content="https://schema.org/InStock">
-            <div class="max-w-7xl mx-auto px-4">
-                <div class="grid md:grid-cols-2 gap-12 items-start">
-                    <!-- 左：製品イメージ -->
-                    <div class="bg-gray-50 rounded-lg p-8 relative border border-gray-200 pdf-avoid-break">
-                        <div class="absolute top-4 left-4 bg-green-600 text-white text-xs font-bold px-3 py-1 rounded">5mm超窄幅</div>
-                        <div class="absolute top-4 right-4 bg-tech-blue text-white text-xs font-bold px-3 py-1 rounded">320LED/m</div>
-                        
-                        <div class="h-64 flex items-center justify-center">
-                            <div class="w-full max-w-sm relative">
-                                <div class="w-1/2 mx-auto h-6 bg-gradient-to-r from-yellow-50 via-white to-yellow-50 border border-gray-300 shadow-sm relative">
-                                    <div class="absolute inset-0 flex items-center justify-center">
-                                        <div class="w-full h-0.5 bg-yellow-400 opacity-60"></div>
-                                    </div>
-                                </div>
-                                <div class="mt-6 text-center">
-                                    <div class="inline-block border-b-2 border-gray-800 px-4">
-                                        <span class="text-2xl font-bold text-gray-900">5.0</span>
-                                        <span class="text-sm text-gray-600 ml-1">mm幅</span>
-                                    </div>
-                                    <div class="text-xs text-gray-500 mt-2">480D比 37.5% コンパクト</div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- 色温度バリエーション -->
-                        <div class="mt-6 pt-4 border-t border-gray-200 no-print">
-                            <div class="text-xs text-gray-500 mb-2">色温度バリエーション：</div>
-                            <div class="flex gap-2">
-                                <span class="px-3 py-1 bg-orange-100 text-orange-800 text-xs rounded border border-orange-200">2700K</span>
-                                <span class="px-3 py-1 bg-orange-50 text-orange-700 text-xs rounded border border-orange-300 font-semibold">3000K</span>
-                                <span class="px-3 py-1 bg-yellow-50 text-yellow-700 text-xs rounded border border-yellow-200">4000K</span>
-                                <span class="px-3 py-1 bg-blue-50 text-blue-700 text-xs rounded border border-blue-200">6000K</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 右：製品情報（CSV全フィールド網羅） -->
-                    <div class="pdf-avoid-break">
-                        <div class="text-xs text-gray-400 mb-2 tracking-widest">COB LED TAPE LIGHT / 超窄幅タイプ</div>
-                        <h1 class="text-3xl font-bold text-gray-900 mb-2" itemprop="name">高密度COB LEDテープライト 5mm超窄幅</h1>
-                        <p class="text-lg text-tech-blue font-semibold mb-1" itemprop="model">320D-12/24V-5mm</p>
-                        <p class="text-gray-600 mb-6 text-sm">3-Step SDCM・完全ドットレス・高演色Ra90+仕様</p>
-                        
-                        <!-- コア仕様＋商業メタデータ -->
-                        <div class="grid grid-cols-2 gap-4 mb-6 text-sm">
-                            <div class="border-b border-gray-200 pb-2">
-                                <div class="text-gray-500 text-xs mb-1">入力電圧</div>
-                                <div class="font-semibold text-gray-900">DC 12V / 24V <span class="text-xs font-normal text-gray-500">（兼用型）</span></div>
-                            </div>
-                            <div class="border-b border-gray-200 pb-2">
-                                <div class="text-gray-500 text-xs mb-1">消費電力</div>
-                                <div class="font-semibold text-gray-900">6.4W/m <span class="text-xs font-normal text-gray-500">（公称）</span></div>
-                            </div>
-                            <div class="border-b border-gray-200 pb-2">
-                                <div class="text-gray-500 text-xs mb-1">基板幅</div>
-                                <div class="font-semibold text-green-600 text-lg">5.0mm <span class="text-xs font-normal text-gray-500">±0.15mm</span></div>
-                            </div>
-                            <div class="border-b border-gray-200 pb-2">
-                                <div class="text-gray-500 text-xs mb-1">配光角</div>
-                                <div class="font-semibold text-gray-900">135° <span class="text-xs font-normal text-gray-500">（高拡散）</span></div>
-                            </div>
-                            <!-- DeepSeek指摘：商業メタデータ追加 -->
-                            <div class="border-b border-gray-200 pb-2 bg-blue-50 -mx-2 px-2 rounded">
-                                <div class="text-gray-500 text-xs mb-1">最大連続長</div>
-                                <div class="font-semibold text-tech-blue">3m / 5m <span class="text-xs font-normal text-gray-500">（max_run_m）</span></div>
-                            </div>
-                            <div class="border-b border-gray-200 pb-2 bg-yellow-50 -mx-2 px-2 rounded">
-                                <div class="text-gray-500 text-xs mb-1">最小受注単位（MOQ）</div>
-                                <div class="font-semibold text-gray-900">100m/ロット <span class="text-xs font-normal text-gray-500">（moq_ja）</span></div>
-                            </div>
-                            <div class="border-b border-gray-200 pb-2">
-                                <div class="text-gray-500 text-xs mb-1">納期</div>
-                                <div class="font-semibold text-gray-900">受注後7営業日 <span class="text-xs font-normal text-gray-500">（lead_time_ja）</span></div>
-                            </div>
-                            <div class="border-b border-gray-200 pb-2">
-                                <div class="text-gray-500 text-xs mb-1">演色性（CRI）</div>
-                                <div class="font-semibold text-gray-900">Ra90+ <span class="text-xs font-normal text-gray-500">（R9>50）</span></div>
-                            </div>
-                        </div>
-
-                        <!-- CTAボタン群 -->
-                        <div class="flex flex-col gap-3 no-print">
-                            <div class="flex gap-3">
-                                <a href="mailto:jp@cobodm.com?subject=【お見積もり依頼】320D-5mm" class="flex-1 bg-tech-blue text-white px-6 py-3 rounded font-semibold hover:bg-tech-blue-dark transition shadow-md flex items-center justify-center gap-2 text-center">
-                                    <span class="icon-mail"></span>
-                                    お問い合わせ・見積依頼
-                                </a>
-                                <button onclick="window.print()" class="px-6 py-3 border-2 border-gray-300 rounded font-semibold text-gray-700 hover:border-gray-400 hover:bg-gray-50 transition flex items-center gap-2">
-                                    <span class="icon-doc"></span>
-                                    印刷
-                                </button>
-                            </div>
-                            <button onclick="generatePDF()" class="w-full bg-white border border-tech-blue text-tech-blue px-6 py-2 rounded font-medium hover:bg-cyan-50 transition flex items-center justify-center gap-2 text-sm">
-                                <span class="icon-arrow"></span>
-                                PDF仕様書を保存（A4最適化）
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 第2ページ：信頼性指標（DeepSeek提案のTrust Module） -->
-        <section id="trust" class="py-12 bg-gray-50 border-t pdf-page pdf-avoid-break">
-            <div class="max-w-7xl mx-auto px-4">
-                <h2 class="text-xl font-bold text-gray-900 mb-6 border-l-4 border-tech-blue pl-3">信頼性評価・品質保証</h2>
-                
-                <!-- メトリクスカード（DeepSeekスタイル・シンプル実装） -->
-                <div class="grid md:grid-cols-3 gap-6 mb-8">
-                    <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm text-center pdf-avoid-break">
-                        <div class="text-3xl font-bold text-tech-blue mb-2">L70 >50,000h</div>
-                        <div class="text-sm font-semibold text-gray-700 mb-1">光束維持率70%寿命</div>
-                        <div class="text-xs text-gray-500">Ta=25℃, IF=350mA条件下</div>
-                    </div>
-                    
-                    <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm text-center pdf-avoid-break">
-                        <div class="text-3xl font-bold text-tech-blue mb-2">5年間保証</div>
-                        <div class="text-sm font-semibold text-gray-700 mb-1">製品保証期間</div>
-                        <div class="text-xs text-gray-500">通常使用条件下・品質問題全額対応</div>
-                    </div>
-                    
-                    <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm text-center pdf-avoid-break">
-                        <div class="text-3xl font-bold text-tech-blue mb-2">MTTF >100,000h</div>
-                        <div class="text-sm font-semibold text-gray-700 mb-1">平均故障間隔</div>
-                        <div class="text-xs text-gray-500">信頼水準90%・JIS C 8156準拠試験</div>
-                    </div>
-                </div>
-
-                <!-- 規格適合性（UL E354137等） -->
-                <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm pdf-avoid-break">
-                    <h3 class="font-bold text-gray-900 mb-4 flex items-center gap-2">
-                        <span class="icon-check mr-1"></span>
-                        規格適合性・認証情報
-                    </h3>
-                    <div class="grid md:grid-cols-4 gap-4 text-sm">
-                        <div class="border border-gray-200 rounded p-3 bg-green-50">
-                            <div class="font-bold text-green-800 mb-1">UL認証</div>
-                            <div class="text-xs text-gray-600">UL番号: E354137</div>
-                            <div class="text-xs text-gray-500 mt-1">UL 8750準拠</div>
-                        </div>
-                        <div class="border border-gray-200 rounded p-3 bg-blue-50">
-                            <div class="font-bold text-blue-800 mb-1">RoHS適合</div>
-                            <div class="text-xs text-gray-600">指令 2011/65/EU</div>
-                            <div class="text-xs text-gray-500 mt-1">有害物質規制対応</div>
-                        </div>
-                        <div class="border border-gray-200 rounded p-3 bg-purple-50">
-                            <div class="font-bold text-purple-800 mb-1">REACH登録</div>
-                            <div class="text-xs text-gray-600">SVHC < 0.1%</div>
-                            <div class="text-xs text-gray-500 mt-1">化学物質規制対応</div>
-                        </div>
-                        <div class="border border-gray-200 rounded p-3 bg-orange-50">
-                            <div class="font-bold text-orange-800 mb-1">PSE適合</div>
-                            <div class="text-xs text-gray-600">電気用品安全法</div>
-                            <div class="text-xs text-gray-500 mt-1">特定電気用品（直流電源別途）</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 耐久性試験データ（JIS規格準拠） -->
-                <div class="mt-8 bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm pdf-avoid-break">
-                    <table class="w-full text-sm">
-                        <thead class="bg-gray-50 text-gray-700 border-b border-gray-300">
-                            <tr>
-                                <th class="px-4 py-3 text-left font-semibold">試験項目</th>
-                                <th class="px-4 py-3 text-left font-semibold">試験条件</th>
-                                <th class="px-4 py-3 text-left font-semibold">規格値</th>
-                                <th class="px-4 py-3 text-left font-semibold">試験方法</th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-gray-100">
-                            <tr>
-                                <td class="px-4 py-3">高温動作試験</td>
-                                <td class="px-4 py-3">Ta=60℃, 1000h連続点灯</td>
-                                <td class="px-4 py-3 font-semibold text-tech-blue">光出力維持率 ≥95%</td>
-                                <td class="px-4 py-3 text-xs text-gray-500">JIS C 8156</td>
-                            </tr>
-                            <tr>
-                                <td class="px-4 py-3">高温高湿試験</td>
-                                <td class="px-4 py-3">85℃/85%RH, 1000h</td>
-                                <td class="px-4 py-3 font-semibold text-tech-blue">外観・電気特性異常なし</td>
-                                <td class="px-4 py-3 text-xs text-gray-500">JESD22-A101</td>
-                            </tr>
-                            <tr>
-                                <td class="px-4 py-3">熱衝撃試験</td>
-                                <td class="px-4 py-3">-40℃↔+85℃, 100サイクル</td>
-                                <td class="px-4 py-3 font-semibold text-tech-blue">導通・断線なし</td>
-                                <td class="px-4 py-3 text-xs text-gray-500">JESD22-A104</td>
-                            </tr>
-                            <tr>
-                                <td class="px-4 py-3">曲げ試験</td>
-                                <td class="px-4 py-3">R=10mm, 100回反復</td>
-                                <td class="px-4 py-3 font-semibold text-tech-blue">導通・断線なし</td>
-                                <td class="px-4 py-3 text-xs text-gray-500">IEC 60068-2-21</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-
-        <!-- 第3ページ：詳細仕様表 -->
-        <section id="specs" class="py-16 bg-white border-t pdf-page pdf-avoid-break">
-            <div class="max-w-7xl mx-auto px-4">
-                <h2 class="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2 border-l-4 border-tech-blue pl-3">
-                    詳細仕様表
-                    <span class="text-xs font-normal text-gray-500 ml-2">データソース：SUNSEMI_ProductMaster_v3.csv</span>
-                </h2>
-                
-                <div class="bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm pdf-avoid-break">
-                    <table class="w-full text-sm">
-                        <thead class="bg-gray-50 text-gray-700 border-b border-gray-300">
-                            <tr>
-                                <th class="px-4 py-3 text-left font-semibold w-1/4">項目</th>
-                                <th class="px-4 py-3 text-left font-semibold w-1/4">記号</th>
-                                <th class="px-4 py-3 text-left font-semibold">仕様値</th>
-                                <th class="px-4 py-3 text-left font-semibold">単位</th>
-                                <th class="px-4 py-3 text-left font-semibold">備考</th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-gray-100">
-                            <tr class="bg-green-50">
-                                <td class="px-4 py-3 font-bold">型番</td>
-                                <td class="px-4 py-3">-</td>
-                                <td class="px-4 py-3 font-bold text-green-700">320D-12/24V-5mm</td>
-                                <td class="px-4 py-3">-</td>
-                                <td class="px-4 py-3 text-gray-500">超窄幅5mm仕様</td>
-                            </tr>
-                            <tr>
-                                <td class="px-4 py-3">LED密度</td>
-                                <td class="px-4 py-3">ρ</td>
-                                <td class="px-4 py-3 font-semibold">320</td>
-                                <td class="px-4 py-3">chips/m</td>
-                                <td class="px-4 py-3 text-gray-500">5mm最適密度</td>
-                            </tr>
-                            <tr>
-                                <td class="px-4 py-3">入力電圧</td>
-                                <td class="px-4 py-3">V<sub>F</sub></td>
-                                <td class="px-4 py-3">DC 12/24</td>
-                                <td class="px-4 py-3">V</td>
-                                <td class="px-4 py-3 text-gray-500">兼用型回路</td>
-                            </tr>
-                            <tr class="bg-yellow-50">
-                                <td class="px-4 py-3 font-semibold">カット間隔（12V時）</td>
-                                <td class="px-4 py-3">P<sub>itch</sub></td>
-                                <td class="px-4 py-3 font-bold">25.0</td>
-                                <td class="px-4 py-3">mm</td>
-                                <td class="px-4 py-3 text-gray-500"><span class="font-bold text-red-700">8LED</span>単位</td>
-                            </tr>
-                            <tr class="bg-yellow-50">
-                                <td class="px-4 py-3 font-semibold">カット間隔（24V時）</td>
-                                <td class="px-4 py-3">P<sub>itch</sub></td>
-                                <td class="px-4 py-3 font-bold">50.0</td>
-                                <td class="px-4 py-3">mm</td>
-                                <td class="px-4 py-3 text-gray-500"><span class="font-bold text-red-700">16LED</span>単位</td>
-                            </tr>
-                            <tr>
-                                <td class="px-4 py-3">消費電力</td>
-                                <td class="px-4 py-3">P</td>
-                                <td class="px-4 py-3">6.4</td>
-                                <td class="px-4 py-3">W/m</td>
-                                <td class="px-4 py-3 text-gray-500">低発熱設計</td>
-                            </tr>
-                            <tr>
-                                <td class="px-4 py-3">光束（3000K）</td>
-                                <td class="px-4 py-3">Φ<sub>v</sub></td>
-                                <td class="px-4 py-3">850</td>
-                                <td class="px-4 py-3">lm/m</td>
-                                <td class="px-4 py-3 text-gray-500">高演色Ra90+仕様</td>
-                            </tr>
-                            <tr>
-                                <td class="px-4 py-3">発光効率</td>
-                                <td class="px-4 py-3">η</td>
-                                <td class="px-4 py-3">133</td>
-                                <td class="px-4 py-3">lm/W</td>
-                                <td class="px-4 py-3 text-gray-500">3000K時</td>
-                            </tr>
-                            <tr>
-                                <td class="px-4 py-3">配光角</td>
-                                <td class="px-4 py-3">2θ<sub>1/2</sub></td>
-                                <td class="px-4 py-3 font-bold text-tech-blue">135</td>
-                                <td class="px-4 py-3">°</td>
-                                <td class="px-4 py-3 text-gray-500">高拡散COB配光</td>
-                            </tr>
-                            <tr>
-                                <td class="px-4 py-3">色容差</td>
-                                <td class="px-4 py-3">SDCM</td>
-                                <td class="px-4 py-3 font-semibold text-tech-blue">3-Step</td>
-                                <td class="px-4 py-3">-</td>
-                                <td class="px-4 py-3 text-gray-500">マクアダム楕円3ステップ内</td>
-                            </tr>
-                            <tr>
-                                <td class="px-4 py-3">基板幅</td>
-                                <td class="px-4 py-3">W</td>
-                                <td class="px-4 py-3 font-semibold text-green-700">5.0±0.15</td>
-                                <td class="px-4 py-3">mm</td>
-                                <td class="px-4 py-3 text-gray-500">2oz 圧延銅箔FPC</td>
-                            </tr>
-                            <tr>
-                                <td class="px-4 py-3">基板厚さ</td>
-                                <td class="px-4 py-3">T</td>
-                                <td class="px-4 py-3">1.2</td>
-                                <td class="px-4 py-3">mm</td>
-                                <td class="px-4 py-3 text-gray-500">ポリイミド(PI)基板</td>
-                            </tr>
-                            <!-- DeepSeek指摘：CSV全フィールド表示 -->
-                            <tr class="bg-blue-50">
-                                <td class="px-4 py-3 font-semibold">最大連続長</td>
-                                <td class="px-4 py-3">L<sub>max</sub></td>
-                                <td class="px-4 py-3 font-bold text-tech-blue">3 / 5</td>
-                                <td class="px-4 py-3">m</td>
-                                <td class="px-4 py-3 text-gray-500">CSV: max_run_m</td>
-                            </tr>
-                            <tr class="bg-blue-50">
-                                <td class="px-4 py-3 font-semibold">最小受注単位</td>
-                                <td class="px-4 py-3">MOQ</td>
-                                <td class="px-4 py-3 font-bold text-tech-blue">100m/ロット</td>
-                                <td class="px-4 py-3">-</td>
-                                <td class="px-4 py-3 text-gray-500">CSV: moq_ja</td>
-                            </tr>
-                            <tr class="bg-blue-50">
-                                <td class="px-4 py-3 font-semibold">納期</td>
-                                <td class="px-4 py-3">LT</td>
-                                <td class="px-4 py-3 font-bold text-tech-blue">受注後7営業日</td>
-                                <td class="px-4 py-3">-</td>
-                                <td class="px-4 py-3 text-gray-500">CSV: lead_time_ja</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-
-        <!-- 第4ページ：外形寸法図 -->
-        <section id="dimensions" class="py-16 bg-gray-50 border-t pdf-page pdf-avoid-break">
-            <div class="max-w-7xl mx-auto px-4">
-                <h2 class="text-xl font-bold text-gray-900 mb-6 border-l-4 border-tech-blue pl-3">外形寸法図</h2>
-                
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div class="border border-gray-200 rounded-lg p-6 bg-white pdf-avoid-break">
-                        <div class="text-xs text-gray-500 mb-4 text-center font-semibold">図1. 上面図（平面）<span class="text-tech-blue ml-2">Unit: mm</span></div>
-                        <div class="h-48 flex items-center justify-center">
-                            <svg viewBox="0 0 400 150" class="w-full">
-                                <rect x="100" y="65" width="200" height="12" fill="white" stroke="#374151" stroke-width="0.75"/>
-                                <line x1="125" y1="60" x2="125" y2="82" stroke="#6b7280" stroke-width="0.5" stroke-dasharray="3,3"/>
-                                <line x1="150" y1="60" x2="150" y2="82" stroke="#6b7280" stroke-width="0.5" stroke-dasharray="3,3"/>
-                                <line x1="280" y1="60" x2="280" y2="82" stroke="#374151" stroke-width="0.5"/>
-                                <line x1="340" y1="60" x2="340" y2="82" stroke="#374151" stroke-width="0.5"/>
-                                <line x1="280" y1="90" x2="340" y2="90" stroke="#374151" stroke-width="0.75"/>
-                                <text x="310" y="102" text-anchor="middle" class="text-xs font-bold" style="font-size:11px;fill:#dc2626;">5.0±0.15</text>
-                                <text x="200" y="40" text-anchor="middle" class="text-xs" style="font-size:9px;fill:#6b7280;">12V時：25mm毎（8LED）カット可能</text>
-                            </svg>
-                        </div>
-                    </div>
-
-                    <div class="border border-gray-200 rounded-lg p-6 bg-white pdf-avoid-break">
-                        <div class="text-xs text-gray-500 mb-4 text-center font-semibold">図2. 断面図（A-A'）<span class="text-tech-blue ml-2">SCALE: 5:1</span></div>
-                        <div class="h-48 flex items-center justify-center">
-                            <svg viewBox="0 0 300 200" class="w-full">
-                                <rect x="125" y="85" width="50" height="20" fill="white" stroke="#374151" stroke-width="0.75"/>
-                                <rect x="125" y="100" width="50" height="5" fill="#fecaca" stroke="#374151" stroke-width="0.5"/>
-                                <rect x="125" y="92" width="50" height="8" fill="#f3f4f6" stroke="#374151" stroke-width="0.5"/>
-                                <rect x="125" y="85" width="50" height="7" fill="#fef9c3" stroke="#374151" stroke-width="0.5" fill-opacity="0.8"/>
-                                <line x1="120" y1="85" x2="120" y2="105" stroke="#374151" stroke-width="0.75"/>
-                                <text x="115" y="98" text-anchor="middle" class="text-xs font-bold" style="font-size:10px;fill:#dc2626;writing-mode:vertical-rl;">1.2</text>
-                                <line x1="180" y1="85" x2="180" y2="105" stroke="#374151" stroke-width="0.75"/>
-                                <text x="185" y="95" class="text-xs" style="font-size:10px;fill:#374151;">5.0</text>
-                                <text x="210" y="103" class="text-xs" style="font-size:8px;fill:#6b7280;">2oz圧延銅箔</text>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 応用例（体言止め厳守） -->
-        <section id="application" class="py-16 bg-white border-t pdf-avoid-break">
-            <div class="max-w-7xl mx-auto px-4">
-                <h2 class="text-xl font-bold text-gray-900 mb-6 border-l-4 border-tech-blue pl-3">推奨用途・適用例</h2>
-                
-                <div class="grid md:grid-cols-3 gap-6">
-                    <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition pdf-avoid-break">
-                        <h3 class="font-bold text-gray-900 mb-3">什器・棚下照明最適</h3>
-                        <p class="text-sm text-gray-600 mb-3">5mm幅により棚板への目立ちにくい設置可能。シームレス発光で高級感演出。</p>
-                        <ul class="text-xs text-gray-500 space-y-1">
-                            <li><span class="icon-check mr-1"></span>家具・キャビネット内蔵</li>
-                            <li><span class="icon-check mr-1"></span>キッチンカウンター下面</li>
-                            <li><span class="icon-check mr-1"></span>店舗什器間接照明</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition pdf-avoid-break">
-                        <h3 class="font-bold text-gray-900 mb-3">狭小スペース・間接照明</h3>
-                        <p class="text-sm text-gray-600 mb-3">アルミプロファイル10mm幅への収納可能。コンパクト設計。</p><p class="text-sm text-gray-600 mb-3">可收纳于10mm宽的铝型材。紧凑设计。</p>
-                        <ul class="text-xs text-gray-500 space-y-1">
-                            <li><span class="icon-check mr-1"></span>廊下・階段間接照明</li><li><span class="icon-check mr-1"></span>走廊・楼梯间接照明</li>
-                            <li><span class="icon-check mr-1"></span>手すり・柵内蔵照明</li><li><span class="icon-check mr-1"></span>扶手・栏杆内置照明</li>
-                            <li><span class="icon-check mr-1"></span>壁面・天井溝入れ</li><li><span class="icon-check mr-1"></span>壁面・天井沟槽安装</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="border border-gray-200 rounded-lg p-6 hover:shadow-md transition pdf-avoid-break">
-                        <h3 class="font-bold text-gray-900 mb-3">曲面・可動部対応</h3><h3 class="font-bold text-gray-900 mb-3">曲面・可动部对应</h3>
-                        <p class="text-sm text-gray-600 mb-3">細幅基板の柔軟性でR配線・曲面接着可能。</p><p class="text-sm text-gray-600 mb-3">细幅基板的灵活性使其能够实现R型布线及曲面粘接。</p>
-                        <ul class="text-xs text-gray-500 space-y-1">
-                            <li><span class="icon-check mr-1"></span>円柱・円筒照明</li><li><span class="icon-check mr-1"></span>圆柱・圆筒照明</li>
-                            <li><span class="icon-check mr-1"></span>可動棚・回転什器</li><li><span class="icon-check mr-1"></span>可移动搁板・旋转家具</li>
-                            <li><span class="icon-check mr-1"></span>サイン・看板内照</li><li><span class="icon-check mr-1"></span>标志・招牌内照</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
+    
+    <div class="certification-footer">
+        <div class="cert-logos">
+            <div class="cert-item"><span class="icon-check"></span> ISO9001認証</div>
+            <div class="cert-item"><span class="icon-check"></span> UL E354137</div>
+            <div class="cert-item"><span class="icon-check"></span> RoHS適合</div>
+            <div class="cert-item"><span class="icon-check"></span> REACH登録</div>
+        </div>
+        <p>&copy; 2026 SUNSEMI. All rights reserved. | 本サイトは日本国内向けB2B専用です。</p>
     </div>
+</footer>
 
-    <!-- フッター（認証情報・Microdata付与） --><!-- 页脚（包含认证信息与Microdata -->
-    <footer class="bg-gray-900 text-white py-12 mt-20 no-print" itemscope itemtype="https://schema.org/Organization">
-        <meta itemprop="name" content="SUNSEMI株式会社">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="grid md:grid-cols-4 gap-8 mb-8">
-                <div class="md:col-span-2">
-                    <div class="text-2xl font-bold tracking-tight mb-4">SUNSEMI<span class="text-xs font-normal ml-2">株式会社</span></div>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-4">
-                        高演色COB LEDテープライトのOEM専門メーカー。5mm超窄幅から8mm標準幅まで、
-                        什器照明・棚下照明に最適なLEDソリューションを提供。为家具照明和货架下照明提供最佳LED解决方案。
-                    </p>
-                </div>
-                <div>
-                    <h4 class="font-semibold mb-4 text
+<script>
+    // 簡易的な印刷対応（ページ内で完結）
+    document.addEventListener('DOMContentLoaded', function() {
+        // 仕様表のハイライト
+        const specTable = document.querySelector('.spec-table');
+        if(specTable) {
+            specTable.addEventListener('click', function(e) {
+                if(e.target.tagName === 'TD') {
+                    const row = e.target.parentElement;
+                    row.style.background = row.style.background ? '' : '#fff3cd';
+                }
+            });
+        }
+    });
+</script>
+
+</body>
+</html>
